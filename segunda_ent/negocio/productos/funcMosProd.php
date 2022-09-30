@@ -9,7 +9,7 @@
 
     <table id="tabla" width="40%" border="1">
         <tr>
-            <th>Id Producto</th>
+            <th>Id Product0</th>
             <th>Nombre</th>
             <th>Stock</th>
             <th>Precio</th>
