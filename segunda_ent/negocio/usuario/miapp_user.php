@@ -194,7 +194,9 @@ function agregar_vendedor($nombre, $apellido, $email, $password)
 {
     $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
     mysqli_query($con, "insert into usuario (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
-    mysqli_query($con, "insert into vendedor values (" . mysqli_insert_id($con) . ")");
+    $id = mysqli_insert_id($con);
+    mysqli_query($con, "insert into vendedor values (" . $id . ")");
+    mysqli_query($con, "insert into telusr values (" . $id . ", '1')");
     (mysqli_error($con));
     mysqli_close($con);
     return true;
@@ -204,7 +206,9 @@ function agregar_comprador($nombre, $apellido, $email, $password)
 {
     $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
     mysqli_query($con, "insert into usuario (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
-    mysqli_query($con, "insert into comprador values (" . mysqli_insert_id($con) . ")");
+    $id = mysqli_insert_id($con);
+    mysqli_query($con, "insert into comprador values (" . $id . ")");
+    mysqli_query($con, "insert into telusr values (" . $id . ", '1')");
     (mysqli_error($con));
     mysqli_close($con);
     return true;

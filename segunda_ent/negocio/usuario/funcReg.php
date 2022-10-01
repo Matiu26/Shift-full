@@ -36,7 +36,7 @@
                 } else {
                     if (reg_clin($nombre,$apellido,$email,$password,$telefono) == true) {
                         echo '<script language="javascript">alert(" Se ha registrado correctamente");</script>';
-                        header('refresh: 1; url=../../dise/index.php');
+                        header('refresh: 1; url=../../../src/index.php');
                     }
 
 
