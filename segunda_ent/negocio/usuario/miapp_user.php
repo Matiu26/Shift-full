@@ -1,8 +1,9 @@
 <?php
+require_once __DIR__."/../../dato/conexion.php";
 
 function login($email, $password)
 {
-    $con = mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
+    $con = conectar();
     $query = mysqli_query($con, "SELECT IdUsuario FROM usuario WHERE Email='" . $email . "'and Contraseña='" . $password . "'") or die(mysqli_error($con));
 
     $row = $query->fetch_assoc();
@@ -16,8 +17,8 @@ function login($email, $password)
 }
 function existe($email)
 {
-    $con = mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
-    $query = mysqli_query($con, "SELECT IdUsuario FROM usuario WHERE Email='" . $email . "'") or die(mysqli_error($con));
+    $con = conectar();  
+      $query = mysqli_query($con, "SELECT IdUsuario FROM usuario WHERE Email='" . $email . "'") or die(mysqli_error($con));
 
     $row = $query->fetch_assoc();
     mysqli_close($con);
@@ -31,7 +32,7 @@ function existe($email)
 
 function buscar_datos($email)
 {
-    $con = mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
+    $con = conectar();
     $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "'") or die(mysqli_error($con));
 
     $row = $query->fetch_assoc();
@@ -45,7 +46,7 @@ function buscar_datos($email)
 }
 function existe_aprobar($email)
 {
-    $con = mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
+    $con = conectar();
     $query = mysqli_query($con, "SELECT IdUsuario FROM usuario_aprobar WHERE Email='" . $email . "'") or die(mysqli_error($con));
 
     $row = $query->fetch_assoc();
@@ -60,7 +61,7 @@ function existe_aprobar($email)
 
 function buscar_datos_aprobar($email)
 {
-    $con = mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
+    $con = conectar();
     $query = mysqli_query($con, "SELECT * FROM usuario_aprobar WHERE Email='" . $email . "'") or die(mysqli_error($con));
 
     $row = $query->fetch_assoc();
@@ -75,7 +76,7 @@ function buscar_datos_aprobar($email)
 function existe_cliente($email, $password)
 {
 
-    $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
+    $con = conectar();
     $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "' and Contraseña='" . $password . "'");
 
     $row = $query->fetch_assoc();
@@ -102,7 +103,7 @@ function existe_cliente($email, $password)
 function existe_vendedor($email, $password)
 {
 
-    $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
+    $con = conectar();
     $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "' and Contraseña='" . $password . "'");
 
     $row = $query->fetch_assoc();
@@ -127,7 +128,7 @@ function existe_vendedor($email, $password)
 function existe_comprador($email, $password)
 {
 
-    $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
+    $con = conectar();
     $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "' and Contraseña='" . $password . "'");
 
     $row = $query->fetch_assoc();
@@ -153,7 +154,7 @@ function existe_comprador($email, $password)
 function existe_jefe($email, $password)
 {
 
-    $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
+    $con = conectar();
     $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "' and Contraseña='" . $password . "'");
 
     $row = $query->fetch_assoc();
@@ -180,7 +181,7 @@ function existe_jefe($email, $password)
 
 function reg_clin($nombre, $apellido, $email, $password, $telefono)
 {
-    $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
+    $con = conectar();
     mysqli_query($con, "insert into usuario (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
     $id = mysqli_insert_id($con);
     mysqli_query($con, "insert into telusr values (" . $id . ", '$telefono')");
@@ -192,7 +193,7 @@ function reg_clin($nombre, $apellido, $email, $password, $telefono)
 }
 function agregar_vendedor($nombre, $apellido, $email, $password)
 {
-    $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
+    $con = conectar();
     mysqli_query($con, "insert into usuario (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
     $id = mysqli_insert_id($con);
     mysqli_query($con, "insert into vendedor values (" . $id . ")");
@@ -204,7 +205,7 @@ function agregar_vendedor($nombre, $apellido, $email, $password)
 
 function agregar_comprador($nombre, $apellido, $email, $password)
 {
-    $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
+    $con = conectar();
     mysqli_query($con, "insert into usuario (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
     $id = mysqli_insert_id($con);
     mysqli_query($con, "insert into comprador values (" . $id . ")");
@@ -217,7 +218,7 @@ function agregar_comprador($nombre, $apellido, $email, $password)
 
 function eliminar($id)
 {
-    $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
+    $con = conectar();
     mysqli_query($con, "DELETE FROM usuario  WHERE IdUsuario='" . $id . "'") or die;
     (mysqli_error($con));
     mysqli_close($con);
@@ -226,7 +227,7 @@ function eliminar($id)
 }
 function actualizar($nombre, $apellido, $password, $email, $telefono, $ID)
 {
-    $con =   mysqli_connect("localhost", "root", "Mateobarsa04", "SISRDdb");
+    $con = conectar();
     mysqli_query($con, "UPDATE usuario SET Nombre = '$nombre',Apellido = '$apellido', Contraseña = '$password', Email = '$email'   
         WHERE IdUsuario = '$ID'") or die(mysqli_error($con));
     mysqli_query($con, "UPDATE telusr SET Telefono = '$telefono' WHERE IdUsuario = '$ID'") or die(mysqli_error($con));
