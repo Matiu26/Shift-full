@@ -232,4 +232,25 @@ function actualizar($nombre, $apellido, $password, $email, $telefono, $ID)
     mysqli_query($con, "UPDATE telusr SET Telefono = '$telefono' WHERE IdUsuario = '$ID'") or die(mysqli_error($con));
     return true;
 }
+function aprobado($nombre, $apellido, $email, $password, $telefono)
+{
+    $con = conectar();
+    mysqli_query($con, "insert into usuario (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
+    $id = mysqli_insert_id($con);
+    mysqli_query($con, "insert into telusr values (" . $id . ", '$telefono')");
+
+    mysqli_close($con);
+
+    return true;
+}
+function eliminar_reg($id)
+{
+    $con = conectar();
+    mysqli_query($con, "DELETE FROM usuario_aprobar  WHERE IdUsuario='" . $id . "'") or die;
+    (mysqli_error($con));
+    mysqli_close($con);
+
+    return true;
+}
+
 ?>
