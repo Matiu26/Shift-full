@@ -29,7 +29,7 @@ if (isset($_POST['modificar'])) {
         $sto2 = $_POST['sto2'];
         $pre2 = $_POST['pre2'];
         $desc2 = $_POST['desc2'];
-        if (actualizar_prod($nom2, $sto2, $pre2, $desc2, $ID)  == true) {
+        if (actualizar_prod($sto2,$ID)  == true) {
             echo '<script language="javascript">alert("Se ha modificado correctamente");</script>';
             header('refresh: 1; url=mostrar_prod.php');
         }
