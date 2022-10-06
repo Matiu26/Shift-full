@@ -183,7 +183,7 @@
               <input class="botons" type="submit" value="Buscar Usuario" name="buscar">
               
               <br> <a href="mostrar.php" class="regresar">Ver listado</a> <br>
-              <br> <a href="../../dise/accion.php" class="regresar">Regresar</a> <br>
+              <br> <a href="../../dise/vendedor.php" class="regresar">Regresar</a> <br>
             </form>
             <table id="tabla" width="40%" border="1">
               <tr>
