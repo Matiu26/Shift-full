@@ -183,10 +183,8 @@
             <form class="form" name="formulario" method="post" enctype="multipart/form-data">
 
             <br> <input class="controls" placeholder="Nombre Producto" type="text" name="nom2" value="<?php echo $nom; ?>" disabled maxlength="30" size="40">
-            <label>
-              Stock        
-              </label>
-            <br> <input class="controls" placeholder= "Stock" type="number" min="1" name="sto2" value="<?php echo $sto; ?>" required maxlength="30" size="40">
+                
+             <br> <p> Stock </p> <input class="controls" placeholder= "Stock" type="number" min="1" name="sto2" value="<?php echo $sto; ?>" required maxlength="30" size="40">
 
             <br> <input class="controls" placeholder="Precio" type="number" min="1" name="pre2" value="<?php echo $pre; ?>" disabled maxlength="30" size="40">
 
