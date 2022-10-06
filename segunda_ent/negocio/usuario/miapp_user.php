@@ -182,10 +182,9 @@ function existe_jefe($email, $password)
 function reg_clin($nombre, $apellido, $email, $password, $telefono)
 {
     $con = conectar();
-    mysqli_query($con, "insert into usuario (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
+    mysqli_query($con, "insert into usuario_aprobar (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
     $id = mysqli_insert_id($con);
-    mysqli_query($con, "insert into telusr values (" . $id . ", '$telefono')");
-    // mysqli_query($con, "insert into cliente values (" . $id . ")");
+    mysqli_query($con, "insert into telusr_aprobar values (" . $id . ", '$telefono')");
 
     mysqli_close($con);
 

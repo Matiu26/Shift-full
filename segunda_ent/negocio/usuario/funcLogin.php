@@ -21,7 +21,7 @@ if (isset($_POST['ingresar'])) {
                 header('refresh: 0; url=../../dise/accion.php');
             }
             else if (existe_vendedor($email, $pass) == true) {
-                header('refresh: 0; url=../../../src/index.php');
+                header('refresh: 0; url=../../dise/vendedor.php');
             }
             else if (existe_comprador($email, $pass) == true) {
                 header('refresh: 0; url=../../../src/index.php');

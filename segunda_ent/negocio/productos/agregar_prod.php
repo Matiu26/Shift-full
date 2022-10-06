@@ -197,7 +197,7 @@
                     <br> <input class="controls" placeholder="Descripcion del producto" type="text" name="desc" required> <br>
 
                     <div class="photo">
-                        <label for="foto">Foto</label>
+                                  <label for="foto">Foto</label>
                         <div class="prevPhoto">
                             <span class="delPhoto notBlock">X</span>
                             <label for="foto"></label>
