@@ -14,7 +14,7 @@
             <th>Stock</th>
             <th>Precio</th>
             <th>Descripcion</th>
-            <th>Foto</th>
+            <th>Imagen</th>
             <th>Editar</th>
             <th>Eliminar</th>
 
