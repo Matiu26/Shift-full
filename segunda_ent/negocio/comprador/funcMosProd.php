@@ -1,7 +1,7 @@
 <?php
     ob_start();
     require_once("../../dato/conexion.php");
-    require_once("miapp_productos.php");
+    require_once("../productos/miapp_productos.php");
 
     $consulta = mysqli_query($con, "SELECT * FROM producto") or die(mysqli_error($con));
 
@@ -12,23 +12,25 @@
             <th>Id Producto</th>
             <th>Nombre</th>
             <th>Stock</th>
+            <th>Tipo</th>
             <th>Precio</th>
             <th>Descripcion</th>
-            <th>Foto</th>
+            <th>Imagen</th>
             <th>Editar</th>
+            <th>Eliminar</th>
 
 
         </tr>
         <?php
-
         while ($filas = mysqli_fetch_array($consulta)) {
             $IDp = $filas['IdProducto'];
             $nom = $filas['Nombre'];
             $sto = $filas['Stock'];
+            $tip = $filas['Tipo'];
             $pre = $filas['Precio'];
             $desc = $filas['Descripcion'];
 
-
+          
 
             if (isset($_POST['buscar'])) {
                 if (isset($_POST['nom'])) {
@@ -47,15 +49,12 @@
                             $IDp = $filas['IdProducto'];
                             $nom = $filas['Nombre'];
                             $sto = $filas['Stock'];
+                            $tip = $filas['Tipo'];
                             $pre = $filas['Precio'];
                             $desc = $filas['Descripcion'];
+                         
                         }
-                        // $cons = mysqli_query($con, "SELECT * FROM telproveedor WHERE IdEmpresa='" . $IDp . "'") or die(mysqli_error($con));
-
-                        // while ($filam = mysqli_fetch_array($cons)) {
-                        //     $tel = $filam['Num_Telefono'];
-
-                        // }
+                    
                     } else {
                         $nombre = null;
                         echo '<script language="javascript">alert("El Producto ingresado no existe");</script>';
@@ -68,17 +67,20 @@
                 <td><?php echo "<p style='color:white;'>" . $IDp . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $nom . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $sto . "</p>"; ?></td>
+                <td><?php echo "<p style='color:white;'>" . $tip . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $pre . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $desc . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . " foto" . "</p>"; ?></td>
+                <td><img  src="<?php echo $filas['Foto']  ?>" width="180"  alt="" srcset="" ></td>
                 <td><a href="editar_prod.php?ID=<?php echo $IDp; ?>">Modificar </a></td>
+                <td><a href="eliminar_prod.php?ID=<?php echo $IDp; ?>">Eliminar </a></td>
 
 
             </tr>
         <?php
 
-        }
+        }           
 
+    
 
         ?>
     </table>

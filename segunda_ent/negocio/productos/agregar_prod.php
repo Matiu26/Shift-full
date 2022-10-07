@@ -192,6 +192,16 @@
 
                     <br> <input class="controls" placeholder="Cantidad adquirida" type="number" min="1" name="cant" required maxlength="30" size="40"> <br>
 
+                    <br> 
+                     <select name="tip" onchange="" id="elemento"  class="form_control"> <br><br>
+                      <option value="0">Selecciona Tipo</option> <br>
+                      <option value="1">Cabeza</option>
+                     <option value="2">Torso </option>
+                     <option value="3">Cintura </option>
+                     <option value="4">Piernas </option>
+                     <option value="5">Calzado </option>
+                      </select>
+                    <br>
                     <br> <input class="controls" placeholder="Precio del producto" type="number" min="1" name="pre" required maxlength="30" size="40"> <br>
 
                     <br> <input class="controls" placeholder="Descripcion del producto" type="text" name="desc" required> <br>

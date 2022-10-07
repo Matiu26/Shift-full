@@ -34,11 +34,11 @@ function buscar_datos_prod($nombre)
 
 
 
-function agregar_prod($Nombre, $stock, $precio,$descripcion,$ruta,$id_e)
+function agregar_prod($Nombre, $stock,$tipo, $precio,$descripcion,$ruta,$id_e)
 {
     $con = conectar();
     mysqli_query($con, "insert into producto (Nombre,Stock,Tipo, Precio, Descripcion, Foto)
-    VALUES('$Nombre', '$stock', 'null', '$precio', '$descripcion', '$ruta' )") or die;
+    VALUES('$Nombre', '$stock', '$tipo', '$precio', '$descripcion', '$ruta' )") or die;
          $id = mysqli_insert_id($con);
          mysqli_query($con, "insert into provee(IdEmpresa,IdProducto) values (" . $id_e . ", '$id')");
 

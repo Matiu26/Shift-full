@@ -1,6 +1,6 @@
 <?php
 
-    require_once("miapp_productos.php");
+    require_once("../productos/miapp_productos.php");
 
     if (isset($_POST['agregar'])) {
 
@@ -8,7 +8,7 @@
 
 
             if (empty($_POST['foto'])) {
-                echo "<p style='color:red;'>Es necesario agregar una foto </p>";
+                echo "<p style='color:white;'>Es necesario agregar una foto </p>";
             }
 
 
@@ -24,30 +24,21 @@
             $descripcion = $_POST['desc'];
             $id = $_POST['proveedor'];
 
-            $foto = $_FILES['foto'];
-            $nombre_foto = $foto['name'];
-            $type        = $foto['type'];
-            $url_temp = $foto['tmp_name'];
+            $nombre_img = $_FILES['foto']['name'];
+            $temporal=$_FILES['foto']['tmp_name'];
+            $carpeta = '../../img/uploads';
+            $ruta =$carpeta.'/'.$nombre_img;
+            move_uploaded_file($temporal,$carpeta.'/'.$nombre_img);
 
-            $imgProducto = '../../img/img_producto.jpg';
 
-            if ($nombre_foto != '') {
-                $destino = '../../img/uploads/';
-                $img_nombre = 'img_' . md5(date('d-m-Y H:m:s'));
-                $imgProducto = $img_nombre . '.jpg';
-                $src         = $destino . $imgProducto;
-
-                if (agregar_prod($producto, $cantidad, $precio, $descripcion, $imgProducto, $id)  == true) {
-                    if ($nombre_foto != '') {
-                        move_uploaded_file($url_temp, $src);
-                    }
+                if (agregar_prod($producto, $cantidad, $precio, $descripcion, $ruta, $id)  == true) {
                     echo '<script language="javascript">alert("Se ha registrado  el producto correctamente");</script>';
                     header('refresh: 0; url=../../dise/comprador.php');
                 } else {
                     echo '<script language="javascript">alert("Error al ingresar el producto");</script>';
                     header('refresh: 0;');
                 }
-            }
+            
         }
     }
 
