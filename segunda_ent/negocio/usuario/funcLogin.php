@@ -12,7 +12,13 @@ if (isset($_POST['ingresar'])) {
             return ;
         } else{
 
-            
+            if (aprobacion($email) == true) {
+                echo '<script language="javascript">alert("El usuario aún no ha sido aprobado");</script>';
+                header('refresh: 0;');
+                }
+                 else{
+
+                
 
         if (login($email, $pass) == true) {
             if (existe_cliente($email, $pass) == true) {
@@ -32,6 +38,8 @@ if (isset($_POST['ingresar'])) {
 
         }
     }
+}
+    
 }
 }
 ?>

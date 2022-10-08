@@ -185,6 +185,8 @@
             <h3 class="border-b mx-10">  USUARIOS </h3>
             <a href="../negocio/usuario/agregar.php" class="">Agregar usuario</a> <br> 
 
+            <a href="../negocio/usuario/Aprobar.php">Aprobar usuario</a>
+
             <a href="../negocio/usuario/modificar.php">Modificar usuario</a>
 
             <a href="../negocio/usuario/eliminar.php">Eliminar usuario</a>

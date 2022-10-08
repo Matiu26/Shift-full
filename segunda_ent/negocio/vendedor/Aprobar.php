@@ -182,7 +182,7 @@
               <input class="controls" placeholder="Ingrese Email" type="email" name="mail" required maxlength="30" size="40">
               <input class="botons" type="submit" value="Buscar Usuario" name="buscar">
               
-              <br> <a href="mostrar.php" class="regresar">Ver listado</a> <br>
+              <br> <a href="aprobar.php" class="regresar">Ver listado</a> <br>
               <br> <a href="../../dise/vendedor.php" class="regresar">Regresar</a> <br>
             </form>
             <table id="tabla" width="40%" border="1">

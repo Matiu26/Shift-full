@@ -29,6 +29,21 @@ function existe($email)
 
     return true;
 }
+function aprobacion($email)
+{
+    $con = conectar();  
+      $query = mysqli_query($con, "SELECT IdUsuario FROM usuario_aprobar WHERE Email='" . $email . "'") or die(mysqli_error($con));
+
+    $row = $query->fetch_assoc();
+    mysqli_close($con);
+
+    if ($row == null) {
+        return false;
+    }
+
+    return true;
+}
+
 
 function buscar_datos($email)
 {
