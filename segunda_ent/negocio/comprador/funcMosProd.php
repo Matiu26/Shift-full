@@ -16,8 +16,9 @@
             <th>Precio</th>
             <th>Descripcion</th>
             <th>Imagen</th>
-            <th>Editar</th>
-            <th>Eliminar</th>
+            <th>Modificar</th>
+
+      
 
 
         </tr>
@@ -71,8 +72,9 @@
                 <td><?php echo "<p style='color:white;'>" . $pre . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $desc . "</p>"; ?></td>
                 <td><img  src="<?php echo $filas['Foto']  ?>" width="180"  alt="" srcset="" ></td>
-                <td><a href="editar_prod.php?ID=<?php echo $IDp; ?>">Modificar </a></td>
-                <td><a href="eliminar_prod.php?ID=<?php echo $IDp; ?>">Eliminar </a></td>
+                <td><a href="editar_prod.php?ID=<?php echo $IDp; ?>">Modificar Stock </a></td>
+
+             
 
 
             </tr>

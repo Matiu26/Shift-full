@@ -63,3 +63,10 @@ function actualizar_prod($nombre, $stock, $precio,$descripcion, $ID)
     Precio = '$precio',  Descripcion = '$descripcion'  WHERE IdProducto = '$ID'") or die(mysqli_error($con));
     return true;
 }
+
+function actualizar_prod_comp($stock, $ID)
+{
+    $con = conectar();
+    mysqli_query($con, "UPDATE producto  Set Stock = '$stock'  WHERE IdProducto = '$ID'") or die(mysqli_error($con));
+    return true;
+}

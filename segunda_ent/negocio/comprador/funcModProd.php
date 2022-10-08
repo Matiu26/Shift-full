@@ -4,7 +4,7 @@ $dir = null;
 $tel = null;
 ob_start();
 require_once("../../dato/conexion.php");
-require_once("miapp_productos.php");
+require_once("../productos/miapp_productos.php");
 $ID = $_GET["ID"];
 
 $consultas = mysqli_query($con, "SELECT * FROM producto WHERE IdProducto='" . $ID . "'") or die(mysqli_error($con));
@@ -20,7 +20,7 @@ if (isset($_POST['modificar'])) {
     if ( isset($_POST['sto2'])) {
         $sto2 = $_POST['sto2'];
      
-        if (actualizar_prod($sto2,$ID)  == true) {
+        if (actualizar_prod_comp($sto2,$ID)  == true) {
             echo '<script language="javascript">alert("Se ha modificado correctamente");</script>';
             header('refresh: 0; url=mostrar_prod.php');
         }

@@ -186,7 +186,7 @@
             <a href="../negocio/comprador/agregar_prod.php">Agregar producto</a>
             <br />
             <br />
-            <a href="../negocio/comprador/mostrar_prod.php">Listado producto</a>
+            <a href="../negocio/comprador/mostrar_prod.php">Listado productos</a>
             <br />
             <br />
             <a href="../negocio/comprador/mostrar_prod.php">Administar paquete</a>

@@ -7,9 +7,9 @@
         if (isset($_POST['prod'])  && isset($_POST['cant']) && isset($_POST['pre']) && isset($_POST['desc'])) {
 
 
-            if (empty($_POST['foto'])) {
-                echo '<script language="javascript">alert("Es necesario agregar una foto");</script>';
-
+            // if (empty($_POST['foto'])) {
+            //     echo '<script language="javascript">alert("Es necesario agregar una foto");</script>';
+            // }
             if (($_POST['tip']) == "0") {
                 echo '<script language="javascript">alert("Es necesario agregar un tipo");</script>';
                 header('refresh: 0; ');
@@ -69,7 +69,7 @@
                 }
             
         }
-    }
+    
     }
 }
     }
