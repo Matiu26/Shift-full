@@ -22,8 +22,10 @@ rastreo
  Generar promociones de productos con pocas ventas
  Administrar ofertas de productos por ventas en grandes volúmenes
 ----------------------------------------------------------------
-mensaje "recurde que antes de usar su cuenta, debe ser aprobada"
+mensaje "recuerde que antes de usar su cuenta, debe ser aprobada"
 mostrar favoritos
+
 mostar foto cuando busco y ver tema de es necesario agregar una foto
+
 ver tema de login (session)
 hasheo contraseña

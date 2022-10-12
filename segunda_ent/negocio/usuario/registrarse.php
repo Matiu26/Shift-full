@@ -180,7 +180,7 @@
 
             <br> <input class="controls" placeholder="Email" type="email" name="mail" required maxlength="30" size="40"> <br>
 
-            <br> <input class="controls" placeholder="Contraseña" type="password" name="pass" required maxlength="30" size="40"> <br>
+            <br> <input class="controls" placeholder="Contraseña" type="password" name="pass" required> <br>
 
             <br> <input class="botons" type="submit" value="Registrarse" name="agregar"> <br>
 

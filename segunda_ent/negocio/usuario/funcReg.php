@@ -29,7 +29,7 @@
                 $telefono = $_POST['tel'];
                 $email = $_POST['mail'];
                 $password = $_POST['pass'];
-
+                $password= password_hash($password, PASSWORD_DEFAULT);
                 if (existe($email) == true) {
                     echo '<script language="javascript">alert("Email ya existente, ingrese otro email");</script>';
                     die;
