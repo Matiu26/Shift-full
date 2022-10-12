@@ -1,6 +1,5 @@
 
 jefe : 
--aprobar usuarios
 - Es el encargado de gestionar los envíos de las compras verificadas y de enviar el remito al cliente
  *administra paquetes de productos relacionados a una tarea 
 ----------------------------------------------------------------

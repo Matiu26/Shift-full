@@ -56,11 +56,11 @@ function eliminar_prod($id)
 
     return true;
 }
-function actualizar_prod($nombre, $stock, $precio,$descripcion, $ID)
+function actualizar_prod($nombre, $stock,$tipos, $precio,$descripcion,$ruta, $ID)
 {
     $con = conectar();
-    mysqli_query($con, "UPDATE producto SET Nombre = '$nombre', Stock = '$stock',Tipo = 'null', 
-    Precio = '$precio',  Descripcion = '$descripcion'  WHERE IdProducto = '$ID'") or die(mysqli_error($con));
+    mysqli_query($con, "UPDATE producto SET Nombre = '$nombre', Stock = '$stock',Tipo = '$tipos', 
+    Precio = '$precio',  Descripcion = '$descripcion' , Foto = '$ruta' WHERE IdProducto = '$ID'") or die(mysqli_error($con));
     return true;
 }
 

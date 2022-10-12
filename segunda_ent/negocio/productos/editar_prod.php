@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
     <link rel="stylesheet" href="styles1.css">
+        <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 
@@ -185,10 +186,33 @@
             <br> <input class="controls" placeholder="Nombre Producto" type="text" name="nom2" value="<?php echo $nom; ?>" required maxlength="30" size="40">
 
             <br> <input class="controls" placeholder= "Stock" type="number" min="1" name="sto2" value="<?php echo $sto; ?>" required maxlength="30" size="40">
-
+            <br> 
+                     <select name="tip" onchange="" id="elemento"  class="form_control"> <br><br>
+                      <option value="0">Selecciona Tipo</option> <br>
+                      <option value="1">Cabeza</option>
+                     <option value="2">Torso </option>
+                     <option value="3">Cintura </option>
+                     <option value="4">Piernas </option>
+                     <option value="5">Calzado </option>
+                      </select>
+                    
             <br> <input class="controls" placeholder="Precio" type="number" min="1" name="pre2" value="<?php echo $pre; ?>" required maxlength="30" size="40">
 
             <br> <input class="controls" placeholder="Descripcion Producto" type="text" name="desc2" value="<?php echo $desc; ?>" required maxlength="30" size="40">
+            <div class="photo">
+                                  <label for="foto"> Nueva Foto</label>
+                        <div class="prevPhoto">
+                            <span class="delPhoto notBlock">X</span>
+                            <label for="foto"></label>
+                        </div>
+                        <div class="upimg">
+                            <input type="file" name="foto" id="foto">
+                        </div>
+                        <div id="form_alert"></div>
+                    </div>
+                    <br>
+                    <script src="../../js/jquery-3.6.0.min.js"></script>
+                    <script src="../../js/functions.js"></script>
 
             <input class="botons" type="submit" value="Modificar" name="modificar">
 
