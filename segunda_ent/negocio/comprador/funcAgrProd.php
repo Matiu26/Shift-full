@@ -30,7 +30,7 @@
             $descripcion = $_POST['desc'];
             $id = $_POST['proveedor'];
 
-            $nombre_img = $_FILES['foto']['name'];
+            $nombre_img = md5(date('d-m-Y H:m:s'));
             $temporal=$_FILES['foto']['tmp_name'];
             $carpeta = '../../img/uploads';
             $ruta =$carpeta.'/'.$nombre_img;
