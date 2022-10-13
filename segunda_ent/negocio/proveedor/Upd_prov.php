@@ -181,8 +181,8 @@
             <div class="flex flex-col">
               <form class="form" name="formulario" method="post" action="">
 
-                <input class="controls" placeholder="Email" type="email" name="mail" required maxlength="30" size="40">
-                <input class="botons" type="submit" value="Buscar Usuario" name="buscar">
+                <input class="controls" placeholder="Nombre" type="text" name="nom" required maxlength="30" size="40">
+                <input class="botons" type="submit" value="Buscar Proveedor" name="buscar">
                 <br> <a href="../../dise/accion.php" class="regresar">Regresar</a> <br>
 
               </form>
@@ -191,12 +191,12 @@
           
                 <table id="tabla" width="40%" border="1">
                   <tr>
-                      <th>Id Empresa:</th>
-                      <th>Nombre:</th>
-                      <th>Email:</th>
-                      <th>Direccion:</th>
-                      <th>Telefono:</th>
-                      <th>Accion:</th>
+                      <th>Id Empresa</th>
+                      <th>Nombre</th>
+                      <th>Email</th>
+                      <th>Direccion</th>
+                      <th>Telefono</th>
+                      <th>Accion</th>
                   </tr>
                   <?php include("funcUpdProv.php")?>
                 </table>  

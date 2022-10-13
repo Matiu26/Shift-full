@@ -175,14 +175,14 @@
       
         <div class="flex flex-col w-full mx-14 ">
           <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Modificar Proveedor</h2>
+            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Lista Proveedores</h2>
           </div>
           <div class="flex h-screen flex-col border-b border-gray-400 mt-10"> 
             <div class="flex flex-col">
 
               <form class="form" name="formulario" method="post" action="">
   
-                <input class="controls" placeholder="Ingrese Email" type="email" name="mail" required maxlength="30" size="40">
+              <input class="controls" placeholder="Nombre" type="text" name="nom" required maxlength="30" size="40">
                 <input class="botons" type="submit" value="Buscar Proveedor" name="buscar">
                 <br> <a href="mostrar_prov.php" class="regresar">Ver listado</a> <br>
                 <br> <a href="../../dise/accion.php" class="regresar">Regresar</a> <br>

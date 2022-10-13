@@ -173,9 +173,8 @@
             <div class="flex flex-col">
               <form class="form" name="formulario" method="post" action="">
     
-                <input class="controls" placeholder="Ingrese Producto" type="text" name="nom" required maxlength="30" size="40">
+                <input class="controls" placeholder="Ingrese Producto" type="text" name="nom" required maxlength="30" size="40"> 
                 <input class="botons" type="submit" value="Buscar Producto" name="buscar">
-                <br />
                 <br> <a href="mostrar_prod.php" class="regresar">Ver listado</a> <br>
                 <br> <a href="../../dise/comprador.php" class="regresar">Regresar</a> <br>
     

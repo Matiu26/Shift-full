@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="../usuario/styles1.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 
@@ -22,7 +22,7 @@
 
     <div class="flex items-center flex-shrink-0 text-whit ">
       <img class="h-10 sm:h-14 inline" src="../../../src/imgs/Logo.png" alt="">
-      <span class="text-sm text-white sm:text-lg md:tex-3xl  font-semibold"><a href="../../../src/index.php">Ropa de seguridad Viera</a> </span>
+      <span class="text-sm text-white sm:text-lg md:tex-3xl  font-semibold"> Ropa de seguridad Viera</span>
 
     </div><link rel="stylesheet" href="">
     <div class="block ml-16 sm:ml-52 md:ml-0 md:hidden ">
@@ -177,36 +177,38 @@
       
         <div class="flex flex-col w-full mx-14 ">
           <div class="flex  w-full mt-5">
-              <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Iniciar Sesión</h2>
-            </div>
-            <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
-          
-              <form calss="form" name="formulario" method="post" action="">
+            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Modificar Usuario</h2>
+          </div>
+          <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
+        
+            <form class="form" name="formulario" method="post" action="">
 
-                <input class="controls" placeholder="" type="text" name="nom2" value="<?php echo $nom; ?>" required maxlength="30" size="40">
+              <input class="controls" placeholder="" type="text" name="nom2" value="<?php echo $nom; ?>" required maxlength="30" size="40">
 
-                <input class="controls" placeholder="" type="text" name="ape2" value="<?php echo $ape ?>" required maxlength="30" size="40">
+              <input class="controls" placeholder="" type="text" name="ape2" value="<?php echo $ape; ?>" required maxlength="30" size="40">
 
-                <input class="controls" placeholder="Ingrese nueva contraseña" value="" type="password" name="pass" required maxlength="30" size="40">
+              <input class="controls" placeholder="Ingrese Contraseña" type="password" name="pass2" value="" required maxlength="30" size="40">
 
-                <input class="controls" placeholder="" type="email" name="mail2" value="<?php echo $mail; ?>" required maxlength="30" size="40">
+              <input class="controls" placeholder="" type="email" name="mail2" value="<?php echo $mail; ?>" required maxlength="30" size="40">
 
-                <input class="controls" placeholder="Número" type="number" name="tel2" value="<?php echo $tel; ?>" required maxlength="30" size="40">
+              <input class="controls" placeholder="" type="number" name="tel2" value="<?php echo $tel; ?>" required maxlength="30" size="40">
 
+              <input class="botons" type="submit" value="Modificar" name="modificar">
 
-                <input class="botons" type="submit" value="Modificar" name="modificar">
+              <a href="modificar.php" class="regresar">Regresar</a>
 
-              </form>
-              <br/>
-              <a href="modificar.php" classx="regresar">Regresar</a>  
-              
-            </div>
+            </form>
+            
         
           </div>
-
+ 
         </div>
 
-  <footer class="flex h-auto ">
+      </div>
+
+
+
+      <footer class="flex h-auto ">
       <div class="flex flex-col w-full bg-blue-900 rounded">
 
         <div class="   ">
@@ -255,7 +257,7 @@
            
           </div>
           <div class="w-full h-5 my-1 ">
-            &copy; Copyrigth
+            &copy; Copyright
          </div>
         </div>
 

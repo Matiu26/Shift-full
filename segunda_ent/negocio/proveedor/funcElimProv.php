@@ -28,17 +28,17 @@
             $dir = $filas['Direccion'];
 
             if (isset($_POST['buscar'])) {
-                if (isset($_POST['mail'])) {
+                if (isset($_POST['nom'])) {
                     
-                    if (empty($_POST['mail'])) {
+                    if (empty($_POST['nom'])) {
 
                         return;
                     }
 
-                    $email = $_POST['mail'];
+                    $nombre = $_POST['nom'];
 
-                    if (buscar_datos_prov($email) == true) {
-                        $consulta = mysqli_query($con, "SELECT * FROM proveedor WHERE Email='" . $email . "'") or die(mysqli_error($con));
+                    if (buscar_datos_prov($nombre) == true) {
+                        $consulta = mysqli_query($con, "SELECT * FROM proveedor WHERE Nombre='" . $nombre . "'") or die(mysqli_error($con));
 
                         while ($filas = mysqli_fetch_array($consulta)) {
                             $IDe = $filas['IdEmpresa'];

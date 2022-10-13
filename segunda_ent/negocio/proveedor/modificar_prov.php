@@ -255,7 +255,7 @@
            
           </div>
           <div class="w-full h-5 my-1 ">
-            &copy; Copyrigth
+            &copy; Copyright
          </div>
         </div>
 

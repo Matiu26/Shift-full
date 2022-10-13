@@ -29,12 +29,12 @@ if (isset($_POST['modificar'])) {
 
         if (preg_match("$patron", ($_POST['nom2']))) {
             echo '<script language="javascript">alert("Solo letras en el nombre");</script>';
-            header('refresh: 1; ');
+            header('refresh: 0; ');
             die;
         }
         if (preg_match("$patron", ($_POST['ape2']))) {
             echo '<script language="javascript">alert("Solo letras en el apellido");</script>';
-            header('refresh: 1; ');
+            header('refresh: 0; ');
             die;
         }
 
@@ -52,7 +52,7 @@ if (isset($_POST['modificar'])) {
         $tel2 = $_POST['tel2'];
         if (actualizar($nom2, $ape2, $pass, $mail2, $tel2, $ID)  == true) {
             echo '<script language="javascript">alert("Se ha modificado correctamente");</script>';
-            header('refresh: 1; url=modificar.php');
+            header('refresh: 0; url=modificar.php');
         }
     }
 }

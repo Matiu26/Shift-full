@@ -38,7 +38,7 @@
                     } else {
                         $email = null;
                         echo '<script language="javascript">alert("El usuario ingresado no existe");</script>';
-                        header('refresh: 1; ');
+                        header('refresh: 0; ');
                         die;
 
                     }

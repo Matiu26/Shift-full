@@ -16,10 +16,10 @@ function existe_prov($email)
     return true;
 }
 
-function buscar_datos_prov($email)
+function buscar_datos_prov($nombre)
 {
     $con = conectar();
-    $query = mysqli_query($con, "SELECT * FROM proveedor WHERE Email='" . $email . "'") or die(mysqli_error($con));
+    $query = mysqli_query($con, "SELECT * FROM proveedor WHERE Nombre='" . $nombre . "'") or die(mysqli_error($con));
 
     $row = $query->fetch_assoc();
     mysqli_close($con);

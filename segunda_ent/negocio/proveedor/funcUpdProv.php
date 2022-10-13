@@ -10,12 +10,12 @@
         if (isset($_POST['buscar'])) {
         ?>
             <?php
-            if (isset($_POST['mail'])) {
+            if (isset($_POST['nom'])) {
 
-                $email = $_POST['mail'];
+                $nombre = $_POST['nom'];
 
-                if (buscar_datos_prov($email) == true) {
-                    $consulta = mysqli_query($con, "SELECT * FROM proveedor WHERE Email='" . $email . "'") or die(mysqli_error($con));
+                if (buscar_datos_prov($nombre) == true) {
+                    $consulta = mysqli_query($con, "SELECT * FROM proveedor WHERE Nombre='" . $nombre . "'") or die(mysqli_error($con));
 
                     while ($filas = mysqli_fetch_array($consulta)) {
                         $IDe = $filas['IdEmpresa'];
@@ -30,7 +30,7 @@
                     }
                 } else {
                     echo '<script language="javascript">alert("El usuario ingresado no existe");</script>';
-                    header('refresh: 1; ');
+                    header('refresh: 0; ');
                     die;
                 }
             }

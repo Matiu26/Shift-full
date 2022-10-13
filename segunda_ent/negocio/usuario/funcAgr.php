@@ -44,12 +44,12 @@
                     if (($_POST['rol']) == "1") {
                         if (agregar_vendedor($nombre, $apellido, $email, $password)  == true) {
                             echo '<script language="javascript">alert("Se ha registrado correctamente");</script>';
-                            header('refresh: 1; url=../../dise/accion.php');
+                            header('refresh: 0; url=../../dise/accion.php');
                         }
                     } else if (($_POST['rol']) == "2") {
                         if (agregar_comprador($nombre, $apellido, $email, $password)  == true) {
                             echo '<script language="javascript">alert(" Se ha registrado correctamente");</script>';
-                            header('refresh: 1; url=../../dise/accion.php');
+                            header('refresh: 0; url=../../dise/accion.php');
                         }
                     }
                 }
