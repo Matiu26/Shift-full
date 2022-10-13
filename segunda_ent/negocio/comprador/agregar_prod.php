@@ -54,8 +54,8 @@
           
           <div x-show="open" class="absolute text-center right-24 sm:right-60 md:right-11 mx-3 md:mx-0  z-10 border border-black bg-blue-900
                                   mt-7 w-40 origin-top-right rounded-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <a href="login.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-0">Ingresar</a>
-            <a href="registrarse.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-1">Registrarse</a>
+            <a href="../usuario/login.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-0">Ingresar</a>
+            <a href="../usuario/registrarse.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-1">Registrarse</a>
           </div>
         </div>
           
@@ -207,7 +207,7 @@
                     <br> <input class="controls" placeholder="Descripcion del producto" type="text" name="desc" required> <br>
 
                     <div class="photo">
-                                  <label for="foto">Foto</label>
+                        <label class="foto" for="foto">Foto</label>
                         <div class="prevPhoto">
                             <span class="delPhoto notBlock">X</span>
                             <label for="foto"></label>

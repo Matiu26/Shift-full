@@ -34,7 +34,6 @@
                         }
                     } else {
                         echo '<script language="javascript">alert("El usuario ingresado no existe");</script>';
-                        header('refresh: 1; ');
                         die;                        
                     }
                 

@@ -29,6 +29,13 @@ function existe($email)
 
     return true;
 }
+// function contra($email)
+// {
+//     $con = conectar();  
+//     $query = mysqli_query($con, "SELECT Contraseña FROM usuario WHERE Email='" . $email . "'") or die(mysqli_error($con));
+//     $row = $query->fetch_assoc();
+//         $passo = $row["Contraseña"];
+// }
 function aprobacion($email)
 {
     $con = conectar();  
@@ -252,6 +259,7 @@ function aprobado($nombre, $apellido, $email, $password, $telefono)
     $con = conectar();
     mysqli_query($con, "insert into usuario (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
     $id = mysqli_insert_id($con);
+    mysqli_query($con, "insert into cliente values (" . $id . ")");
     mysqli_query($con, "insert into telusr values (" . $id . ", '$telefono')");
 
     mysqli_close($con);

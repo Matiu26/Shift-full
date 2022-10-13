@@ -8,12 +8,12 @@
 
             if (preg_match("$patron", ($_POST['nom']))) {
                 echo '<script language="javascript">alert("Solo letras en el nombre");</script>';
-                header('refresh: 1; ');
+                header('refresh: 0; ');
                 die;
             }
             if (preg_match("$patron", ($_POST['ape']))) {
                 echo '<script language="javascript">alert("Solo letras en el apellido");</script>';
-                header('refresh: 1; ');
+                header('refresh: 0; ');
                 die;
             } else {
 
@@ -36,7 +36,7 @@
                 } else {
                     if (reg_clin($nombre,$apellido,$email,$password,$telefono) == true) {
                         echo '<script language="javascript">alert(" Se ha registrado correctamente");</script>';
-                        header('refresh: 1; url=../../../src/index.php');
+                        header('refresh: 0; url=../../../src/index.php');
                     }
 
 

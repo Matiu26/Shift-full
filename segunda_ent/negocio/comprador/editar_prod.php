@@ -182,13 +182,13 @@
           
             <form class="form" name="formulario" method="post" enctype="multipart/form-data">
 
-            <br> <input class="controls" placeholder="Nombre Producto" type="text" name="nom2" value="<?php echo $nom; ?>" disabled maxlength="30" size="40">
+            <br><p class="foto">Nombre</p>  <input class="controls" placeholder="Nombre Producto" type="text" name="nom2" value="<?php echo $nom; ?>" disabled maxlength="30" size="40">
                 
-             <br> <p> Stock </p> <input class="controls" placeholder= "Stock" type="number" min="1" name="sto2" value="<?php echo $sto; ?>" required maxlength="30" size="40">
-
-            <br> <input class="controls" placeholder="Precio" type="number" min="1" name="pre2" value="<?php echo $pre; ?>" disabled maxlength="30" size="40">
-
-            <br> <input class="controls" placeholder="Descripcion Producto" type="text" name="desc2" value="<?php echo $desc; ?>" disabled maxlength="30" size="40">
+             <br> <p class="foto">Stock</p> <input class="controls" placeholder= "Stock" type="number" min="1" name="sto2" value="<?php echo $sto; ?>" required maxlength="30" size="40">
+    
+            <br> <p class="foto">Precio</p> <input class="controls" placeholder="Precio" type="number" min="1" name="pre2" value="<?php echo $pre; ?>" disabled maxlength="30" size="40">
+           
+            <br><p class="foto">Descripción</p> <input class="controls" placeholder="Descripcion Producto" type="text" name="desc2" value="<?php echo $desc; ?>" disabled maxlength="30" size="40">
 
             <input class="botons" type="submit" value="Modificar" name="modificar">
 
