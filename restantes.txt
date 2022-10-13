@@ -1,6 +1,3 @@
-
-mensaje "recuerde que antes de usar su cuenta, debe ser aprobada"
-ver si 2 fotos se llaman igual
 mostar foto cuando busco y ver tema de es necesario agregar una foto
 ----------------------------------------------------------------
 ver tema de login (session)

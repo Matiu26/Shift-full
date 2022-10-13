@@ -29,6 +29,7 @@
             $tip = $filas['Tipo'];
             $pre = $filas['Precio'];
             $desc = $filas['Descripcion'];
+            $foto= '<img  src="'.$filas["Foto"].'" width="180"  alt="" srcset="">';
 
           
 
@@ -52,7 +53,7 @@
                             $tip = $filas['Tipo'];
                             $pre = $filas['Precio'];
                             $desc = $filas['Descripcion'];
-                         
+                           $foto= '<img  src="'.$filas["Foto"].'" width="180"  alt="" srcset="">';
                         }
                     
                     } else {
@@ -70,7 +71,7 @@
                 <td><?php echo "<p style='color:white;'>" . $tip . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $pre . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $desc . "</p>"; ?></td>
-                <td><img  src="<?php echo $filas['Foto']  ?>" width="180"  alt="" srcset="" ></td>
+                <td><?php echo "<p style='color:white;'>" . $foto . "</p>"; ?></td>
                 <td><a href="editar_prod.php?ID=<?php echo $IDp; ?>">Modificar </a></td>
                 <td><a href="eliminar_prod.php?ID=<?php echo $IDp; ?>">Eliminar </a></td>
 
