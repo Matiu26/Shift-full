@@ -35,6 +35,7 @@
                 $apellido = $_POST['ape'];
                 $email = $_POST['mail'];
                 $password = $_POST['pass'];
+                $password= password_hash($password, PASSWORD_DEFAULT);
                 $rango = $_POST['rol'];
 
                 if (existe($email) == true) {
@@ -48,6 +49,12 @@
                         }
                     } else if (($_POST['rol']) == "2") {
                         if (agregar_comprador($nombre, $apellido, $email, $password)  == true) {
+                            echo '<script language="javascript">alert(" Se ha registrado correctamente");</script>';
+                            header('refresh: 0; url=../../dise/accion.php');
+                        }
+                    }
+                    else if (($_POST['rol']) == "3") {
+                        if (agregar_jefe($nombre, $apellido, $email, $password)  == true) {
                             echo '<script language="javascript">alert(" Se ha registrado correctamente");</script>';
                             header('refresh: 0; url=../../dise/accion.php');
                         }

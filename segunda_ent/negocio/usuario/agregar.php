@@ -195,6 +195,8 @@
                 <option value="0">Selecciona un Rol</option> <br>
                 <option value="1">Vendedor</option>
                 <option value="2">Comprador </option>
+                <option value="3">Jefe </option>
+
 
               </select>
                 <br>

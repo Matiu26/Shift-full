@@ -1,10 +1,10 @@
 <?php
 require_once __DIR__."/../../dato/conexion.php";
 
-function login($email, $password)
+function login($email)
 {
     $con = conectar();
-    $query = mysqli_query($con, "SELECT IdUsuario FROM usuario WHERE Email='" . $email . "'and Contraseña='" . $password . "'") or die(mysqli_error($con));
+    $query = mysqli_query($con, "SELECT IdUsuario FROM usuario WHERE Email='" . $email . "'") or die(mysqli_error($con));
 
     $row = $query->fetch_assoc();
     mysqli_close($con);
@@ -95,11 +95,11 @@ function buscar_datos_aprobar($email)
 
     return true;
 }
-function existe_cliente($email, $password)
+function existe_cliente($email)
 {
 
     $con = conectar();
-    $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "' and Contraseña='" . $password . "'");
+    $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "'");
 
     $row = $query->fetch_assoc();
 
@@ -122,11 +122,11 @@ function existe_cliente($email, $password)
 }
 
 
-function existe_vendedor($email, $password)
+function existe_vendedor($email)
 {
 
     $con = conectar();
-    $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "' and Contraseña='" . $password . "'");
+    $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "'");
 
     $row = $query->fetch_assoc();
 
@@ -147,11 +147,11 @@ function existe_vendedor($email, $password)
     mysqli_close($con);
     return true;
 }
-function existe_comprador($email, $password)
+function existe_comprador($email)
 {
 
     $con = conectar();
-    $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "' and Contraseña='" . $password . "'");
+    $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "'");
 
     $row = $query->fetch_assoc();
 
@@ -173,11 +173,11 @@ function existe_comprador($email, $password)
     return
         true;
 }
-function existe_jefe($email, $password)
+function existe_jefe($email)
 {
 
     $con = conectar();
-    $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "' and Contraseña='" . $password . "'");
+    $query = mysqli_query($con, "SELECT * FROM usuario WHERE Email='" . $email . "'");
 
     $row = $query->fetch_assoc();
 
@@ -230,6 +230,17 @@ function agregar_comprador($nombre, $apellido, $email, $password)
     mysqli_query($con, "insert into usuario (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
     $id = mysqli_insert_id($con);
     mysqli_query($con, "insert into comprador values (" . $id . ")");
+    mysqli_query($con, "insert into telusr values (" . $id . ", '1')");
+    (mysqli_error($con));
+    mysqli_close($con);
+    return true;
+}
+function agregar_jefe($nombre, $apellido, $email, $password)
+{
+    $con = conectar();
+    mysqli_query($con, "insert into usuario (Nombre, Apellido, Contraseña, Email) VALUES('$nombre', '$apellido','$password', '$email')") or die;
+    $id = mysqli_insert_id($con);
+    mysqli_query($con, "insert into jefe values (" . $id . ")");
     mysqli_query($con, "insert into telusr values (" . $id . ", '1')");
     (mysqli_error($con));
     mysqli_close($con);
