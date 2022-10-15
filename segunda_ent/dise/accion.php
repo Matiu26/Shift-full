@@ -15,6 +15,8 @@
     <link rel="icon" type="imgs" href="../../src/imgs/favicon.png.png">
     <?php include("../negocio/sesiones/sesion.php");
     include("../negocio/sesiones/sesion_in.php");
+    // include("../negocio/sesiones/sesion_jefe.php");
+
      ?>
     
 
@@ -54,7 +56,7 @@
           Cerrar Sesión
         </a>
 
-        <div x-data="{ open: false }" class="inline">
+        <!-- <div x-data="{ open: false }" class="inline">
           <div class="inline">
             <button x-on:click="open = ! open" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b">
               Iniciar sesion
@@ -66,7 +68,7 @@
             <a href="../negocio/usuario/login.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-0">Ingresar</a>
             <a href="../negocio/usuario/registrarse.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-1">Registrarse</a>
           </div>
-        </div>
+        </div> -->
           
       </div>
       

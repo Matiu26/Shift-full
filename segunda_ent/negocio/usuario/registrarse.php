@@ -184,7 +184,7 @@
 
             <br> <input class="botons" type="submit" value="Registrarse" name="agregar"> <br>
 
-            <br> <a href="../../dise/accion.php">Regresar</a> <br>
+            <br> <a href="../../../src/index.php">Regresar</a> <br>
           </form>
           <div class="flex flex-col mx-auto mt-20">
         </div>

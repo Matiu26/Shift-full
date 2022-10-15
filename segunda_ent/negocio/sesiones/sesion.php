@@ -1,17 +1,14 @@
 <?php
     error_reporting(0);
     session_start();
+    $sesion_i = $_SESSION['session_username'];
 
     
-    // if($_SESSION[''] ){
-
-    // }
     if ($sesion_i == null ||  $sesion_i = "") {
-
+      $ola;
    
-  } else {
-
-  
+  } 
+  else {
     ?>
   <h2> Bienvenido, <span> <?php  echo $_SESSION['session_username'];?> ! </span> </h2>
   <?php

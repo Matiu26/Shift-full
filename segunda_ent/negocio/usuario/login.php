@@ -188,6 +188,8 @@
                 <input class="controls" placeholder="Contraseña" type="password" required name="pass" maxlength="30" size="40">
 
                 <input class="botons" type="submit" value="Ingresar" name="ingresar">
+                 <p clas="regis"> ¿No tienes cuenta? </p>
+                 <a href="registrarse.php" class="regresar">Registrate</a> <br>
 
               </form>
               

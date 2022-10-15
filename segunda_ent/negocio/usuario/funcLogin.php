@@ -5,7 +5,7 @@ session_start();
 if (isset($_POST['ingresar'])) {
 
     if (isset($_POST['mail'])  && isset($_POST['pass'])) {
-
+        
         $email = $_POST['mail'];
         $pass= $_POST['pass'];
 
@@ -30,17 +30,17 @@ if (isset($_POST['ingresar'])) {
                 $_SESSION['session_username']=$email;
                     header('refresh: 0; url=../../../src/index.php');
                 }
-                else if (existe_jefe($email, $pass) == true) {
+                else if (existe_jefe($email) == true) {
                     $_SESSION['session_username']=$email;
 
                     header('refresh: 0; url=../../dise/accion.php');
                 }
-                else if (existe_vendedor($email, $pass) == true) {
+                else if (existe_vendedor($email) == true) {
                     $_SESSION['session_username']=$email;
 
                     header('refresh: 0; url=../../dise/vendedor.php');
                 }
-                else if (existe_comprador($email, $pass) == true) {
+                else if (existe_comprador($email) == true) {
                     $_SESSION['session_username']=$email;
 
                     header('refresh: 0; url=../../dise/comprador.php');
