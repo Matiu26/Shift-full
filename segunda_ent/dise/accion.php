@@ -13,7 +13,10 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="icon" type="imgs" href="../../src/imgs/favicon.png.png">
-    <?php include("../negocio/usuario/sesion.php"); ?>
+    <?php include("../negocio/sesiones/sesion.php");
+    include("../negocio/sesiones/sesion_in.php");
+     ?>
+    
 
 </head>
 <body class="mx-5 md:mx-10 font-Comfortaa" >
@@ -47,7 +50,7 @@
         <a href="" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Nosotros
         </a>
-        <a href="../negocio/usuario/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+        <a href="../negocio/sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Cerrar Sesión
         </a>
 
