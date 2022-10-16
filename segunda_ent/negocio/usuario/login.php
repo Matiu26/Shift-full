@@ -14,7 +14,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="icon" type="imgs" href="./imgs/favicon.png.png">
+    <link rel="icon" type="imgs" href="../../../src/imgs/favicon.png.png">
 </head>
 <body class="mx-5 md:mx-10 font-Comfortaa" >
   <header class="flex justify-around flex-wrap items-center bg-blue-900 rounded md:px-10 ">

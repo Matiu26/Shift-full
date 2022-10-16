@@ -15,6 +15,8 @@
     <link rel="icon" type="imgs" href="../../src/imgs/favicon.png.png">
     <?php include("../negocio/sesiones/sesion.php");
     include("../negocio/sesiones/sesion_in.php");
+    include("../negocio/sesiones/sesion_comprador.php");
+
      ?>
     
 </head>

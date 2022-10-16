@@ -15,6 +15,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="index.css">
+    <?php
+            include("../segunda_ent/negocio/sesiones/sesion.php");
+        ?>
 </head>
 <body class="mx-5 md:mx-10 font-Comfortaa" >
   <header class="flex justify-around flex-wrap items-center bg-blue-900 rounded md:px-10 ">
@@ -36,9 +39,40 @@
     <div id="menu" class="w-full mt-0 md:mt-5 hidden flex-grow md:flex md:items-center md:w-auto text-end ">
       <div  class="text-md md:flex-grow text-center items-cenetr mb-5  md:text-end justify-center items-cenetr ">
 
+    
         <a href="index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Inicio
         </a>
+        <?php
+        require_once("../segunda_ent/negocio/usuario/miapp_user.php");
+        $sesion_i = $_SESSION['session_username'];
+         if(existe_jefe($sesion_i)==true){
+        
+           ?>
+        <a href="../segunda_ent/dise/accion.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+          Administar
+        </a>
+        <?php } ?> 
+        <?php
+        require_once("../segunda_ent/negocio/usuario/miapp_user.php");
+        $sesion_i = $_SESSION['session_username'];
+         if(existe_vendedor($sesion_i)==true){
+        
+           ?>
+        <a href="../segunda_ent/dise/vendedor.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+          Administar
+        </a>
+        <?php } ?> 
+        <?php
+        require_once("../segunda_ent/negocio/usuario/miapp_user.php");
+        $sesion_i = $_SESSION['session_username'];
+         if(existe_comprador($sesion_i)==true){
+        
+           ?>
+        <a href="../segunda_ent/dise/comprador.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+          Administar
+        </a>
+        <?php } ?> 
         <a href="" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Contacto
         </a>
@@ -46,6 +80,11 @@
           Nosotros
         </a>
 
+        <?php
+$sesion_i = $_SESSION['session_username'];
+if ($sesion_i == null ||  $sesion_i = "") {
+
+?>
         <div x-data="{ open: false }" class="inline">
           <div class="inline">
             <button x-on:click="open = ! open" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b">
@@ -63,7 +102,15 @@
       </div>
       
     </div>
-    
+    <?php
+  } else{
+    ?>
+ <a href="../segunda_ent/negocio/sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+          Cerrar Sesión
+        </a>
+    <?php
+}
+?>
   </header>
 
 

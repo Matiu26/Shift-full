@@ -13,9 +13,10 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="icon" type="imgs" href="../../src/imgs/favicon.png.png">
-    <?php include("../negocio/sesiones/sesion.php");
+    <?php 
+    include("../negocio/sesiones/sesion.php");
     include("../negocio/sesiones/sesion_in.php");
-    // include("../negocio/sesiones/sesion_jefe.php");
+    include("../negocio/sesiones/sesion_jefe.php");
 
      ?>
     
