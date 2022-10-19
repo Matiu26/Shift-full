@@ -1,4 +1,4 @@
-mostar foto cuando busco y ver tema de es necesario agregar una foto
+ver tema de es necesario agregar una foto
 ----------------------------------------------------------------
 CRUD carrito
 CRUD paquete

@@ -14,6 +14,37 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="icon" type="imgs" href="../../../src/imgs/favicon.png.png">
+    <?php 
+        error_reporting(0);
+        session_start();
+    require_once("../usuario/miapp_user.php");
+    $sesion_i = $_SESSION['session_username'];
+
+    if ($sesion_i == null ||  $sesion_i = "") {
+    
+        echo '
+        <script language="javascript">
+        alert("No has iniciado sesión");
+        </script>
+        ';
+        header('refresh: 0; url=../usuario/login.php');
+        die();
+    }
+    $sesion_i = $_SESSION['session_username'];
+
+    if(existe_jefe($sesion_i)==true){
+
+    } else{
+   
+       echo '
+       <script language="javascript">
+       alert("No  tienes el rol necesario");
+       </script>
+       ';
+       header('refresh: 0; url=../../../src/index.php');
+       die();
+    }
+     ?>
 </head>
 <body class="mx-5 md:mx-10 font-Comfortaa" >
   <header class="flex justify-around flex-wrap items-center bg-blue-900 rounded md:px-10 ">
@@ -45,7 +76,10 @@
           Nosotros
         </a>
 
-        <div x-data="{ open: false }" class="inline">
+        <a href="../sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+          Cerrar Sesión
+        </a>
+        <!-- <div x-data="{ open: false }" class="inline">
           <div class="inline">
             <button x-on:click="open = ! open" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b">
               Iniciar sesion
@@ -57,7 +91,7 @@
             <a href="../usuario/login.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-0">Ingresar</a>
             <a href="../usuario/registrarse.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-1">Registrarse</a>
           </div>
-        </div>
+        </div> -->
           
       </div>
       
