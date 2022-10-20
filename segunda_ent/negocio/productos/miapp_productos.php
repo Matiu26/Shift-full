@@ -31,7 +31,20 @@ function buscar_datos_prod($nombre)
     return true;
 }
 
+function mostrar_prod($id)
+{
+    $con = conectar();
+    $query = mysqli_query($con, "SELECT * FROM producto WHERE IdProducto='" . $id . "'") or die(mysqli_error($con));
 
+    $row = $query->fetch_assoc();
+    mysqli_close($con);
+
+    if ($row == null) {
+        return false;
+    }
+
+    return true;
+}
 
 
 function agregar_prod($Nombre, $stock,$tipo, $precio,$descripcion,$ruta,$id_e)

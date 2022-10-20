@@ -242,15 +242,25 @@
 
                     <div class="photo">
                                   <label class="foto" for="foto">Foto</label>
-                        <div class="prevPhoto">
+                                  
+                                  
+                         <div class="prevPhoto">
+                          
                             <span class="delPhoto notBlock">X</span>
                             <label for="foto"></label>
                         </div>
+                        <label class="foto" for="foto">Es necesario</label>
+
+                        <label class="fotos" for="foto">agregar una foto</label>
+
+
                         <div class="upimg">
-                            <input type="file" name="foto" id="foto">
+                        <input required type="file" name="foto" id="foto">
+
                         </div>
                         <div id="form_alert"></div>
-                    </div>
+                      </div>
+                
 
                     <br>
                     <br> <input class="botons" type="submit" value="Agregar Producto" name="agregar"> <br>
