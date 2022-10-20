@@ -103,17 +103,17 @@
   
 
   
-      <nav class="mt-2 hidden md:flex md:justify-center">
+  <nav class="mt-2 hidden md:flex md:justify-center">
         <div class="  flex justify-center  id="menuCategorias">
           <ul x-show="open" class=" hidden md:flex  items-center bg-slate-800 rounded">
-            <li><a href="../../../Pags/Cascos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/casco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Cascos</p></a></li>
-            <li><a href="../../../Pags/Chalecos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Chaleco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Chalecos</p></a></li>
-            <li><a href="../../../Pags/Uniformes.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Uniforme.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Uniformes</p></a></li>
+            <li><a href="../productos/Pags/Cascos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/casco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Cascos</p></a></li>
+            <li><a href="../productos/Pags/Chalecos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Chaleco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Chalecos</p></a></li>
+            <li><a href="../productos/Pags/Uniformes.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Uniforme.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Uniformes</p></a></li>
             <li><input class="h-6" type="text"></li>
             <li><img class="h-6 p-1 border"src="../../../src/imgs/Lupa2.png" alt=""></li>            
-            <li><a href="../../../Pags/Combos.php"><img class="h-11 px-5 m-2 mt-2" src="../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
-            <li><a href="../../../Pags/Ofertas.php"><img class="h-11 px-5 m-2 mt-2" src="../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
-            <li><a href="../../../Pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
+            <li><a href="../productos/Pags/Combos.php"><img class="h-11 px-5 m-2 mt-2" src="../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
+            <li><a href="../productos/Pags/Ofertas.php"><img class="h-11 px-5 m-2 mt-2" src="../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
+            <li><a href="../productos/Pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
 
 
           </ul>
@@ -144,7 +144,7 @@
           
           <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white" >
-                      <a href="../../../Pags/Cascos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/casco.png" alt=""></a>  
+                      <a href="../productos/Pags/Cascos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/casco.png" alt=""></a>  
                       <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Cascos</p>
                     <span class="text-sm m-auto p-auto" id="arrow">
                        <i class="bi bi-chevron-down"></i>    
@@ -154,7 +154,7 @@
   
           <div class="p-2.5  flex items rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../../../Pags/Chalecos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Chaleco.png" alt=""></a>  
+                      <a href="../productos/Pags/Chalecos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Chaleco.png" alt=""></a>  
                       <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Chalecos</p>        
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
@@ -162,7 +162,7 @@
           </div>
           <div class="p-2.5  flex items rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../../../Pags/Uniformes.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Uniforme.png" alt=""></a>  
+                      <a href="../productos/Pags/Uniformes.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Uniforme.png" alt=""></a>  
                       <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Uniformes</p>        
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
@@ -170,7 +170,7 @@
           </div>
           <div class="p-2.5  flex items rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../../../Pags/Botas.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Botas.png" alt=""></a>  
+                      <a href="../productos/Pags/Botas.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Botas.png" alt=""></a>  
                       <p class=" m-auto p-auto text-sm md:text-lg text-white justify-center">Botas</p>        
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
@@ -178,7 +178,7 @@
           </div>
           <div class="p-2.5  flex items rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../../../Pags/Ofertas.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Ofertas.png" alt=""></a>  
+                      <a href="../productos/Pags/Ofertas.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Ofertas.png" alt=""></a>  
                       <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Ofertas</p>        
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
@@ -186,7 +186,7 @@
           </div>
           <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../../../Pags/Combos.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Combos.png" alt=""></a>  
+                      <a href="../productos/Pags/Combos.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Combos.png" alt=""></a>  
                       <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Combos</p>        
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
@@ -194,6 +194,8 @@
           </div>
   
         </div>           
+                 
+
                  
 
       </div>
