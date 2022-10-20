@@ -219,8 +219,14 @@ if ($sesion_i == null ||  $sesion_i = "") {
                   <div >
 
                     <div class="flex mb-1">
-                      <p>Talle:</p>  
-                      <input class="w-5 h-5 ml-2 rounded border border-black" type="number">
+                    <select name="tip" onchange="" id="elemento"  class="form_control"> <br><br>
+                      <option value="0">Selecciona Talle</option> <br>
+                      <option value="1">XS</option>
+                     <option value="2">S</option>
+                     <option value="3">M </option>
+                     <option value="4">L </option>
+                     <option value="5">XL </option>
+                      </select>
                     </div>
 
                     <div class="flex  ">

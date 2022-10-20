@@ -1,4 +1,4 @@
-ver tema de es necesario agregar una foto
+Pagina de producto el tema talles 
 ----------------------------------------------------------------
 CRUD carrito
 CRUD paquete

@@ -1,3 +1,5 @@
+<!-- <?php include("../segunda_ent/negocio/producto/funcProducto.php") ?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -243,9 +245,9 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  place-items-center 
           py-5  border-b border-gray-400 flex-grow rounded ">
+          <!-- <p> a </p> -->
 
           <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
           </div>
 
           <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">

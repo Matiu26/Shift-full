@@ -35,12 +35,13 @@ if (isset($_POST['modificar'])) {
         $pre2 = $_POST['pre2'];
         $desc2 = $_POST['desc2'];
 
-        $nombre_img = $_FILES['foto']['name'];
+        $nombre_img = md5(date('d-m-Y H:m:s'));
         $temporal=$_FILES['foto']['tmp_name'];
         $carpeta = '../../img/uploads';
         $ruta =$carpeta.'/'.$nombre_img;
         move_uploaded_file($temporal,$carpeta.'/'.$nombre_img);
 
+        
         if (($_POST['tip']) == "1") {
             if (actualizar_prod($nom2, $sto2,"Cabeza", $pre2, $desc2,$ruta, $ID)  == true) {
                 echo '<script language="javascript">alert("Se ha modificado  el producto correctamente");</script>';
