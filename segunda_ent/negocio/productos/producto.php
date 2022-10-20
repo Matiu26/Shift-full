@@ -189,11 +189,11 @@ if ($sesion_i == null ||  $sesion_i = "") {
             <div class="w-60 mr-5 bg-blue-900 rounded h-auto my-5 hidden md:flex flex-col justify-around">
               
               <div class="border-b mx-2">
-                <img src="../../../src/imgs/Combos.png" alt="">
+                <img src="../../../src/imgs/Combos.png" width="180" alt="">
               </div>
 
               <div class="border-b mx-2">
-                <img src="../../../src/imgs/Ofertas.png" alt="">
+                <img src="../../../src/imgs/Ofertas.png" width="180" salt="">
               </div>
             </div>  
             
@@ -324,7 +324,6 @@ if ($sesion_i == null ||  $sesion_i = "") {
                 Cuenta
               </h4> 
               <a href="" class="text-white">Mi cuenta</a> <br>
-              <a href="" class="text-white">Favoritos</a> <br>
               <a href="" class="text-white">Carrito</a>  <br>
               <a href="" class="text-white">Cerrar/Iniciar Sesión</a>
             </div>
