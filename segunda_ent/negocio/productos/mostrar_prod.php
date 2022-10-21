@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="../usuario/styles1.css">
-    <link rel="stylesheet" href="../../../src/estilos.css">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../usuario/styles1.css">
+    <link rel="stylesheet" href="../../../../src/estilos.css">
+    <link rel="stylesheet" href="../../../css/style.css">
     <script src="//unpkg.com/alpinejs" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="icon" type="imgs" href="../../../src/imgs/favicon.png.png">
+    <link rel="icon" type="imgs" href="../../../../src/imgs/favicon.png.png">
     <?php 
         error_reporting(0);
         session_start();
@@ -65,7 +65,7 @@
     <div id="menu" class="w-full mt-0 md:mt-5 hidden flex-grow md:flex md:items-center md:w-auto text-end ">
       <div  class="text-md md:flex-grow text-center items-cenetr mb-5  md:text-end justify-center items-cenetr ">
         
-        <a href="carrito.php"><img src="../../../src/imgs/carrito.png" class="h-10 inline-block mr-4" alt=""></a>
+        <a href="carrito/carrito.php"><img src="../../../src/imgs/carrito.png" class="h-10 inline-block mr-4" alt=""></a>
 
         <a href="../../../src/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Inicio

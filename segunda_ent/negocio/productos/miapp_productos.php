@@ -83,3 +83,32 @@ function actualizar_prod_comp($stock, $ID)
     mysqli_query($con, "UPDATE producto  Set Stock = '$stock'  WHERE IdProducto = '$ID'") or die(mysqli_error($con));
     return true;
 }
+
+//CARRITO --------------------------------------------------------------------------------------------------------------------------------
+
+
+function agregar_carrito($id_u,$id_p)
+{
+    $con = conectar();
+    mysqli_query($con, "insert into carrito (IdUsuario,IdProducto) VALUES('$id_u', '$id_p')") or die;
+    
+    mysqli_close($con);
+
+    return true;
+}
+
+function existe_en_carrito($id_u)
+{
+    $con = conectar();
+    $query = mysqli_query($con, "SELECT IdProducto FROM carrito WHERE IdUsuario='" . $id_u . "'") or die(mysqli_error($con));
+
+    $row = $query->fetch_assoc();
+    mysqli_close($con);
+
+    if ($row == null) {
+        return false;
+    }
+
+    return true;
+}
+//SELECT IdProducto FROM carrito WHERE IdUsuario y select * producto where idproducto 

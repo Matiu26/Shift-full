@@ -19,6 +19,8 @@
             <th>Editar</th>
             <th>Eliminar</th>
             <th>Ver</th>
+            <th> Carrito</th>
+
 
 
 
@@ -77,6 +79,8 @@
                 <td><a href="editar_prod.php?ID=<?php echo $IDp; ?>">Modificar </a></td>
                 <td><a href="?ID=<?php echo $IDp; ?>">Eliminar </a></td>
                 <td><a href="producto.php?ID=<?php echo $IDp; ?>">Mostrar </a></td>
+                <td><a href=carrito/funcAgrCarrito.php?ID=<?php echo $IDp; ?>">Agregar  </a></td>
+
 
 
 

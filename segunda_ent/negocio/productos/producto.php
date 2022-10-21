@@ -205,7 +205,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
             <div class="">
               <div>
-                <h2 class="mb-3 text-lg w-full font-semibold">  </h2>
+                <h2 class="mb-3 text-lg w-full font-semibold"><?php echo $nom ?> </h2>
               </div>
               
               <div class="flex h-48 w-48 md:h-60 md:w-60 border border-gray-200 p-3 rounded">
