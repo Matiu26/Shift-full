@@ -111,4 +111,3 @@ function existe_en_carrito($id_u)
 
     return true;
 }
-//SELECT IdProducto FROM carrito WHERE IdUsuario y select * producto where idproducto 

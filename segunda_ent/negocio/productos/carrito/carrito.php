@@ -1,5 +1,4 @@
-<?php include("func_most_carrito.php") ?>
-<?php include("../../productos/miapp_productos.php") ?>
+<?php include("func_most_carrito.php") ?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -184,119 +183,72 @@ if ($sesion_i == null ||  $sesion_i = "") {
    </div>
 
    
-        <div class="flex flex-col w-full mx-14">     
-          <div class="flex  w-full mt-5">
+  </div>
+  <div class="flex flex-col w-full mx-14">     
+    <div class="flex  w-full mt-5">
 <!--             <h2 class="text-lg md:text-3xl mx-auto pb-5 w-full text-center border-b border-gray-300">Inicio</h2>
- -->          </div>
+-->          </div>
 
-          <div class="flex">
+    <div class="flex">
 
-            <div class="w-60 mr-5 bg-blue-900 rounded h-auto my-5 hidden md:flex flex-col justify-around">
-              
-              <div class="border-b mx-2">
-                <img src="../../../../src/imgs/Combos.png" width="180" alt="">
-              </div>
+      <div class="w-60 mr-5 bg-blue-900 rounded h-auto my-5 hidden md:flex flex-col justify-around">
+        
+        <div class="border-b mx-2">
+          <img src="../../../../src/imgs/Combos.png" width="180" alt="">
+        </div>
 
-              <div class="border-b mx-2">
-                <img src="../../../../src/imgs/Ofertas.png" width="180" salt="">
-              </div>
-            </div>  
+        <div class="border-b mx-2">
+          <img src="../../../../src/imgs/Ofertas.png" width="180" salt="">
+        </div>
+      </div>  
+      <div class="columns">
+        <div class="column">
+        <h2 class="mb-3 text-lg w-full font-semibold">Carrito de Compras</h2>
+        
+            <table class="table">
+                <thead>
+                    <tr>
+                       <th>Foto</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Quitar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                           <td><?php echo $foto ?></td>
+                            <td><?php echo $nom ?></td>
+                            <td><?php echo $desc ?></td>
+                            <td> $<?php echo $pre ?></td>
+                            <td>
+                                <form action="eliminar_del_carrito.php" method="post">
+                                  aca iria el boton
+                                    <!-- <input type="hidden" name="id_producto" value="<?php echo $IdP ?>">
+                                    <input type="hidden" name="redireccionar_carrito">
+                                    <button class="botons">
+                                     
+                                    </button> -->
+                                </form>
+                            </td>
+                        
+                        </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" class=""><strong>Total</strong></td>
+                        <td colspan="9" class="">
+                            $<?php echo ($pre) ?>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <br> <a href="../../../../src/index.php" class="regresar">Regresar</a> <br>
+        </div>
+    </div>
+
             
-            <div class="flex w-full justify-center md:justify-start
-            py-5 px-5 border border-gray-200 flex-grow rounded mt-5 ">
-
-
-            <div class="">
-              <div>
-                <h2 class="mb-3 text-lg w-full font-semibold">  </h2>
-              </div>
-              
-              <div class="flex h-48 w-48 md:h-60 md:w-60 border border-gray-200 p-3 rounded">
-                
-               <?php echo $foto ?>
-
-                <div class="ml-7 hidden md:flex flex-col w-full justify-between">
-
-                  <div class=""> 
-                    <p class="font-bold text-2xl text-blue-900 ">$<?php echo $pre ?></p>
-                  </div>
-
-                  <div >
-
-                    <div class="flex mb-1">
-                    <select name="tip" onchange="" id="elemento"  class="form_control"> <br><br>
-                      <option value="0">Selecciona Talle</option> <br>
-                      <option value="1">XS</option>
-                     <option value="2">S</option>
-                     <option value="3">M </option>
-                     <option value="4">L </option>
-                     <option value="5">XL </option>
-                      </select>
-                    </div>
-
-                    <div class="flex  ">
-                      <p>Cantidad:</p>  
-                      <input class="w-5 h-5 ml-2 rounded border border-black" type="number">
-                    </div>
-
-                  </div>
-                
-                  
-                </div>
-
-                <div class="w-full ml-20 md:flex flex-col hidden ">
-                  <p class=""><span class="font-semibold  border-b border-black ">Descripción:</span> <br>
-                  </p>
-                  <div class=" w-80">
-                    <p> <?php echo $desc ?></p></p>
-                  </div>
-                  
-                </div>
-              </div>
-
-              <div class="flex w-full md:w-60 h-16 md:h-20 mt-1 rounded border border-gray-200 ">
-                <div class="bg-blue-600 m-1 w-full rounded"></div>
-                <div class="bg-blue-600 m-1 w-full rounded"></div>
-                <div class="bg-blue-600 m-1 w-full rounded"></div>
-              </div>
-
-              <div class="md:hidden">
-                
-                <p class="font-bold text-xl text-blue-900 my-2">$<?php echo $pre ?></p>
-              </div>
-
-              <div class="flex mb-1 md:hidden">
-                <p>Talle:</p>  
-                <input class="w-5 h-5 ml-2 rounded border border-black" type="number">
-              </div>
-              <div class="flex md:hidden">
-                <p>Cantidad:</p>  
-                <input class="w-5 h-5 ml-2 rounded border border-black" type="number">
-              </div>
-
-              <div class="flex justify-between w-48 mt-4">
-                <button class="w-full"><ion-icon class="text-3xl text-white w-full bg-blue-600 rounded mb-5 py-0.5 md:ml-6 md:mt-2" name="cart-outline"></ion-icon>
-                </button>  
-
-              </div>
-
-              <div class="flex flex-col md:hidden">
-                <p class=""><span class="font-semibold  border-b border-black ">Descripción:</span> <br>
-                </p>
-                <div class="border p-3 mt-2 rounded flex flex-col descripcion flex w-48 md:w-full ">    
-                  <p class=""> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus similique autem natus atque numquam voluptatem ut accusamus assumenda asperiores enim!
-                  </p>
-                </div>
-              </div>
-
-              <!-- <div class="w-auto px-5 h-60  ml-60 mb-10 flex items-center">
-                <img class="h-32 mx-3" src="imgs/producto.jpg" alt="">
-                <img class="h-28 mx-3" src="imgs/producto.jpg" alt="">
-                <img class="h-28 mx-3" src="imgs/producto.jpg" alt="">
-                <img class="h-28 mx-3" src="imgs/producto.jpg" alt="">
-
-              </div> -->
-              
 
 
             </div>
@@ -324,7 +276,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
             <div class="flex col-span-1  sm:col-span-3 justify-center items-center">
               <!-- quiero que no se achique -->
-              <img class="h-16 md:h-24 lg:h-28 inline" src="../../../src/imgs/Logo.png" alt="">
+              <img class="h-16 md:h-24 lg:h-28 inline" src="../../../../src/imgs/Logo.png" alt="">
               <span class="font-semibold text-xl md:text-2xl text-white tracking-tight">
                 Ropa de Seguridad
               </span>
@@ -354,9 +306,9 @@ if ($sesion_i == null ||  $sesion_i = "") {
               </h4> 
               <ul class="flex ml-5 hover:text-white">
       
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
       
               </ul>
             </div>

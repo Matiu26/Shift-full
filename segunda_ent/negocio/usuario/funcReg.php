@@ -32,6 +32,7 @@
                 $password= password_hash($password, PASSWORD_DEFAULT);
                 if (existe($email) == true) {
                     echo '<script language="javascript">alert("Email ya existente, ingrese otro email");</script>';
+                    header('refresh: 0; url=registrarse.php');
                     die;
                 } else {
                     if (reg_clin($nombre,$apellido,$email,$password,$telefono) == true) {

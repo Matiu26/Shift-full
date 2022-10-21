@@ -48,7 +48,7 @@
                     $nombre = $_POST['nom'];
 
                     if (buscar_datos_prod($nombre) == true) {
-                        $consulta = mysqli_query($con, "SELECT * FROM producto WHERE Nombre='" . $nombre . "'") or die(mysqli_error($con));
+                        $consulta = mysqli_query($con, "SELECT * FROM producto WHERE Nombre like '%" . $nombre . "%'") or die(mysqli_error($con));
 
                         while ($filas = mysqli_fetch_array($consulta)) {
                             $IDp = $filas['IdProducto'];
