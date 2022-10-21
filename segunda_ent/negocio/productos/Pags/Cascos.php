@@ -186,7 +186,7 @@ while ($filas = mysqli_fetch_array($consulta)) {
     $nom = $filas['Nombre'];
     $pre = $filas['Precio'];
     $desc = $filas['Descripcion'];
-    $foto= '<img  src="'.$filas["Foto"].'" width="180"  alt="" srcset="">';
+    $foto= '<img  src="'."../".$filas["Foto"].'"    width="120"  alt="" srcset="">';
 
   //  echo  "../".$filas["Foto"];
 
@@ -203,14 +203,19 @@ while ($filas = mysqli_fetch_array($consulta)) {
 
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  place-items-center 
           py-5  border-b border-gray-400 flex-grow rounded ">
-          <?php 
-          // echo $nom;
-          //  echo $pre;
-          //  echo $foto;
-         
-           ?>
- <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
+        
+    <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
+    <?php
+       echo $foto;
+       ?><br>
+       <?php
+       echo $nom;
+       ?><br>
+       <?php
+       echo "$".$pre;
+       ?><br>
 
+      
           </div>
 
           <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
