@@ -210,17 +210,25 @@ if ($sesion_i == null ||  $sesion_i = "") {
                     <tr>
                        <th>Foto</th>
                         <th>Nombre</th>
-                        <th>Descripción</th>
                         <th>Precio</th>
                         <th>Quitar</th>
                     </tr>
                 </thead>
-                <tbody>
-                    
+                <tbody><?php 
+              $total=0;
+
+                while ($producto = mysqli_fetch_array($q)) {
+
+$IDp = $producto['IdProducto'];
+$nom = $producto['Nombre'];
+$pre = $producto['Precio'];
+$foto= '<img  src="'."../".$producto["Foto"].'"    width="70"  alt="" srcset="">';
+$total= $total + $pre;
+?>
+
                         <tr>
                            <td><?php echo $foto ?></td>
                             <td><?php echo $nom ?></td>
-                            <td><?php echo $desc ?></td>
                             <td> $<?php echo $pre ?></td>
                             <td>
                                 <form action="eliminar_del_carrito.php" method="post">
@@ -234,12 +242,14 @@ if ($sesion_i == null ||  $sesion_i = "") {
                             </td>
                         
                         </tr>
+                        <?php } ?>
+
                 </tbody>
                 <tfoot>
                     <tr>
                         <td colspan="2" class=""><strong>Total</strong></td>
                         <td colspan="9" class="">
-                            $<?php echo ($pre) ?>
+                            $<?php echo ($total) ?>
                         </td>
                     </tr>
                 </tfoot>

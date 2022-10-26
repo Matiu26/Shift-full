@@ -1,6 +1,7 @@
 <?php
 require_once("../../usuario/miapp_user.php");
 require_once("../../productos/miapp_productos.php");
+require_once("../../productos/funcMosProd.php");
 
 session_start();
 $sesion_i = $_SESSION['session_username'];
@@ -11,7 +12,7 @@ $ID = $_GET["ID"];
         $id_u= $row["IdUsuario"];
 
 
-        if (existe_en_carrito($id_u) == true) {
+        if (existe_en_carrito($ID) == true) {
             echo '<script language="javascript">alert("Este producto ya existe en tu carrito");</script>';
             header('refresh: 0; url=../../productos/mostrar_prod.php');
             die;
@@ -24,7 +25,8 @@ $ID = $_GET["ID"];
             
         }
     
-       
+    
+
 
   
 ?>

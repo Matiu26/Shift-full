@@ -1,7 +1,7 @@
 <?php
     ob_start();
-    require_once("../../dato/conexion.php");
-    require_once("../productos/miapp_productos.php");
+    // require_once("../../dato/conexion.php");
+    require_once("miapp_productos.php");
 
     $consulta = mysqli_query($con, "SELECT * FROM producto") or die(mysqli_error($con));
 
@@ -79,7 +79,7 @@
                 <td><a href="editar_prod.php?ID=<?php echo $IDp; ?>">Modificar </a></td>
                 <td><a href="?ID=<?php echo $IDp; ?>">Eliminar </a></td>
                 <td><a href="producto.php?ID=<?php echo $IDp; ?>">Mostrar </a></td>
-                <td><a href=carrito/funcAgrCarrito.php?ID=<?php echo $IDp; ?>">Agregar  </a></td>
+                <td><a href=carrito/funcAgrCarrito.php?ID=<?php echo $IDp; ?>> Agregar  </a></td>
 
 
 

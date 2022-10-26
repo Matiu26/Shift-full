@@ -97,10 +97,10 @@ function agregar_carrito($id_u,$id_p)
     return true;
 }
 
-function existe_en_carrito($id_u)
+function existe_en_carrito($id)
 {
     $con = conectar();
-    $query = mysqli_query($con, "SELECT IdProducto FROM carrito WHERE IdUsuario='" . $id_u . "'") or die(mysqli_error($con));
+    $query = mysqli_query($con, "SELECT IdUsuario FROM carrito WHERE IdProducto='" . $id. "'") or die(mysqli_error($con));
 
     $row = $query->fetch_assoc();
     mysqli_close($con);
