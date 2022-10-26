@@ -111,3 +111,12 @@ function existe_en_carrito($id)
 
     return true;
 }
+function eliminar_carrito($id_p)
+{
+    $con = conectar();
+    mysqli_query($con, "DELETE FROM carrito  WHERE IdProducto='" . $id_p . "'") or die;
+    
+    mysqli_close($con);
+
+    return true;
+}

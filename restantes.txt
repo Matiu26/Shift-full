@@ -1,4 +1,5 @@
 Pagina de producto el tema talles 
+cantidad a carrito
 ----------------------------------------------------------------
 CRUD carrito
 CRUD paquete

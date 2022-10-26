@@ -231,13 +231,11 @@ $total= $total + $pre;
                             <td><?php echo $nom ?></td>
                             <td> $<?php echo $pre ?></td>
                             <td>
-                                <form action="eliminar_del_carrito.php" method="post">
-                                  aca iria el boton
-                                    <!-- <input type="hidden" name="id_producto" value="<?php echo $IdP ?>">
-                                    <input type="hidden" name="redireccionar_carrito">
-                                    <button class="botons">
+                  <a href="eliminar_carrito.php?ID=<?php echo $IDp; ?>"><img src="../../../../src/imgs/basura.png" width="50" > </a>
+                                     <input type="hidden" name="id_producto" value="<?php echo $IdP ?>"> 
+                                  
                                      
-                                    </button> -->
+                                    </button> 
                                 </form>
                             </td>
                         

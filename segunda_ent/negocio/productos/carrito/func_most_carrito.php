@@ -15,6 +15,4 @@ from producto pr
 inner join carrito ca
 ON pr.IdProducto= ca.IdProducto WHERE ca.IdUsuario ='".$id_u."'") or die(mysqli_error($con));
 
-
-  // var_dump(mysqli_fetch_array($consulta));
 ?>
