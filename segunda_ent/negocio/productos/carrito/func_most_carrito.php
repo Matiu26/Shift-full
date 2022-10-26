@@ -2,7 +2,7 @@
 require_once("../../usuario/miapp_user.php");
 require_once("../../productos/miapp_productos.php");
 session_start();
-// error_reporting(0);
+error_reporting(0);
 $sesion_i = $_SESSION['session_username'];
 
 $query = mysqli_query($con, "SELECT IdUsuario FROM usuario WHERE Email='" . $sesion_i . "'");

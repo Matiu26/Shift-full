@@ -206,24 +206,27 @@ if ($sesion_i == null ||  $sesion_i = "") {
         <h2 class="mb-3 text-lg w-full font-semibold">Carrito de Compras</h2>
         
             <table class="table">
-                <thead>
-                    <tr>
-                       <th>Foto</th>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Quitar</th>
-                    </tr>
-                </thead>
+               
                 <tbody><?php 
               $total=0;
-
+              if($q->num_rows > 0){ 
+                ?>
+                <thead>
+                <tr>
+                   <th>Foto</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Quitar</th>
+                </tr>
+            </thead>
+            <?php 
                 while ($producto = mysqli_fetch_array($q)) {
 
-$IDp = $producto['IdProducto'];
-$nom = $producto['Nombre'];
-$pre = $producto['Precio'];
-$foto= '<img  src="'."../".$producto["Foto"].'"    width="70"  alt="" srcset="">';
-$total= $total + $pre;
+                $IDp = $producto['IdProducto'];
+                  $nom = $producto['Nombre'];
+                    $pre = $producto['Precio'];
+                    $foto= '<img  src="'."../".$producto["Foto"].'"    width="70"  alt="" srcset="">';
+                      $total= $total + $pre;
 ?>
 
                         <tr>
@@ -231,7 +234,7 @@ $total= $total + $pre;
                             <td><?php echo $nom ?></td>
                             <td> $<?php echo $pre ?></td>
                             <td>
-                  <a href="eliminar_carrito.php?ID=<?php echo $IDp; ?>"><img src="../../../../src/imgs/basura.png" width="50" > </a>
+                            <a href="eliminar_carrito.php?ID=<?php echo $IDp; ?>"><img src="../../../../src/imgs/basura.png" width="50" > </a>
                                      <input type="hidden" name="id_producto" value="<?php echo $IdP ?>"> 
                                   
                                      
@@ -240,20 +243,25 @@ $total= $total + $pre;
                             </td>
                         
                         </tr>
-                        <?php } ?>
-
+                        
                 </tbody>
-                <tfoot>
+                             
+                    <?php }?>
+
                     <tr>
                         <td colspan="2" class=""><strong>Total</strong></td>
                         <td colspan="9" class="">
                             $<?php echo ($total) ?>
-                        </td>
-                    </tr>
+                        </td><?php 
+                  }
+                        else{ 
+                          
+                          echo"No hay productos en tu carrito aún"; } 
+                          ?>
                 </tfoot>
             </table>
-            <br> <a href="../../../../src/index.php" class="regresar">Regresar</a> <br>
-        </div>
+            <br> <a href="javascript:history.back()"> Regresar</a>
+
     </div>
 
             

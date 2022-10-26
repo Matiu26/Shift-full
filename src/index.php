@@ -40,7 +40,18 @@
     </div>
     <div id="menu" class="w-full mt-0 md:mt-5 hidden flex-grow md:flex md:items-center md:w-auto text-end ">
       <div  class="text-md md:flex-grow text-center items-cenetr mb-5  md:text-end justify-center items-cenetr ">
+      <?php
+      $sesion_i = $_SESSION['session_username'];
+            if ($sesion_i == null ||  $sesion_i = "") {
 
+          ?>
+          <?php
+  } else{
+    ?>
+      <a href="../segunda_ent/negocio/productos/carrito/carrito.php"><img src="imgs/carrito.png" class="h-10 inline-block mr-4 hover:border-b" alt=""></a>
+      <?php
+}
+?>
     
         <a href="index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Inicio
