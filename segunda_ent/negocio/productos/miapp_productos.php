@@ -83,6 +83,16 @@ function actualizar_prod_comp($stock, $ID)
     mysqli_query($con, "UPDATE producto  Set Stock = '$stock'  WHERE IdProducto = '$ID'") or die(mysqli_error($con));
     return true;
 }
+function agregar_desc($ID,$desc)
+{
+    $con = conectar();
+    mysqli_query($con, "UPDATE producto  Set Descuento = '$desc'  WHERE IdProducto = '$ID'") or die(mysqli_error($con));
+
+
+    mysqli_close($con);
+
+    return true;
+}
 
 //CARRITO --------------------------------------------------------------------------------------------------------------------------------
 

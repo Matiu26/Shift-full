@@ -220,7 +220,12 @@ if ($sesion_i == null ||  $sesion_i = "") {
                   </div> 
 
                   <div class="flex justify-center w-full mt-3 p-3">
-                    <button class=""><p class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded  ">Agregar al carrito</p> 
+                    <button class="" name="a"> <p class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded  ">Agregar al carrito</p> 
+                    <?php
+                  if (isset($_POST['a'])) {
+                    echo '<script language="javascript">alert("Se ha eliminado correctamente");</script>';
+                  }
+                    ?>
                     </button> 
                   </div>
                   <div class="flex-col md:hidden">

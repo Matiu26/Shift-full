@@ -16,17 +16,17 @@
             <th>Precio</th>
             <th>Descripcion</th>
             <th>Imagen</th>
-            <th>Editar</th>
-            <th>Eliminar</th>
-            <th>Ver</th>
-            <th> Carrito</th>
+            <th>Agregar Oferta</th>
+          
 
 
 
 
         </tr>
         <?php
+   
         while ($filas = mysqli_fetch_array($consulta)) {
+
             $IDp = $filas['IdProducto'];
             $nom = $filas['Nombre'];
             $sto = $filas['Stock'];
@@ -35,7 +35,6 @@
             $pre = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
             $desc = $filas['Descripcion'];
             $foto= '<img  src="'.$filas["Foto"].'" width="180"  alt="" srcset="">';
-
           
 
             if (isset($_POST['buscar'])) {
@@ -44,7 +43,8 @@
                     if (empty($_POST['nom'])) {
 
                         return;
-                    }
+                    }              
+
 
                     $nombre = $_POST['nom'];
 
@@ -77,10 +77,8 @@
                 <td><?php echo "<p style='color:white;'>$" . $pre . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $desc . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $foto . "</p>"; ?></td>
-                <td><a href="editar_prod.php?ID=<?php echo $IDp; ?>">Modificar </a></td>
-                <td><a href="?ID=<?php echo $IDp; ?>">Eliminar </a></td>
-                <td><a href="producto.php?ID=<?php echo $IDp; ?>">Mostrar </a></td>
-                <td><a href=carrito/funcAgrCarrito.php?ID=<?php echo $IDp; ?>> Agregar  </a></td>
+                <td><a href="agrDescuento.php?ID=<?php echo $IDp; ?>">Agregar descuento </a></td>
+
 
 
 

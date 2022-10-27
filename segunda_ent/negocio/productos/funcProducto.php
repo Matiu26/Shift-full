@@ -8,7 +8,8 @@ while ($filas = mysqli_fetch_array($consulta)) {
     $nom = $filas['Nombre'];
     $sto = $filas['Stock'];
     $tip = $filas['Tipo'];
-    $pre = $filas['Precio'];
+    $descu = $filas['Descuento'];
+    $pre = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
     $desc = $filas['Descripcion'];
     $foto= '<img  src="'.$filas["Foto"].'" width="180"  alt="" srcset="">';
 

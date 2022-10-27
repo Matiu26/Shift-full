@@ -212,8 +212,9 @@
             <br />
             <h3 class="border-b mx-10">  PRODUCTOS </h3>
             <a href="../negocio/productos/agregar_prod.php">Agregar producto</a>
-            <!-- <a href="../negocio/Upd_prov.php">Modificar producto</a> -->
             <a href="../negocio/productos/mostrar_prod.php">Listado producto</a>
+            <a href="../negocio/productos/agregar_oferta.php">Agregar Oferta</a>
+
             <br />
             <br />
           </form>  
