@@ -219,15 +219,15 @@ if ($sesion_i == null ||  $sesion_i = "") {
                   <?php echo $foto?>
                   </div> 
 
-                  <div class="flex justify-center w-full mt-3 p-3">
-                    <button class="" name="a"> <p class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded  ">Agregar al carrito</p> 
-                    <?php
-                  if (isset($_POST['a'])) {
-                    echo '<script language="javascript">alert("Se ha eliminado correctamente");</script>';
-                  }
-                    ?>
+                  <!-- <form  method="post" class="flex justify-center w-full mt-3 p-3"> -->
+        
+                    <button class="" name="a" type="submit">
+                    <p class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded">
+                    <a href="carrito/funcAgrCarrito.php?ID=<?php echo $IDp; ?>"><?php echo "Agregar al carrito" ?> </a>
+                  </p> 
                     </button> 
-                  </div>
+            
+                <!-- </form> -->
                   <div class="flex-col md:hidden">
                     <div class="w-28  border-black">
                       <p class="font-bold text-2xl text-blue-900 ">$<?php echo $pre ?></p>
@@ -275,7 +275,8 @@ if ($sesion_i == null ||  $sesion_i = "") {
                           <option value="5">XL </option>
                         </select>
                       </div>
-  
+                      <br> <a href="javascript:history.back()"> Regresar</a>
+
                     </div>
                   </div>
 
@@ -294,9 +295,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
 
                 
-                
-                
-                
+            
 
 
           </div>          

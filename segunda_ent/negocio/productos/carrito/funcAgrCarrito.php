@@ -13,7 +13,7 @@ $ID = $_GET["ID"];
 
         if (existe_en_carrito($ID) == true) {
             echo '<script language="javascript">alert("Este producto ya existe en tu carrito");</script>';
-            header('refresh: 0; url=../../productos/mostrar_prod.php');
+            header('refresh: 0; url=carrito.php');
             die;
         } else {
 

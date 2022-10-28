@@ -14,6 +14,8 @@ while ($filax = mysqli_fetch_array($consultas)) {
     $sto = $filax['Stock'];
     $pre = $filax['Precio'];
     $desc = $filax['Descripcion'];
+    $foto= $filax['Foto'];
+
 }
 if (isset($_POST['modificar'])) {
 

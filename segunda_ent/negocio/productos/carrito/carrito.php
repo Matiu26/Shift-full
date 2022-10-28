@@ -231,7 +231,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
 ?>
 
                         <tr>
-                           <td><?php echo $foto ?></td>
+                           <td><a href="../producto.php?ID=<?php echo $IDp; ?>"><?php echo $foto ?> </a> </td>
                             <td><?php echo $nom ?></td>
                             <td> $<?php echo $pre ?></td>
                             <td>
