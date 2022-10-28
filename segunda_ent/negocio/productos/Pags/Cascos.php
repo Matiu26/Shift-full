@@ -190,112 +190,37 @@ if ($sesion_i == null ||  $sesion_i = "") {
       </div>
 
 
-      
+      <div class="flex flex-col w-full mx-14">
+          <div class="flex  w-full mt-5">
+            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Cascos</h2>
+          </div>
+
         
       <?php
 require_once("../miapp_productos.php");
 $consulta = mysqli_query($con, "SELECT * FROM producto WHERE Tipo='Cabeza'") or die(mysqli_error($con));
 
 while ($filas = mysqli_fetch_array($consulta)) {
+    $IDp = $filas['IdProducto'];
     $nom = $filas['Nombre'];
-    $pre = $filas['Precio'];
+    $descu = $filas['Descuento'];
+    $pre = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
     $desc = $filas['Descripcion'];
-    $foto= '<img  src="'."../".$filas["Foto"].'"    width="120"  alt="" srcset="">';
+    $foto= '<img  src="'."../".$filas["Foto"].'"    width="190"  alt="" srcset="">';
 
-  //  echo  "../".$filas["Foto"];
-
-  }
+  
 ?>
-       
-      
-      
-      
-        <div class="flex flex-col w-full mx-14">
-          <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Cascos</h2>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  place-items-center 
-          py-5  border-b border-gray-400 flex-grow rounded ">
+    
+         
         
-    <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-    <?php
-       echo $foto;
-       ?><br>
+    <a href="../producto.php?ID=<?php echo $IDp; ?>"><?php echo $foto ?> </a><br>
+        <?php echo $nom;?><br>
+       <?php echo "$".$pre;?><br>
        <?php
-       echo $nom;
-       ?><br>
-       <?php
-       echo "$".$pre;
-       ?><br>
-
-      
-          </div>
-
-          <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
-          </div>
-
-          <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
-          </div>
-
-          <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
-          </div>
-
-          <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
-          </div>
-
-          <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
-          </div>
-          
-          <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
-          </div>
-          
-          <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
-          </div>
-
-          <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
-          </div>
-
-          
-          <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
-          </div>
-
-          <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
-          </div>
-
-          <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
-          </div>
-
-          <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
-          </div> 
-          
-          <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
-          </div>
-
-          <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
-          </div>
-
-          <div class="h-48 w-32  sm:h-52 md:w-36 lg:h-64 lg:w-48 bg-slate-900 mb-5 rounded">
-
-          </div>
-
-        </div>
+          }
+       ?>
      
-      </div>
+  
 
         
           </div>

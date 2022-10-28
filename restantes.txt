@@ -2,7 +2,7 @@ Pagina de producto el tema talles
 cantidad a carrito
 ----------------------------------------------------------------
 CRUD paquete
-agregar descuento
+ver tema foto en carpeta upload al modificar y eliminar (tambien ver modificar foto)
 ----------------------------------------------------------------
 jefe : 
 - Es el encargado de gestionar los envíos de las compras verificadas y de enviar el remito al cliente
