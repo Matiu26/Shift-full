@@ -28,7 +28,7 @@ if (isset($_POST['ingresar'])) {
 
             if (existe_cliente($email) == true) {
                 $_SESSION['session_username']=$email;
-                    header('refresh: 0; url=../../../src/index.php');
+                    header('refresh: 0; url=../productos/pags/index.php');
                 }
                 else if (existe_jefe($email) == true) {
                     $_SESSION['session_username']=$email;

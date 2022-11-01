@@ -23,8 +23,8 @@
 
 
     <div class="flex items-center flex-shrink-0 text-whit ">
-    <a href="../../../../src/index.php"><img class="h-10 sm:h-14 inline" src="../../../../src/imgs/Logo.png" alt=""></a> 
-      <span class="text-sm text-white sm:text-lg md:tex-3xl  font-semibold"><a href="../../../../src/index.php">Ropa de seguridad Viera</a></span>
+    <a href="index.php"><img class="h-10 sm:h-14 inline" src="../../../../src/imgs/Logo.png" alt=""></a> 
+      <span class="text-sm text-white sm:text-lg md:tex-3xl  font-semibold"><a href="index.php">Ropa de seguridad Viera</a></span>
 
     </div><link rel="stylesheet" href="">
     <div class="block ml-16 sm:ml-52 md:ml-0 md:hidden ">
@@ -51,7 +51,7 @@
       <?php
 }
 ?>
-      <a href="../../../../src/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+      <a href="index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Inicio
         </a>
         <a href="" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
@@ -113,19 +113,21 @@ if ($sesion_i == null ||  $sesion_i = "") {
     
       <div class="flex mb-10">
      
-        <div  class="  flex-col w-auto md:hidden absolute mt-1 lg:left-0 mr-5
+      
+      
+      <div  class="  flex-col w-auto md:hidden absolute mt-1 lg:left-0 mr-5
                     text-center bg-slate-800 rounded h-auto mb-10 ">
-          <button id="boton2" class=" flex my-3  m-auto">
-            <span class=" text-white text-2xl  left-4 cursor-pointer md:hidden" >
-              <i class="bi bi-filter-left px-3 py-1 left-4 cursor-pointer rounded-md "></i>
-            </span>
-          </button> 
+        <button id="boton2" class=" flex my-3  m-auto">
+          <span class=" text-white text-2xl  left-4 cursor-pointer md:hidden" >
+            <i class="bi bi-filter-left px-3 py-1 left-4 cursor-pointer rounded-md "></i>
+          </span>
+        </button> 
 
-          <div id="menu2" class="flex-col hidden mx-14">
-            <div class="text-gray-100  text-xl">
-              <div class="px-2.5 flex items-center">
-              </div> 
-            </div>
+        <div id="menu2" class="flex-col hidden mx-14">
+          <div class="text-gray-100  text-xl">
+            <div class="px-2.5 flex items-center">
+            </div> 
+          </div>
           <div class="p-2.5 mt- flex items rounded-md px-4 duration-300
                       cursor-pointer bg-gray-700 text-white ">
             <i class="bi bi-search font-bold text-sm " ></i>        
@@ -135,7 +137,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
           
           <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white" >
-                      <a href="../../../Pags/Cascos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/casco.png" alt=""></a>  
+                      <a href="Cascos.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/casco.png" alt=""></a>  
                       <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Cascos</p>
                     <span class="text-sm m-auto p-auto" id="arrow">
                        <i class="bi bi-chevron-down"></i>    
@@ -145,40 +147,40 @@ if ($sesion_i == null ||  $sesion_i = "") {
   
           <div class="p-2.5  flex items rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../../../Pags/Chalecos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Chaleco.png" alt=""></a>  
-                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Chalecos</p>        
+                      <a href="Chalecos.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/Chaleco.png" alt=""></a>  
+                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Chalecos</p>     
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
                      </span>
           </div>
           <div class="p-2.5  flex items rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../../../Pags/Uniformes.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Uniforme.png" alt=""></a>  
-                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Uniformes</p>        
+                      <a href="Uniformes.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/Uniforme.png" alt=""></a>  
+                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Uniformes</p>          
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
                      </span>
           </div>
           <div class="p-2.5  flex items rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../../../Pags/Botas.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Botas.png" alt=""></a>  
-                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-center">Botas</p>        
+                      <a href="Botas.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/botas.png" alt=""></a>  
+                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Botas</p>             
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
                      </span>
           </div>
           <div class="p-2.5  flex items rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../../../Pags/Ofertas.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Ofertas.png" alt=""></a>  
-                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Ofertas</p>        
+                      <a href="Ofertas.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/Ofertas.png" alt=""></a>  
+                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Ofertas</p>      
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
                      </span>
           </div>
           <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../../../Pags/Combos.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Combos.png" alt=""></a>  
-                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Combos</p>        
+                      <a href="Combos.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/Combos.png" alt=""></a>  
+                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Combos</p>              
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
                      </span>
@@ -278,9 +280,9 @@ while ($filas = mysqli_fetch_array($consulta)) {
               </h4> 
               <ul class="flex ml-5 hover:text-white">
       
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+              <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
       
               </ul>
             </div>
@@ -307,8 +309,10 @@ while ($filas = mysqli_fetch_array($consulta)) {
 
   
   
-    <script src="../src/app.js"></script>
-    <script src="../src/jquer.js"></script>
+  
+    <script src="../../../../src/app.js"></script>
+    <script src="../../../../src/jquer.js"></script>
+    
     
 </body>
 </html>

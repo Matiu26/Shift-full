@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,14 +19,16 @@
     <link rel="stylesheet" href="../../../../src/estilos.css">
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="icon" type="imgs" href="../../../../src/imgs/favicon.png.png">
-
+    <?php
+            include("../../sesiones/sesion.php");
+        ?>
 </head>
 <body class="mx-5 md:mx-10 font-Comfortaa" >
   <header class="flex justify-around flex-wrap items-center bg-blue-900 rounded md:px-10 ">
 
 
     <div class="flex items-center flex-shrink-0 text-whit ">
-    <a href="index.php"><img class="h-10 sm:h-14 inline" src="../../../../src/imgs/Logo.png" alt=""></a> 
+     <a href="index.php"><img class="h-10 sm:h-14 inline" src="../../../../src/imgs/Logo.png" alt=""></a> 
       <span class="text-sm text-white sm:text-lg md:tex-3xl  font-semibold"><a href="index.php">Ropa de seguridad Viera</a></span>
 
     </div><link rel="stylesheet" href="">
@@ -38,8 +43,6 @@
     <div id="menu" class="w-full mt-0 md:mt-5 hidden flex-grow md:flex md:items-center md:w-auto text-end ">
       <div  class="text-md md:flex-grow text-center items-cenetr mb-5  md:text-end justify-center items-cenetr ">
       <?php
-  session_start();
-  error_reporting(0);
       $sesion_i = $_SESSION['session_username'];
             if ($sesion_i == null ||  $sesion_i = "") {
 
@@ -51,18 +54,48 @@
       <?php
 }
 ?>
-      <a href="index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+    
+        <a href="index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Inicio
         </a>
+        <?php
+        require_once("../../usuario/miapp_user.php");
+        $sesion_i = $_SESSION['session_username'];
+         if(existe_jefe($sesion_i)==true){
+        
+           ?>
+        <a href="../../../dise/accion.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+          Administar
+        </a>
+        <?php } ?> 
+        <?php
+        require_once("../../usuario/miapp_user.php");
+        $sesion_i = $_SESSION['session_username'];
+         if(existe_vendedor($sesion_i)==true){
+        
+           ?>
+        <a href="../../../dise/vendedor.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+          Administar
+        </a>
+        <?php } ?> 
+        <?php
+        require_once("../../usuario/miapp_user.php");
+        $sesion_i = $_SESSION['session_username'];
+         if(existe_comprador($sesion_i)==true){
+        
+           ?>
+        <a href="../../../dise/vendedor.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+          Administar
+        </a>
+        <?php } ?> 
         <a href="" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Contacto
         </a>
         <a href="" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Nosotros
         </a>
+
         <?php
-          error_reporting(0);
-        session_start();
 $sesion_i = $_SESSION['session_username'];
 if ($sesion_i == null ||  $sesion_i = "") {
 
@@ -94,6 +127,11 @@ if ($sesion_i == null ||  $sesion_i = "") {
 }
 ?>
   </header>
+
+
+
+  
+
   <nav class="mt-2 hidden md:flex md:justify-center">
         <div class="  flex justify-center  id="menuCategorias">
           <ul x-show="open" class=" hidden md:flex  items-center bg-slate-800 rounded">
@@ -110,8 +148,9 @@ if ($sesion_i == null ||  $sesion_i = "") {
           </ul>
         </div>
       </nav> 
+  
     
-      <div class="flex mb-10">
+    <div class="flex mb-10">
      
       
       
@@ -192,15 +231,21 @@ if ($sesion_i == null ||  $sesion_i = "") {
       </div>
 
 
-      <div class="flex flex-col w-full mx-14">
+
+      
+        
+        
+       
+      
+      
+        <div class="flex flex-col w-full mx-14">
           <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Botas</h2>
+            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Inicio</h2>
           </div>
 
-        
-      <?php
+          <?php
 require_once("../miapp_productos.php");
-$consulta = mysqli_query($con, "SELECT * FROM producto WHERE Tipo='Calzado'") or die(mysqli_error($con));
+$consulta = mysqli_query($con, "SELECT * FROM producto") or die(mysqli_error($con));
 
 while ($filas = mysqli_fetch_array($consulta)) {
     $IDp = $filas['IdProducto'];
@@ -222,14 +267,9 @@ while ($filas = mysqli_fetch_array($consulta)) {
           }
        ?>
      
-  
+     
 
-        
           </div>
-
-       
-
-         
 
         </div>
      
@@ -238,7 +278,7 @@ while ($filas = mysqli_fetch_array($consulta)) {
 
     </div>
     
-
+ 
    
   
     <footer class="flex h-auto ">
@@ -280,7 +320,7 @@ while ($filas = mysqli_fetch_array($consulta)) {
               </h4> 
               <ul class="flex ml-5 hover:text-white">
       
-              <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
                 <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
                 <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
       
@@ -307,7 +347,6 @@ while ($filas = mysqli_fetch_array($consulta)) {
  
 
 
-  
   
   
     <script src="../../../../src/app.js"></script>

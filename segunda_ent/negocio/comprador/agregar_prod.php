@@ -41,7 +41,7 @@
        alert("No  tienes el rol necesario");
        </script>
        ';
-       header('refresh: 0; url=../../src/index.php');
+       header('refresh: 0; url=../productos/pags/index.php');
        die();
     }
      ?>
@@ -66,7 +66,7 @@
     <div id="menu" class="w-full mt-0 md:mt-5 hidden flex-grow md:flex md:items-center md:w-auto text-end ">
       <div  class="text-md md:flex-grow text-center items-cenetr mb-5  md:text-end justify-center items-cenetr ">
 
-        <a href="../../../src/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+        <a href="../productos/pags/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Inicio
         </a>
         <a href="" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">

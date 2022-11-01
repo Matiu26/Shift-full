@@ -27,8 +27,8 @@
 
 
     <div class="flex items-center flex-shrink-0 text-whit ">
-    <a href="../../src/index.php"><img class="h-10 sm:h-14 inline" src="../../src/imgs/Logo.png" alt=""></a> 
-    <span class="text-sm text-white sm:text-lg md:tex-3xl  font-semibold"><a href="../../src/index.php">Ropa de seguridad Viera</a></span>
+    <a href="../negocio/productos/Pags/index.php"><img class="h-10 sm:h-14 inline" src="../../src/imgs/Logo.png" alt=""></a> 
+    <span class="text-sm text-white sm:text-lg md:tex-3xl  font-semibold"><a href="../negocio/productos/Pags/index.php">Ropa de seguridad Viera</a></span>
       
 
     </div><link rel="stylesheet" href="">
@@ -45,7 +45,7 @@
 
         <a href="../negocio/productos/carrito/carrito.php"><img src="../../src/imgs/carrito.png" class="h-10 inline-block mr-4 hover:border-b" alt=""></a>
 
-        <a href="../../src/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+        <a href="../negocio/productos/Pags/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Inicio
         </a>
         <a href="" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">

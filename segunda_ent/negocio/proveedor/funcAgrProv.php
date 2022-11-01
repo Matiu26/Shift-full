@@ -16,12 +16,12 @@
 
             if (existe_prov($email) == true) {
                 echo '<script language="javascript">alert("Email ya existente, ingrese otro email");</script>';
-                header('refresh: 1; ');
+                header('refresh: 0; ');
                 die;
             } else {
                 if (agregar_prov($nombre,$email, $direccion,$telefono)  == true) {
                     echo '<script language="javascript">alert(" Se ha registrado correctamente");</script>';
-                    header('refresh: 1; url=../../dise/accion.php');
+                    header('refresh: 0; url=../../dise/accion.php');
                 }
             }
         }

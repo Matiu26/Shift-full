@@ -11,7 +11,7 @@ $sesion_i = $_SESSION['session_username'];
     alert("No  tienes el rol necesario");
     </script>
     ';
-    header('refresh: 0; url=../../src/index.php');
+    header('refresh: 0; url=../productos/pags/index.php');
     die();
  }
 ?>

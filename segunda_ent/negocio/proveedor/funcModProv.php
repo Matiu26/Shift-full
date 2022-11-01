@@ -36,7 +36,7 @@
             $tel2 = $_POST['tel2'];
             if (actualizar_prov($nom2, $mail2, $dir2, $tel2, $ID)  == true) {
                 echo '<script language="javascript">alert("Se ha modificado correctamente");</script>';
-                header('refresh: 1; url=Upd_prov.php');
+                header('refresh: 0; url=Upd_prov.php');
             }
         }
     }

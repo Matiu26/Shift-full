@@ -1,5 +1,6 @@
 Pagina de producto el tema talles 
 cantidad a carrito
+mostrar nombre proveedor y no poder borrar proveedor si tiene un producti
 ----------------------------------------------------------------
 CRUD paquete
 ver tema foto en carpeta upload al modificar y eliminar (tambien ver modificar foto)
