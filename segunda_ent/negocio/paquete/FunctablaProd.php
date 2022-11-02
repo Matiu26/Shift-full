@@ -1,4 +1,7 @@
 <?php
+$IDpa = $_GET["ID"];
+$_SESSION['IDPAQ'];
+$_SESSION['IDPAQ']= $IDpa;
     ob_start();
     // require_once("../../dato/conexion.php");
     require_once("miapp_productos.php");
@@ -17,6 +20,7 @@
             <th>Descripcion</th>
             <th>Imagen</th>
             <th>Agregar Paquete</th>
+
           
 
 
@@ -64,7 +68,7 @@
                 <td><?php echo "<p style='color:white;'>$" . $pre . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $desc . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $foto . "</p>"; ?></td>
-                <td><a href="agrDescuento.php?ID=<?php echo $IDp; ?>">Agregar a Paquete </a></td>
+                <td><a href="funcAgregarAPaq.php?IDpr=<?php echo $IDp; ?>">Agregar a Paquete </a></td>
 
 
 

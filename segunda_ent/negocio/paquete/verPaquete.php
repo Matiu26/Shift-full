@@ -1,5 +1,4 @@
-<?php include("func_most_carrito.php") ?> 
-
+<?php include("func_most_paquete.php") ?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,18 +13,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="../../usuario/styles1.css">
-    <link rel="stylesheet" href="../../../../src/estilos.css">
-    <link rel="stylesheet" href="../../../css/style.css">
-    <link rel="icon" type="imgs" href="../../../../src/imgs/favicon.png.png">
+    <link rel="stylesheet" href="../usuario/styles1.css">
+    <link rel="stylesheet" href="../../../src/estilos.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" type="imgs" href="../../../src/imgs/favicon.png.png">
 </head>
 <body class="mx-5 md:mx-10 font-Comfortaa" >
   <header class="flex justify-around flex-wrap items-center bg-blue-900 rounded md:px-10 ">
 
 
   <div class="flex items-center flex-shrink-0 text-whit ">
-    <a href="../pags/index.php"><img class="h-10 sm:h-14 inline" src="../../../../src/imgs/Logo.png" alt=""></a> 
-      <span class="text-sm text-white sm:text-lg md:tex-3xl  font-semibold"><a href="../pags/index.php">Ropa de seguridad Viera</a></span>
+    <a href="../productos/pags/index.php"><img class="h-10 sm:h-14 inline" src="../../../src/imgs/Logo.png" alt=""></a> 
+      <span class="text-sm text-white sm:text-lg md:tex-3xl  font-semibold"><a href="../productos/pags/index.php">Ropa de seguridad Viera</a></span>
 
     </div><link rel="stylesheet" href="">
     <div class="block ml-16 sm:ml-52 md:ml-0 md:hidden ">
@@ -39,7 +38,7 @@
     <div id="menu" class="w-full mt-0 md:mt-5 hidden flex-grow md:flex md:items-center md:w-auto text-end ">
       <div  class="text-md md:flex-grow text-center items-cenetr mb-5  md:text-end justify-center items-cenetr ">
 
-        <a href="../pags/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+        <a href="../productos/pags/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Inicio
         </a>
         <a href="" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
@@ -64,8 +63,8 @@ if ($sesion_i == null ||  $sesion_i = "") {
           
           <div x-show="open" class="absolute text-center right-24 sm:right-60 md:right-11 mx-3 md:mx-0  z-10 border border-black bg-blue-900
                                   mt-7 w-40 origin-top-right rounded-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <a href="../../usuario/login.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-0">Ingresar</a>
-            <a href="../../usuario/registrarse.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-1">Registrarse</a>
+            <a href="../usuario/login.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-0">Ingresar</a>
+            <a href="../usuario/registrarse.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-1">Registrarse</a>
           </div>
         </div>
           
@@ -75,7 +74,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
     <?php
   } else{
     ?>
- <a href="../../sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+ <a href="../sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Cerrar Sesión
         </a>
     <?php
@@ -86,14 +85,14 @@ if ($sesion_i == null ||  $sesion_i = "") {
   <nav class="mt-2 hidden md:flex md:justify-center">
         <div class="  flex justify-center  id="menuCategorias">
           <ul x-show="open" class=" hidden md:flex  items-center bg-slate-800 rounded">
-            <li><a href="../pags/Cascos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/casco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Cascos</p></a></li>
-            <li><a href="../pags/Chalecos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs//Chaleco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Chalecos</p></a></li>
-            <li><a href="../pags/Uniformes.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Uniforme.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Uniformes</p></a></li>
+            <li><a href="../productos/pags/Cascos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/casco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Cascos</p></a></li>
+            <li><a href="../productos/pags/Chalecos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs//Chaleco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Chalecos</p></a></li>
+            <li><a href="../productos/pags/Uniformes.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Uniforme.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Uniformes</p></a></li>
             <li><input class="h-6" type="text"></li>
             <li><img class="h-6 p-1 border"src="../../../../src/imgs/Lupa2.png" alt=""></li>            
-            <li><a href="../pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
-            <li><a href="../pags/Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
-            <li><a href="../pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
+            <li><a href="../productos/pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
+            <li><a href="../productos/pags/Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
+            <li><a href="../productos/pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
 
 
           </ul>
@@ -125,7 +124,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
        
        <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
                    cursor-pointer hover:bg-blue-700 text-white" >
-                   <a href="../../../Pags/Cascos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/casco.png" alt=""></a>  
+                   <a href="../productos/pags/Cascos.php"><img class="h-6 m-2 p-auto inline" src="../../src/imgs/casco.png" alt=""></a>  
                    <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Cascos</p>
                  <span class="text-sm m-auto p-auto" id="arrow">
                     <i class="bi bi-chevron-down"></i>    
@@ -135,7 +134,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
        <div class="p-2.5  flex items rounded-md px-4 duration-300
                    cursor-pointer hover:bg-blue-700 text-white">
-                   <a href="../../../Pags/Chalecos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Chaleco.png" alt=""></a>  
+                   <a href="../productos/pags/Chalecos.php"><img class="h-6 m-2 p-auto inline" src="../../src/imgs/Chaleco.png" alt=""></a>  
                    <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Chalecos</p>        
                    <span class="text-sm m-auto p-auto" id="arrow">
                      <i class="bi bi-chevron-down"></i>    
@@ -143,7 +142,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
        </div>
        <div class="p-2.5  flex items rounded-md px-4 duration-300
                    cursor-pointer hover:bg-blue-700 text-white">
-                   <a href="../../../Pags/Uniformes.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Uniforme.png" alt=""></a>  
+                   <a href="../productos/pags/Uniformes.php"><img class="h-6 m-2 p-auto inline" src="../../src/imgs/Uniforme.png" alt=""></a>  
                    <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Uniformes</p>        
                    <span class="text-sm m-auto p-auto" id="arrow">
                      <i class="bi bi-chevron-down"></i>    
@@ -151,7 +150,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
        </div>
        <div class="p-2.5  flex items rounded-md px-4 duration-300
                    cursor-pointer hover:bg-blue-700 text-white">
-                   <a href="../../../Pags/Botas.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Botas.png" alt=""></a>  
+                   <a href="../productos/pags/Botas.php"><img class="h-6 m-2 p-auto inline" src="../../src/imgs/Botas.png" alt=""></a>  
                    <p class=" m-auto p-auto text-sm md:text-lg text-white justify-center">Botas</p>        
                    <span class="text-sm m-auto p-auto" id="arrow">
                      <i class="bi bi-chevron-down"></i>    
@@ -159,7 +158,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
        </div>
        <div class="p-2.5  flex items rounded-md px-4 duration-300
                    cursor-pointer hover:bg-blue-700 text-white">
-                   <a href="../../../Pags/Ofertas.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Ofertas.png" alt=""></a>  
+                   <a href="../productos/pags/Ofertas.php"><img class="h-7 m-2 p-auto inline" src="../../src/imgs/Ofertas.png" alt=""></a>  
                    <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Ofertas</p>        
                    <span class="text-sm m-auto p-auto" id="arrow">
                      <i class="bi bi-chevron-down"></i>    
@@ -167,7 +166,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
        </div>
        <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
                    cursor-pointer hover:bg-blue-700 text-white">
-                   <a href="../../../Pags/Combos.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Combos.png" alt=""></a>  
+                   <a href="../productos/pags/Combos.php"><img class="h-7 m-2 p-auto inline" src="../../src/imgs/Combos.png" alt=""></a>  
                    <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Combos</p>        
                    <span class="text-sm m-auto p-auto" id="arrow">
                      <i class="bi bi-chevron-down"></i>    
@@ -194,22 +193,22 @@ if ($sesion_i == null ||  $sesion_i = "") {
       <div class="w-60 mr-5 bg-blue-900 rounded h-auto my-5 hidden md:flex flex-col justify-around">
         
         <div class="border-b mx-2">
-          <img src="../../../../src/imgs/Combos.png" width="180" alt="">
+          <img src="../../../src/imgs/Combos.png" width="180" alt="">
         </div>
 
         <div class="border-b mx-2">
-          <img src="../../../../src/imgs/Ofertas.png" width="180" salt="">
+          <img src="../../../src/imgs/Ofertas.png" width="180" salt="">
         </div>
       </div>  
       <div class="columns">
         <div class="column">
-        <h2 class="mb-3 text-lg w-full font-semibold">Carrito de Compras</h2>
+        <h2 class="mb-3 text-lg w-full font-semibold">Paquete</h2>
         
             <table class="table">
                
                 <tbody><?php 
               $total=0;
-              if($q->num_rows > 0){ 
+              if($qu->num_rows > 0){ 
                 ?>
                 <thead>
                 <tr>
@@ -220,13 +219,13 @@ if ($sesion_i == null ||  $sesion_i = "") {
                 </tr>
             </thead>
             <?php 
-                while ($producto = mysqli_fetch_array($q)) {
+                while ($producto = mysqli_fetch_array($qu)) {
 
                 $IDp = $producto['IdProducto'];
                   $nom = $producto['Nombre'];
                   $descu = $producto['Descuento'];
                   $pre = $producto['Precio']- (($producto['Precio'] * $descu)/ 100);
-                    $foto= '<img  src="'."../".$producto["Foto"].'"    width="70"  alt="" srcset="">';
+                    $foto= '<img  src="'."".$producto["Foto"].'"    width="70"  alt="" srcset="">';
                       $total= $total + $pre;
 ?>
 
@@ -235,7 +234,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
                             <td><?php echo $nom ?></td>
                             <td> $<?php echo $pre ?></td>
                             <td>
-                            <a href="eliminar_carrito.php?ID=<?php echo $IDp; ?>"><img src="../../../../src/imgs/basura.png" width="50" > </a>
+                            <a href="eliminar_prod_de_paq.php?ID=<?php echo $IDp; ?>"><img src="../../../src/imgs/basura.png" width="50" > </a>
                                      <input type="hidden" name="id_producto" value="<?php echo $IdP ?>"> 
                                   
                                      
@@ -257,7 +256,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
                   }
                         else{ 
                           
-                          echo"No hay productos en tu carrito aún"; } 
+                          echo"No hay productos en este paquete aún"; } 
                           ?>
                 </tfoot>
             </table>
@@ -293,7 +292,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
             <div class="flex col-span-1  sm:col-span-3 justify-center items-center">
               <!-- quiero que no se achique -->
-              <img class="h-16 md:h-24 lg:h-28 inline" src="../../../../src/imgs/Logo.png" alt="">
+              <img class="h-16 md:h-24 lg:h-28 inline" src="../../../src/imgs/Logo.png" alt="">
               <span class="font-semibold text-xl md:text-2xl text-white tracking-tight">
                 Ropa de Seguridad
               </span>
@@ -323,9 +322,9 @@ if ($sesion_i == null ||  $sesion_i = "") {
               </h4> 
               <ul class="flex ml-5 hover:text-white">
       
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
       
               </ul>
             </div>

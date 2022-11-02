@@ -100,8 +100,8 @@
             <li><a href="Pags/Uniformes.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Uniforme.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Uniformes</p></a></li>
             <li><input class="h-6" type="text"></li>
             <li><img class="h-6 p-1 border"src="../../../src/imgs/Lupa2.png" alt=""></li>            
-            <li><a href="Pags/Combos.php"><img class="h-11 px-5 m-2 mt-2" src="../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
-            <li><a href="Pags/Ofertas.php"><img class="h-11 px-5 m-2 mt-2" src="../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
+            <li><a href="Pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
+            <li><a href="Pags/Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
             <li><a href="Pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
 
 
@@ -201,7 +201,7 @@
                 <input class="controls" placeholder="Ingrese Producto" type="text" name="nom" required maxlength="30" size="40">
                 <input class="botons" type="submit" value="Buscar Paquete" name="buscar">
                 <br />
-                <br> <a href="mostrar_prod.php" class="regresar">Ver listado</a> <br>
+                <br> <a href="lista_paquetes.php" class="regresar">Ver listado</a> <br>
                 <br> <a href="../../dise/accion.php" class="regresar">Regresar</a> <br>
     
               </form>

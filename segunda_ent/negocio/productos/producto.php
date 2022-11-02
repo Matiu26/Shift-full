@@ -298,13 +298,15 @@ while ($filas = mysqli_fetch_array($consulta)) {
 }
 
 $c = mysqli_query($con, "SELECT * FROM producto WHERE Tipo= '$tip' and IdProducto != '$IDp' limit 4") or die(mysqli_error($con));
-while ($filas = mysqli_fetch_array($c)) {
-    $IDp2 = $filas['IdProducto'];
-    $nom2 = $filas['Nombre'];
-    $descu2 = $filas['Descuento'];
-    $tip2 = $filas['Tipo'];
-    $pre2 = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
-    $foto2= '<img  src="'.$filas["Foto"].'"    width="190"  alt="" srcset="">';
+$productos_relacionados = mysqli_fetch_all($c);
+shuffle($productos_relacionados);
+foreach ($productos_relacionados as $filas) {
+    $IDp2 = $filas[0];
+    $nom2 = $filas[1];
+    $descu2 = $filas[7];
+    $pre2 =$filas[4];
+    $pre2 = $filas[4]- (($filas[4] * $descu2)/ 100);
+    $foto2= '<img  src="'.$filas[6].'"    width="190"  alt="" srcset="">';
 ?>
 
         </div>

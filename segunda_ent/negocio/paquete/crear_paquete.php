@@ -111,8 +111,8 @@
             <li><a href="../productos/Pags/Uniformes.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Uniforme.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Uniformes</p></a></li>
             <li><input class="h-6" type="text"></li>
             <li><img class="h-6 p-1 border"src="../../../src/imgs/Lupa2.png" alt=""></li>            
-            <li><a href="../productos/Pags/Combos.php"><img class="h-11 px-5 m-2 mt-2" src="../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
-            <li><a href="../productos/Pags/Ofertas.php"><img class="h-11 px-5 m-2 mt-2" src="../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
+            <li><a href="../productos/Pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
+            <li><a href="../productos/Pags/Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
             <li><a href="../productos/Pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
 
 
@@ -221,7 +221,7 @@
 
             <br> <input class="controls" placeholder="Precio del Paquete" type="number" min="1" name="pre" required maxlength="30" size="40"> <br>
 
-            <br> <input class="controls" placeholder= "Descuento" type="number" min="1" name="descu"   value="" required maxlength="30" size="40"><br>
+            <br> <input class="controls" placeholder= "Descuento" type="number" min="0" name="descu"   value="" required maxlength="30" size="40"><br>
 
             <br> <input class="controls" placeholder="Descripcion de Paquete" type="text" name="desc" required> <br>
 

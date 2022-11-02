@@ -15,6 +15,8 @@
             <th>Descripcion</th>
             <!-- <th>Imagen</th> -->
             <th>Agregar Paquete</th>
+            <th>Ver Paquete</th>
+
           
 
 
@@ -47,7 +49,7 @@
                         $consulta = mysqli_query($con, "SELECT * FROM paquete WHERE Nombre like '%" . $nombre . "%'") or die(mysqli_error($con));
 
                         while ($filas = mysqli_fetch_array($consulta)) {
-                            $IDpa = $filas['Paquete'];
+                            $IDpa = $filas['IdPaquete'];
                             $nom = $filas['Nombre'];
                             $descu = $filas['Descuento'];
                             $pre = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
@@ -68,6 +70,8 @@
                 <td><?php echo "<p style='color:white;'>$" . $pre . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $desc . "</p>"; ?></td>
                 <td><a href="lista_prod.php?ID=<?php echo $IDpa; ?>">Agregar productos </a></td>
+                <td><a href="verPaquete.php?ID=<?php echo $IDpa; ?>">Ver  Paquete </a></td>
+
 
 
 

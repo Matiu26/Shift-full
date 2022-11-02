@@ -10,7 +10,7 @@
   } 
   else {
     ?>
-  <h2> Bienvenido, <span> <?php  echo $_SESSION['session_username'];?> ! </span> </h2>
+  <!-- <h2>  <span> <?php  echo $_SESSION['session_username'];?> </span> </h2> -->
   <?php
 
 }
