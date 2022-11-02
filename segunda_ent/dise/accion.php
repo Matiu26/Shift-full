@@ -214,7 +214,14 @@
             <a href="../negocio/productos/agregar_prod.php">Agregar producto</a>
             <a href="../negocio/productos/mostrar_prod.php">Listado producto</a>
             <a href="../negocio/productos/agregar_oferta.php">Agregar Oferta</a>
-
+            <br />
+            <br />
+            <h3 class="border-b mx-10">  PAQUETES </h3> 
+            <a href="../negocio/paquete/crear_paquete.php" class="text-">Crear paquete</a>
+            <a href="../negocio/paquete/lista_paquetes.php">Agregar paquete</a>
+            <!-- <a href="../negocio/paquete/lista_prod.php">Agregar paquete</a> -->
+            <a href="../negocio/proveedor/Upd_prov.php">Modificar paquete</a>
+            <a href="../negocio/proveedor/eliminar_prov.php">Eliminar paquete</a>
             <br />
             <br />
           </form>  
