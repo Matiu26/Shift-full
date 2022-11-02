@@ -182,64 +182,80 @@ if ($sesion_i == null ||  $sesion_i = "") {
    </div>  
 
      
-       
-       
-      
-     
-     
-  
-   <div class="flex flex-col h-auto  mt-20">     
+   <div>
+      <div class="flex flex-col h-auto  mt-5 mx-0 md:mx-14">     
           
 
-          <div class="flex h-full md:flex-rows mb-40">
+        <div class="flex h-full md:flex-rows mb-5">
 
-            <div class="">
-              <div class="hidden w-40 h-60 mr-10 mt-5 bg-blue-900 rounded hidden md:flex flex-col justify-around">
-                <img src="../../../src/imgs/Combos.png" alt="">
-              </div>  
-              
-              <div class="hidden w-40 h-60 mr-10 mt-3 bg-blue-900 rounded hidden md:flex flex-col justify-around">
-                <img src="../../../src/imgs/Ofertas.png" alt="">
-              </div> 
+          <div class="">
+            <div class="hidden w-40 h-60 mr-10 mt-5 bg-blue-900 rounded hidden md:flex flex-col justify-around">
+              <img src="../../../src/imgs/Combos.png" alt="">
+            </div>  
+            
+            <div class="hidden w-40 h-60 mr-10 mt-3 bg-blue-900 rounded hidden md:flex flex-col justify-around">
+              <img src="../../../src/imgs/Ofertas.png" alt="">
+            </div> 
+          </div>
+          
+          <div>
+            
+          </div>
+          
+          <div class="flex flex-col w-auto  
+          py-5  border border-gray-200 flex-grow rounded mt-5 ">
+
+          
+            
+            <div class="flex w-auto justify-center mb-5 ">
+                <h2 class="mb-3 text-2xl w-28  border-b border-gray-200 shadow-md text-center font-semibold"><?php echo $nom?> </h2>
             </div>
-            
-            
-            <div class="flex flex-col w-auto  
-            py-5  border border-gray-200 flex-grow rounded mt-5 ">
 
-            
-              
-              <div class="flex w-auto justify-center mb-10">
-                  <h2 class="mb-3 text-2xl w-auto   border-b border-gray-200 shadow-md text-center font-semibold"><?php echo $nom?> </h2>
-              </div>
+            <div class=" mx-5 flex justify-center">
+              <div class="flex  flex-col ">
+                <div class="flex  h-48 w-48 md:h-64 md:w-64  items-center border border-gray-100 p-3 rounded border-r border-black">
+                <?php echo $foto?>
+                </div> 
 
-              <div class="m-auto p-auto flex ">
-                <div class="flex  flex-col">
-                  <div class="flex  h-48 w-48 md:h-60 md:w-60  justify-center items-center border border-gray-200 p-3 rounded border-r border-black">
-                  <?php echo $foto?>
-                  </div> 
-
-                  <!-- <form  method="post" class="flex justify-center w-full mt-3 p-3"> -->
-        
-                    <button class="" name="a" type="submit">
+                <div class=" justify-center w-full mt-3 p-3 flex md:hidden">
+                <button class="" name="a" type="submit">
                     <p class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded">
                     <a href="carrito/funcAgrCarrito.php?ID=<?php echo $IDp; ?>"><?php echo "Agregar al carrito" ?> </a>
                   </p> 
                     </button> 
-            
-                <!-- </form> -->
-                  <div class="flex-col md:hidden">
-                    <div class="w-28  border-black">
+                </div>
+                <div class="flex-col md:hidden mt-3 ">
+                  <div class="w-28  border-black">
+                    <p class="font-bold text-2xl text-blue-900 ">$<?php echo $pre ?></p>
+                  </div>  
+  
+                  <div class="flex mt-3 flex-col justify-between ">
+                        
+                    <select name="tip" onchange="" id="elemento"  class="form_control -ml-1 border-b border-gray-200 shadow-sm border-r">
+                      <option value="0">Selecciona Talle</option> 
+                      <option value="1">XS</option>
+                      <option value="2">S</option>
+                      <option value="3">M </option>
+                      <option value="4">L </option>
+                      <option value="5">XL </option>
+                    </select>
+                  </div>
+                  
+
+                </div>
+                  
+                  
+                </div>
+                
+                <div class="hidden md:flex ">
+                  <div class="flex flex-col justify-between mx-5 mb-2">
+                    <div class="w-28  border-black ">
                       <p class="font-bold text-2xl text-blue-900 ">$<?php echo $pre ?></p>
                     </div>  
-    
+  
                     <div class="flex mt-3 flex-col justify-between ">
-                          
-                      <div class="flex">
-                        <p class="border-b border-gray-200 shadow-sm border-r">Cantidad</p>
-                        <input class="w-10 h-6 ml-2  rounded border border-blue-900 " type="number">  
-                      </div>
-                      <select name="tip" onchange="" id="elemento"  class="form_control -ml-1 border-b border-gray-200 shadow-sm border-r">
+
+                      <select name="tip" onchange="" id="elemento"  class="form_control -ml-1 ">
                         <option value="0">Selecciona Talle</option> 
                         <option value="1">XS</option>
                         <option value="2">S</option>
@@ -247,66 +263,75 @@ if ($sesion_i == null ||  $sesion_i = "") {
                         <option value="4">L </option>
                         <option value="5">XL </option>
                       </select>
-                    </div>
-  
-                  </div>
-                    
-                    
-                  </div>
-                  
-                  <div class="hidden md:flex ">
-                    <div class="flex flex-col justify-between mx-5 mb-16">
-                      <div class="w-28  border-black">
-                        <p class="font-bold text-2xl text-blue-900 ">$<?php echo $pre ?></p>
-                      </div>  
-    
-                      <div class="flex mt-3 flex-col justify-between ">
-                        <div class="flex">
-                          <p class="border-b border-gray-200 shadow-sm border-r">Cantidad</p>
-                          <input class="w-10 h-6 ml-2  rounded border border-blue-900 " type="number">  
-                        </div>
-
-                        <select name="tip" onchange="" id="elemento"  class="form_control -ml-1 border-b border-gray-200 shadow-sm border-r">
-                          <option value="0">Selecciona Talle</option> 
-                          <option value="1">XS</option>
-                          <option value="2">S</option>
-                          <option value="3">M </option>
-                          <option value="4">L </option>
-                          <option value="5">XL </option>
-                        </select>
+                      
+                      <div class="w-full text-center mt-3">
+                      <button class="" name="a" type="submit">
+                    <p class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded">
+                    <a href="carrito/funcAgrCarrito.php?ID=<?php echo $IDp; ?>"><?php echo "Agregar al carrito" ?> </a>
+                  </p> 
+                  <br> <a href="javascript:history.back()"> Regresar</a>
+                    </button> 
                       </div>
-                      <br> <a href="javascript:history.back()"> Regresar</a>
-
                     </div>
-                  </div>
-
-                 
-
-                </div>
-                
-                <div  class="flex flex-col mt-3 m-5 md:mx-20">
-                  <div class="mt-20 ">
-                    <h3 class="border-b border-gray-200 shadow-sm border-r w-28 text-center">Descripcion</h3>
-                    <p class="mt-5 border border-gray-300 pb-10 p-5 w-full shadow-md rounded"><?php echo $desc ?></p>
 
                   </div>
-
                 </div>
 
-
                 
-            
 
-
+              </div>
+              <div class=" flex flex-col m-3 mt-5  ">
+                <h3 class="border-b border-gray-200 shadow-sm border-r w-28 text-center">Descripcion</h3>
+                <p class="mt-5 border border-gray-300 pb-10 p-5 w-full  shadow-md"><?php echo $desc?></p>
+              </div>
+              <br>
+              <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Productos Similares</h2>  
           </div>          
 
-        
-            
+           
+          <?php
+require_once("miapp_productos.php");
+$consulta = mysqli_query($con, "SELECT Tipo FROM producto  WHERE IdProducto = '$IDp'") or die(mysqli_error($con));
+while ($filas = mysqli_fetch_array($consulta)) {
+    $tip = $filas['Tipo']; 
+    
+}
 
-          
-          </div>
-     
+$c = mysqli_query($con, "SELECT * FROM producto WHERE Tipo= '$tip' and IdProducto != '$IDp' limit 4") or die(mysqli_error($con));
+while ($filas = mysqli_fetch_array($c)) {
+    $IDp2 = $filas['IdProducto'];
+    $nom2 = $filas['Nombre'];
+    $descu2 = $filas['Descuento'];
+    $tip2 = $filas['Tipo'];
+    $pre2 = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
+    $foto2= '<img  src="'.$filas["Foto"].'"    width="190"  alt="" srcset="">';
+?>
+
         </div>
+        <div class=" w-full  h-auto m-auto grid grid-cols-2 justify-center  sm:grid-cols-3 lg:grid-cols-4 place-items-center ">
+          
+          <div class="">
+          <a href="producto.php?ID=<?php echo $IDp2; ?>"><?php echo $foto2 ?> </a><br>
+        <?php echo $nom2;?><br>
+       <?php echo "$".$pre2;?><br>
+     
+          </div>
+          <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 bg-slate-900 mb-5 rounded">
+
+          </div>
+          <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 bg-slate-900 mb-5 rounded">
+
+          </div> 
+          <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 bg-slate-900 mb-5 rounded">
+            
+          </div>
+        </div>
+        <?php
+          }
+       ?>
+      </div>
+    </div>
+          
   
     <footer class="flex h-auto ">
       <div class="flex flex-col w-full bg-blue-900 rounded">

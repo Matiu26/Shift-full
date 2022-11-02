@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="index.css">
 </head>
-<body class="mx-5 md:mx-10 font-Comfortaa" >
+<body class="mx-5 md:mx-10 font-Comfortaa " >
   <header class="flex justify-around flex-wrap items-center bg-blue-900 rounded md:px-10 ">
 
 
@@ -93,100 +93,11 @@
         </div>
       </nav> 
   
-    
-    <div class="flex">
-     
-      
-      
-      <div  class="  flex-col w-full md:hidden  mt-1     
-                    text-center bg-slate-800 rounded h-auto">
-        <button id="boton2" class=" flex my-3  m-auto">
-          <span class=" text-white text-2xl  left-4 cursor-pointer md:hidden" >
-            <i class="bi bi-filter-left px-3 py-1 left-4 cursor-pointer rounded-md "></i>
-          </span>
-        </button> 
+      <div class="flex">
+        <div class="flex flex-col h-auto  mt-5 mx-0 md:mx-14">     
+            
 
-        <div id="menu2" class="flex-col hidden mx-14">
-          <div class="text-gray-100  text-xl">
-            <div class="px-2.5 flex items-center">
-            </div> 
-          </div>
-          <div class="p-2.5 mt- flex items rounded-md px-4 duration-300
-                      cursor-pointer bg-gray-700 text-white ">
-            <i class="bi bi-search font-bold text-sm " ></i>        
-            <input type="text" class="text-[15px] ml-4 w-full bg-transparent
-                focus:outline-none" placeholder="Buscar...">    
-          </div>
-          
-          <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
-                      cursor-pointer hover:bg-blue-700 text-white" >
-                      <a href="../Pags/Cascos.php"><img class="h-6 m-2 p-auto inline" src="imgs/casco.png" alt=""></a>  
-                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Cascos</p>
-                    <span class="text-sm m-auto p-auto" id="arrow">
-                       <i class="bi bi-chevron-down"></i>    
-                    </span>
-          </div>
-          
-  
-          <div class="p-2.5  flex items rounded-md px-4 duration-300
-                      cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../Pags/Chalecos.php"><img class="h-6 m-2 p-auto inline" src="imgs/Chaleco.png" alt=""></a>  
-                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Chalecos</p>        
-                      <span class="text-sm m-auto p-auto" id="arrow">
-                        <i class="bi bi-chevron-down"></i>    
-                     </span>
-          </div>
-          <div class="p-2.5  flex items rounded-md px-4 duration-300
-                      cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../Pags/Uniformes.php"><img class="h-6 m-2 p-auto inline" src="imgs/Uniforme.png" alt=""></a>  
-                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Uniformes</p>        
-                      <span class="text-sm m-auto p-auto" id="arrow">
-                        <i class="bi bi-chevron-down"></i>    
-                     </span>
-          </div>
-          <div class="p-2.5  flex items rounded-md px-4 duration-300
-                      cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../Pags/Botas.php"><img class="h-6 m-2 p-auto inline" src="imgs/Botas.png" alt=""></a>  
-                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-center">Botas</p>        
-                      <span class="text-sm m-auto p-auto" id="arrow">
-                        <i class="bi bi-chevron-down"></i>    
-                     </span>
-          </div>
-          <div class="p-2.5  flex items rounded-md px-4 duration-300
-                      cursor-pointer hover:bg-blue-700 text-white">
-                      <a href=""><img class="h-7 m-2 p-auto inline" src="imgs/Ofertas.png" alt=""></a>  
-                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Ofertas</p>        
-                      <span class="text-sm m-auto p-auto" id="arrow">
-                        <i class="bi bi-chevron-down"></i>    
-                     </span>
-          </div>
-          <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
-                      cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../Pags/Combos.php"><img class="h-7 m-2 p-auto inline" src="imgs/Combos.png" alt=""></a>  
-                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Combos</p>        
-                      <span class="text-sm m-auto p-auto" id="arrow">
-                        <i class="bi bi-chevron-down"></i>    
-                     </span>
-          </div>
-  
-        </div>           
-                 
-
-      </div>
-
-    </div>  
-
-      
-        
-        
-       
-      
-      
-   
-        <div class="flex flex-col h-auto  mt-20">     
-          
-
-          <div class="flex h-full md:flex-rows mb-40">
+          <div class="flex h-full md:flex-rows mb-5">
 
             <div class="">
               <div class="hidden w-40 h-60 mr-10 mt-5 bg-blue-900 rounded hidden md:flex flex-col justify-around">
@@ -198,37 +109,36 @@
               </div> 
             </div>
             
+            <div>
+              
+            </div>
             
-            <div class="flex flex-col w-auto  
+            <div class="flex flex-col w-full 
             py-5  border border-gray-200 flex-grow rounded mt-5 ">
 
             
               
-              <div class="flex w-auto justify-center mb-10">
+              <div class="flex w-auto justify-center mb-5 ">
                   <h2 class="mb-3 text-2xl w-28  border-b border-gray-200 shadow-md text-center font-semibold"><?php echo $nom?> nombre</h2>
               </div>
 
-              <div class="m-auto p-auto flex ">
-                <div class="flex  flex-col">
-                  <div class="flex  h-48 w-48 md:h-60 md:w-60  items-center border border-gray-200 p-3 rounded border-r border-black">
+              <div class=" mx-5 flex justify-center">
+                <div class="flex  flex-col items-center ">
+                  <div class="flex  h-48 w-48 md:h-64 md:w-64  items-center border border-gray-100 p-3 rounded border-r border-black">
                     <img class="" src="imgs/producto.jpg" alt="">
                   </div> 
 
-                  <div class="flex justify-center w-full mt-3 p-3">
+                  <div class=" justify-center w-full mt-3 p-3 flex md:hidden">
                     <button class=""><p class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded  ">Agregar al carrito</p> 
                     </button> 
                   </div>
-                  <div class="flex-col md:hidden">
+                  <div class="flex-col md:hidden mt-3 ">
                     <div class="w-28  border-black">
                       <p class="font-bold text-2xl text-blue-900 ">$1000<?php echo $pre ?></p>
                     </div>  
     
                     <div class="flex mt-3 flex-col justify-between ">
                           
-                      <div class="flex">
-                        <p class="border-b border-gray-200 shadow-sm border-r">Cantidad</p>
-                        <input class="w-10 h-6 ml-2  rounded border border-blue-900 " type="number">  
-                      </div>
                       <select name="tip" onchange="" id="elemento"  class="form_control -ml-1 border-b border-gray-200 shadow-sm border-r">
                         <option value="0">Selecciona Talle</option> 
                         <option value="1">XS</option>
@@ -238,25 +148,22 @@
                         <option value="5">XL </option>
                       </select>
                     </div>
-  
+                    
+
                   </div>
                     
                     
                   </div>
                   
                   <div class="hidden md:flex ">
-                    <div class="flex flex-col justify-between mx-5 mb-16">
-                      <div class="w-28  border-black">
-                        <p class="font-bold text-2xl text-blue-900 ">$1000<?php echo $pre ?></p>
+                    <div class="flex flex-col justify-between mx-5 mb-2">
+                      <div class="w-28  border-black ">
+                        <p class="font-bold text-2xl text-blue-900 ">$1000 <?php echo $pre ?></p>
                       </div>  
     
                       <div class="flex mt-3 flex-col justify-between ">
-                        <div class="flex">
-                          <p class="border-b border-gray-200 shadow-sm border-r">Cantidad</p>
-                          <input class="w-10 h-6 ml-2  rounded border border-blue-900 " type="number">  
-                        </div>
 
-                        <select name="tip" onchange="" id="elemento"  class="form_control -ml-1 border-b border-gray-200 shadow-sm border-r">
+                        <select name="tip" onchange="" id="elemento"  class="form_control -ml-1 ">
                           <option value="0">Selecciona Talle</option> 
                           <option value="1">XS</option>
                           <option value="2">S</option>
@@ -264,46 +171,51 @@
                           <option value="4">L </option>
                           <option value="5">XL </option>
                         </select>
+                        <div class="w-full text-center mt-3">
+                          <button class=""><p class="text-sm md:text-base px-1 text-white w-auto bg-blue-600 rounded  ">Agregar al carrito</p> 
+                          </button> 
+                        </div>
                       </div>
-  
+
                     </div>
                   </div>
 
-                 
+                  
+
+                </div>
+                <div class=" flex flex-col m-3 mt-5  mx-5">
+                  <h3 class="border-b border-gray-200 shadow-sm border-r w-28 text-center">Descripcion</h3>
+                  <p class="mt-5 border border-gray-300 pb-10 p-5 w-full  shadow-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit in dignissimos nisi culpa illum delectus ullam porro consequatur facilis tenetur.</p>
 
                 </div>
                 
-                <div  class="flex flex-col mt-3 m-5 md:mx-20">
-                  <div class="mt-20 ">
-                    <h3 class="border-b border-gray-200 shadow-sm border-r w-28 text-center">Descripcion</h3>
-                    <p class="mt-5 border border-gray-300 pb-10 p-5 w-full shadow-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit in dignissimos nisi culpa illum delectus ullam porro consequatur facilis tenetur.</p>
-
-                  </div>
-
-                </div>
-
-
+              
                 
-                
-                
-                
-
-
-          </div>          
+            </div>          
 
         
             
 
           
           </div>
-     
-        </div>
+          <div class=" w-full  h-auto m-auto grid grid-cols-2 justify-center  sm:grid-cols-3 lg:grid-cols-4 place-items-center ">
+            <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 bg-slate-900 mb-5 rounded">
 
+            </div>
+            <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 bg-slate-900 mb-5 rounded">
 
-   
+            </div>
+            <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 bg-slate-900 mb-5 rounded">
+
+            </div> 
+            <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 bg-slate-900 mb-5 rounded">
+              
+            </div>
+          </div>
     
-   
-  
+        </div>
+      </div>
+      
     <footer class="flex h-auto ">
       <div class="flex flex-col w-full bg-blue-900 rounded">
 
