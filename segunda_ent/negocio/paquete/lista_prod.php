@@ -195,6 +195,15 @@
           </div>
           <div class="flex h-screen flex-col border-b  border-gray-400 mt-10 agrProd">
             <div class="flex flex-col">
+            <form class="form" name="formulario" method="post" action="">
+    
+    <input class="controls" placeholder="Ingrese Producto" type="text" name="nom" required maxlength="30" size="40">
+    <input class="botons" type="submit" value="Buscar Producto" name="buscar">
+    <br />
+    <br> <a href="lista_prod.php" class="regresar">Ver listado</a> <br>
+    <br> <a href="lista_paquetes.php" class="regresar">Regresar</a> <br>
+
+  </form>
               <?php include("FunctablaProd.php")?>
             </div>
 

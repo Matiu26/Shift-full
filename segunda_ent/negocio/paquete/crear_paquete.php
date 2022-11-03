@@ -223,7 +223,7 @@
 
             <br> <input class="controls" placeholder= "Descuento" type="number" min="0" name="descu"   value="" required maxlength="30" size="40"><br>
 
-            <br> <input class="controls" placeholder="Descripcion de Paquete" type="text" name="desc" required> <br>
+            <br> <textarea class="controls" placeholder="Descripcion del paquete" type="text" name="desc" required> </textarea><br>
 
                 <br> <input class="botons" type="submit" value="Crear Paquete" name="agregar"> <br>
                 <br> <a href="javascript:history.back()"class="regresar"> Regresar</a>

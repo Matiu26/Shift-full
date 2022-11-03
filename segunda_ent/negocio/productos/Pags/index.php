@@ -138,22 +138,20 @@ if ($sesion_i == null ||  $sesion_i = "") {
             <li><a href="Cascos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/casco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Cascos</p></a></li>
             <li><a href="Chalecos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs//Chaleco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Chalecos</p></a></li>
             <li><a href="Uniformes.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Uniforme.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Uniformes</p></a></li>
-            <li><input class="h-6" type="text"></li>
-            <li><img class="h-6 p-1 border"src="../../../../src/imgs/Lupa2.png" alt=""></li>            
-            <li><a href="Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
-            <li><a href="Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
-            <li><a href="Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
+            <li><input class="h-7" type="text"></li>
+            <li><img class="h-7 p-1 border"src="../../../../src/imgs/Lupa2.png" alt=""></li>            
+            <li><a href="Pags/Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
+            <li><a href="Pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
+            <li><a href="Pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
 
 
           </ul>
         </div>
-      </nav> 
+  </nav> 
   
     
-    <div class="flex mb-10">
+  <div class="flex  mb-10">
      
-      
-      
       <div  class="  flex-col w-auto md:hidden absolute mt-1 lg:left-0 mr-5
                     text-center bg-slate-800 rounded h-auto mb-10 ">
         <button id="boton2" class=" flex my-3  m-auto">
@@ -224,64 +222,82 @@ if ($sesion_i == null ||  $sesion_i = "") {
                         <i class="bi bi-chevron-down"></i>    
                      </span>
           </div>
-  
-        </div>           
+      </div>
+    </div>           
                  
 
+  </div>
+  
+  <div class="flex flex-col h-auto  mt-5 mx-0 md:mx-14 ">     
+          
+
+          <div class="flex h-full md:flex-rows mb-5 mt-10 md:mt-0">
+  
+            <div class="">
+              <div class="hidden w-40 h-60 mr-10 mt-5 bg-blue-900 rounded hidden md:flex flex-col justify-around">
+                <img class="px-3" src="../../../../src/imgs/Combos.png" alt="">
+              </div>  
+              
+              <div class="hidden w-40 h-60 mr-10 mt-3 bg-blue-900 rounded hidden md:flex flex-col justify-around">
+                <img class="px-3" src="../../../../src/imgs/Ofertas.png" alt="">
+              </div> 
+            </div>
+            
+  
+            
+            <div class="flex flex-col w-auto  
+            py-5  border border-gray-200 flex-grow rounded mt-5 ">
+  
+            
+              
+            
+          
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  place-items-center ">
+            <?php
+              require_once("../miapp_productos.php");
+              $consulta = mysqli_query($con, "SELECT * FROM producto limit 16") or die(mysqli_error($con));
+
+
+               while ($filas = mysqli_fetch_array($consulta)) {
+                $IDp = $filas['IdProducto'];
+                $nom = $filas['Nombre'];
+                $descu = $filas['Descuento'];
+                $pre = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
+                $desc = $filas['Descripcion'];
+                $foto= '<img  src="'."../".$filas["Foto"].'"    width="200"  alt="" srcset="">';
+              ?>
+              <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 hover:shadow-lg  flex flex-col hover:border hover:border-gray-200 rounded my-5 p-5 justify-between ">
+                <a href="../producto.php?ID=<?php echo $IDp; ?>"><?php echo $foto ?> </a>
+                <div class="flex justify-between">
+                  <p><?php echo $nom;?></p>
+                  <p><?php echo "$".$pre;?></p>
+                  
+                </div>
+                
+              </div>
+                  
+              <?php 
+                }
+              ?>
+                    
+            </div>
+        
+        
+        
+  
       </div>
-
-
-
-      
-        
-        
-       
-      
-      
-        <div class="flex flex-col w-full mx-14">
-          <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Inicio</h2>
-          </div>
-
-          <?php
-require_once("../miapp_productos.php");
-$consulta = mysqli_query($con, "SELECT * FROM producto") or die(mysqli_error($con));
-
-while ($filas = mysqli_fetch_array($consulta)) {
-    $IDp = $filas['IdProducto'];
-    $nom = $filas['Nombre'];
-    $descu = $filas['Descuento'];
-    $pre = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
-    $desc = $filas['Descripcion'];
-    $foto= '<img  src="'."../".$filas["Foto"].'"    width="190"  alt="" srcset="">';
+    </div>  
+  </div>
+                
+               
+                
 
   
-?>
-    
-         
-        
-    <a href="../producto.php?ID=<?php echo $IDp; ?>"><?php echo $foto ?> </a><br>
-        <?php echo $nom;?><br>
-       <?php echo "$".$pre;?><br>
-       <?php
-          }
-       ?>
-     
-     
-
-          </div>
-
-        </div>
-     
-      </div>
-
-
-    </div>
     
  
    
   
-    <footer class="flex h-auto ">
+  <footer class="flex h-auto ">
       <div class="flex flex-col w-full bg-blue-900 rounded">
 
         <div class="   ">
@@ -289,7 +305,7 @@ while ($filas = mysqli_fetch_array($consulta)) {
 
             <div class="flex col-span-1  sm:col-span-3 justify-center items-center">
               <!-- quiero que no se achique -->
-              <img class="h-16 md:h-24 lg:h-28 inline" src="../src/imgs/Logo.png" alt="">
+              <img class="h-16 md:h-24 lg:h-28 inline" src="../../../../src/imgs/Logo.png" alt="">
               <span class="font-semibold text-xl md:text-2xl text-white tracking-tight">
                 Ropa de Seguridad
               </span>
@@ -340,7 +356,7 @@ while ($filas = mysqli_fetch_array($consulta)) {
 
        
       
-    </footer>
+  </footer>
    
 
  

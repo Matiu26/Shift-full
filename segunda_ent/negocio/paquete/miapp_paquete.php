@@ -35,10 +35,10 @@ function agregarApaq($id_paq,$id_pr)
     return true;
 }
 
-function existe_en_paquete($id)
+function existe_en_paquete($IDpa,$IDp)
 {
     $con = conectar();
-    $query = mysqli_query($con, "SELECT IdPaquete FROM genera WHERE IdProducto='" . $id. "'") or die(mysqli_error($con));
+    $query = mysqli_query($con, "SELECT IdPaquete  FROM genera WHERE  IdPaquete='" . $IDpa. "' AND IdProducto='" . $IDp. "'") or die(mysqli_error($con));
 
     $row = $query->fetch_assoc();
     mysqli_close($con);
@@ -52,8 +52,16 @@ function existe_en_paquete($id)
 function eliminar_de_paquete($id_p)
 {
     $con = conectar();
-    mysqli_query($con, "DELETE FROM gestiona WHERE IdProducto='" . $id_p . "'") or die;
+    mysqli_query($con, "DELETE FROM genera WHERE IdProducto='" . $id_p . "'") or die;
     
+    mysqli_close($con);
+
+    return true;
+}function eliminar_paquete($IDpa)
+{
+    $con = conectar();
+    mysqli_query($con, "DELETE FROM paquete  WHERE IdPaquete='" . $IDpa . "'") or die;
+    (mysqli_error($con));
     mysqli_close($con);
 
     return true;

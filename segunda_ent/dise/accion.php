@@ -218,10 +218,8 @@
             <br />
             <h3 class="border-b mx-10">  PAQUETES </h3> 
             <a href="../negocio/paquete/crear_paquete.php" class="text-">Crear paquete</a>
-            <a href="../negocio/paquete/lista_paquetes.php">Agregar a paquete</a>
-            <!-- <a href="../negocio/paquete/lista_prod.php">Agregar paquete</a> -->
-            <a href="../negocio/proveedor/Upd_prov.php">Modificar paquete</a>
-            <a href="../negocio/proveedor/eliminar_prov.php">Eliminar paquete</a>
+            <a href="../negocio/paquete/lista_paquetes.php">Listado paquete</a>
+      
             <br />
             <br />
           </form>  

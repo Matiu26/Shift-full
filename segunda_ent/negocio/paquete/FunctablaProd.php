@@ -1,15 +1,10 @@
 <?php
 $IDpa = $_GET["ID"];
-$_SESSION['IDPAQ'];
-$_SESSION['IDPAQ']= $IDpa;
     ob_start();
     // require_once("../../dato/conexion.php");
     require_once("miapp_productos.php");
-
     $consulta = mysqli_query($con, "SELECT * FROM producto") or die(mysqli_error($con));
-
     ?>
-
     <table id="tabla" width="40%" border="1">
         <tr>
             <th>Id Producto</th>
@@ -20,12 +15,6 @@ $_SESSION['IDPAQ']= $IDpa;
             <th>Descripcion</th>
             <th>Imagen</th>
             <th>Agregar Paquete</th>
-
-          
-
-
-
-
         </tr>
         <?php
    
@@ -41,7 +30,16 @@ $_SESSION['IDPAQ']= $IDpa;
             $foto= '<img  src="'.$filas["Foto"].'" width="180"  alt="" srcset="">';
           
 
-        
+            if (isset($_POST['buscar'])) {
+                if (isset($_POST['nom'])) {
+
+                    if (empty($_POST['nom'])) {
+
+                        return;
+                    }              
+
+
+                    $nombre = $_POST['nom'];
 
                     if (buscar_datos_prod($nombre) == true) {
                         $consulta = mysqli_query($con, "SELECT * FROM producto WHERE Nombre like '%" . $nombre . "%'") or die(mysqli_error($con));
@@ -56,8 +54,13 @@ $_SESSION['IDPAQ']= $IDpa;
                            $foto= '<img  src="'.$filas["Foto"].'" width="180"  alt="" srcset="">';
                         }
                     
-                    } 
-                
+                    } else {
+                        $nombre = null;
+                        echo '<script language="javascript">alert("El Producto ingresado no existe");</script>';
+                        die;
+                    }
+                }
+            }
             
         ?>
             <tr>
@@ -68,7 +71,7 @@ $_SESSION['IDPAQ']= $IDpa;
                 <td><?php echo "<p style='color:white;'>$" . $pre . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $desc . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $foto . "</p>"; ?></td>
-                <td><a href="funcAgregarAPaq.php?IDpr=<?php echo $IDp; ?>">Agregar a Paquete </a></td>
+                <td><a href="funcAgregarAPaq.php?IDpr=<?php echo $IDp; ?>&ID=<?php echo $IDpa; ?>">Agregar a Paquete </a></td>
 
 
 

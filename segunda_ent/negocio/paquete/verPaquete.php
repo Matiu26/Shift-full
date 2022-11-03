@@ -234,7 +234,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
                             <td><?php echo $nom ?></td>
                             <td> $<?php echo $pre ?></td>
                             <td>
-                            <a href="eliminar_prod_de_paq.php?ID=<?php echo $IDp; ?>"><img src="../../../src/imgs/basura.png" width="50" > </a>
+                            <a href="eliminar_prod_de_paq.php?IDpr=<?php echo $IDp; ?>&ID=<?php echo $IDpa; ?>"><img src="../../../src/imgs/basura.png" width="50" > </a>
                                      <input type="hidden" name="id_producto" value="<?php echo $IdP ?>"> 
                                   
                                      

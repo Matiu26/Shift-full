@@ -4,6 +4,7 @@
     require_once("miapp_paquete.php");
 
     $consulta = mysqli_query($con, "SELECT * FROM paquete") or die(mysqli_error($con));
+    $c = mysqli_query($con, "SELECT * FROM VIEW_PAQUETES_CON_IMAGEN") or die(mysqli_error($con));
 
     ?>
 
@@ -13,12 +14,12 @@
             <th>Nombre</th>
             <th>Precio</th>
             <th>Descripcion</th>
-            <!-- <th>Imagen</th> -->
+            <th>Imagen</th>
             <th>Agregar Paquete</th>
             <th>Ver Paquete</th>
+            <th>Eliminar Paquete</th>
 
           
-
 
 
 
@@ -26,12 +27,16 @@
         <?php
    
         while ($filas = mysqli_fetch_array($consulta)) {
-
             $IDpa = $filas['IdPaquete'];
             $nom = $filas['Nombre'];
             $descu = $filas['Descuento'];
             $pre = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
             $desc = $filas['Descripcion'];
+            
+            $filax = mysqli_fetch_array($c) ;
+            $foto= '<img  src="'.$filax["Imagen"].'" width="180"  alt="" srcset="">';
+
+           
           
 
             if (isset($_POST['buscar'])) {
@@ -69,8 +74,11 @@
                 <td><?php echo "<p style='color:white;'>" . $nom . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>$" . $pre . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $desc . "</p>"; ?></td>
+                <td><?php echo "<p style='color:white;'>" . $foto . "</p>"; ?></td>
                 <td><a href="lista_prod.php?ID=<?php echo $IDpa; ?>">Agregar productos </a></td>
                 <td><a href="verPaquete.php?ID=<?php echo $IDpa; ?>">Ver  Paquete </a></td>
+                <td><a href="eliminar_paquete.php?ID=<?php echo $IDpa; ?>">Eliminar  Paquete </a></td>
+
 
 
 
@@ -81,8 +89,8 @@
         <?php
 
         }           
-
-    
+        
+      
 
         ?>
     </table>

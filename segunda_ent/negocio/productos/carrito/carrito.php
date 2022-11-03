@@ -14,7 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="../../usuario/styles1.css">
     <link rel="stylesheet" href="../../../../src/estilos.css">
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="icon" type="imgs" href="../../../../src/imgs/favicon.png.png">
@@ -89,10 +88,10 @@ if ($sesion_i == null ||  $sesion_i = "") {
             <li><a href="../pags/Cascos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/casco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Cascos</p></a></li>
             <li><a href="../pags/Chalecos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs//Chaleco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Chalecos</p></a></li>
             <li><a href="../pags/Uniformes.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Uniforme.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Uniformes</p></a></li>
-            <li><input class="h-6" type="text"></li>
-            <li><img class="h-6 p-1 border"src="../../../../src/imgs/Lupa2.png" alt=""></li>            
-            <li><a href="../pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
+            <li><input class="h-7" type="text"></li>
+            <li><img class="h-7 p-1 border"src="../../../../src/imgs/Lupa2.png" alt=""></li>            
             <li><a href="../pags/Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
+            <li><a href="../pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
             <li><a href="../pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
 
 
@@ -184,86 +183,112 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
    
   </div>
-  <div class="flex flex-col w-full mx-14">     
-    <div class="flex  w-full mt-5">
-<!--             <h2 class="text-lg md:text-3xl mx-auto pb-5 w-full text-center border-b border-gray-300">Inicio</h2>
--->          </div>
 
-    <div class="flex">
+    <div class="flex w-full">
+      <div class="flex flex-col h-auto w-full mt-10 mx-0 md:mx-14">     
+            
+        <div class="flex h-full md:flex-rows mb-5 mt-10 md:mt-0 ">
 
-      <div class="w-60 mr-5 bg-blue-900 rounded h-auto my-5 hidden md:flex flex-col justify-around">
-        
-        <div class="border-b mx-2">
-          <img src="../../../../src/imgs/Combos.png" width="180" alt="">
-        </div>
+          <div class="">
+            <div class="w-40 h-60 mr-10 mt-5 bg-blue-900 rounded hidden  lg:flex flex-col justify-around">
+              <img src="imgs/Combos.png" alt="">
+            </div>  
+              
+            <div class="w-40 h-60 mr-10 mt-3 bg-blue-900 rounded hidden lg:flex flex-col justify-around">
+              <img src="imgs/Ofertas.png" alt="">
+            </div> 
+          </div>
+       
 
-        <div class="border-b mx-2">
-          <img src="../../../../src/imgs/Ofertas.png" width="180" salt="">
-        </div>
-      </div>  
-      <div class="columns">
-        <div class="column">
-        <h2 class="mb-3 text-lg w-full font-semibold">Carrito de Compras</h2>
-        
-            <table class="table">
+            <div class="flex w-full">
+
+              <div class="columns w-full mx-10 border border-gray-200 rounded px-5">
+                <div class="column text-center mt-5">
+                  <h2 class=" text-lg  w-full font-semibold">Carrito </h2>
+
+                  <div class="">
+                    <table class="tableCarr  w-full border border-gray-200 ">
                
-                <tbody><?php 
-              $total=0;
-              if($q->num_rows > 0){ 
-                ?>
-                <thead>
-                <tr>
-                   <th>Foto</th>
-                    <th>Nombre</th>
-                    <th>Precio</th>
-                    <th>Quitar</th>
-                </tr>
-            </thead>
-            <?php 
-                while ($producto = mysqli_fetch_array($q)) {
+                      <tbody><?php 
+                        $total=0;
+                        if($q->num_rows > 0){ 
+                        ?>
+                        <thead class="headCar">
+                          <tr >
+                            <th class="border border-gray-200"></th>
+                            <th class="border border-gray-200">Foto</th>
+                            <th class="border border-gray-200">Nombre</th>
+                            <th class="border border-gray-200">Precio</th>
+                          </tr>
+                        </thead>
+                        <?php 
+                          while ($producto = mysqli_fetch_array($q)) {
 
-                $IDp = $producto['IdProducto'];
-                  $nom = $producto['Nombre'];
-                  $descu = $producto['Descuento'];
-                  $pre = $producto['Precio']- (($producto['Precio'] * $descu)/ 100);
-                    $foto= '<img  src="'."../".$producto["Foto"].'"    width="70"  alt="" srcset="">';
-                      $total= $total + $pre;
-?>
+                          $IDp = $producto['IdProducto'];
+                          $nom = $producto['Nombre'];
+                          $descu = $producto['Descuento'];
+                          $pre = $producto['Precio']- (($producto['Precio'] * $descu)/ 100);
+                          $foto= '<img  src="'."../".$producto["Foto"].'"    width="70"  alt="" srcset="">';
+                          $total= $total + $pre;
+                        ?>
 
                         <tr>
-                           <td><a href="../producto.php?ID=<?php echo $IDp; ?>"><?php echo $foto ?> </a> </td>
-                            <td><?php echo $nom ?></td>
-                            <td> $<?php echo $pre ?></td>
-                            <td>
-                            <a href="eliminar_carrito.php?ID=<?php echo $IDp; ?>"><img src="../../../../src/imgs/basura.png" width="50" > </a>
-                                     <input type="hidden" name="id_producto" value="<?php echo $IdP ?>"> 
-                                  
-                                     
-                                    </button> 
-                                </form>
-                            </td>
+                          <td class="border border-gray-200"> <a  href="eliminar_carrito.php?ID=<?php echo $IDp; ?>"><ion-icon name="close" ></ion-icon>   </a>
+                            <input type="hidden" name="id_producto" value="<?php echo $IdP ?>"> 
+                                      
+                            </button></td>
+                          <td class="ftCar border border-gray-200" ><a href="../producto.php?ID=<?php echo $IDp; ?>" ><?php echo $foto ?> </a> </td>
+                          <td class="border border-gray-200"><?php echo $nom ?></td>
+                          <td class="border border-gray-200"> $<?php echo $pre ?></td>
+                         
                         
                         </tr>
                         
-                </tbody>
-                             
-                    <?php }?>
-
-                    <tr>
-                        <td colspan="2" class=""><strong>Total</strong></td>
-                        <td colspan="9" class="">
-                            $<?php echo ($total) ?>
+                        
+                        
+                      </tbody>
+                              
+                      
+                      <?php }?>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="border border-gray-200" colspan=""></td>
+                        <td  class="border border-gray-200"><strong calass="total">Total:</strong>
+                          $<?php echo ($total) ?>
                         </td><?php 
-                  }
-                        else{ 
-                          
+                        } else{ 
+                                
                           echo"No hay productos en tu carrito aún"; } 
-                          ?>
-                </tfoot>
-            </table>
-            <br> <a href="javascript:history.back()"> Regresar</a>
+                                ?>
+                      </tfoot>
+                    </table>
+                
 
-    </div>
+                  </div>
+                </div>
+                
+                
+              
+                
+              </div>          
+
+        
+            
+
+          
+            </div>
+          
+    
+         
+        </div>
+
+
+      <div class="flex flex-col w-full mx-14">     
+        <div class="flex  w-full mt-5">
+        </div>
+
+    
 
             
 
@@ -360,3 +385,6 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
 
 <!--<npx tailwindcss -i ./src/input.css -o ./src/estilos.css --watch>  -->
+
+
+
