@@ -185,60 +185,78 @@ if ($sesion_i == null ||  $sesion_i = "") {
                         <i class="bi bi-chevron-down"></i>    
                      </span>
           </div>
-  
-        </div>           
+        </div>
+      </div>           
                  
 
-      </div>
+  </div>
 
 
-      <div class="flex flex-col w-full mx-14">
+  <div class="flex flex-col h-auto  mt-5 mx-0 md:mx-14 ">     
+          
+
+          <div class="flex h-full md:flex-rows mb-5 mt-10 md:mt-0">
+  
+            <div class="">
+              <div class="hidden w-40 h-60 mr-10 mt-5 bg-blue-900 rounded hidden md:flex flex-col justify-around">
+                <img class="px-3" src="../../../../src/imgs/Combos.png" alt="">
+              </div>  
+              
+              <div class="hidden w-40 h-60 mr-10 mt-3 bg-blue-900 rounded hidden md:flex flex-col justify-around">
+                <img class="px-3" src="../../../../src/imgs/Ofertas.png" alt="">
+              </div> 
+            </div>
+            
+  
+            
+            <div class="flex flex-col w-auto  
+            py-5  border border-gray-200 flex-grow rounded mt-5 ">
+  
+            
+              
+            <div class="flex flex-col w-full mx-14">
           <div class="flex  w-full mt-5">
             <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Botas</h2>
           </div>
 
-        
-      <?php
-require_once("../miapp_productos.php");
-$consulta = mysqli_query($con, "SELECT * FROM producto WHERE Tipo='Calzado'") or die(mysqli_error($con));
-
-while ($filas = mysqli_fetch_array($consulta)) {
-    $IDp = $filas['IdProducto'];
-    $nom = $filas['Nombre'];
-    $descu = $filas['Descuento'];
-    $pre = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
-    $desc = $filas['Descripcion'];
-    $foto= '<img  src="'."../".$filas["Foto"].'"    width="190"  alt="" srcset="">';
-
-  
+          
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  place-items-center ">
+            <?php
+              require_once("../miapp_productos.php");
+$consulta = mysqli_query($con, "SELECT * FROM producto WHERE Tipo='Calzado' limit 8") or die(mysqli_error($con));
+$productos_relacionados = mysqli_fetch_all($consulta);
+shuffle($productos_relacionados);
+foreach ($productos_relacionados as $filas) {
+  $IDp = $filas[0];
+  $nom = $filas[1];
+  $descu = $filas[7];
+  $pre =$filas[4];
+  $pre = $filas[4]- (($filas[4] * $descu)/ 100);
+  $foto= '<img  src="'."../".$filas[6].'"    width="190"  alt="" srcset="">';
 ?>
-    
-         
+            
+              <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 hover:shadow-lg  flex flex-col hover:border hover:border-gray-200 rounded my-5 p-5 justify-between ">
+                <a href="../producto.php?ID=<?php echo $IDp; ?>"><?php echo $foto ?> </a>
+                <div class="flex justify-between">
+                  <p><?php echo $nom;?></p>
+                  <p><?php echo "$".$pre;?></p>
+                  
+                </div>
+                
+              </div>
+                  
+              <?php 
+                }
+              ?>
+                    
+            </div>
         
-    <a href="../producto.php?ID=<?php echo $IDp; ?>"><?php echo $foto ?> </a><br>
-        <?php echo $nom;?><br>
-       <?php echo "$".$pre;?><br>
-       <?php
-          }
-       ?>
-     
+        
+        
   
-
-        
-          </div>
-
-       
-
-         
-
-        </div>
-     
       </div>
-
-
-    </div>
-    
-
+    </div>  
+  </div>
    
   
     <footer class="flex h-auto ">
@@ -309,9 +327,10 @@ while ($filas = mysqli_fetch_array($consulta)) {
 
   
   
-  
+      
     <script src="../../../../src/app.js"></script>
     <script src="../../../../src/jquer.js"></script>
+    
     
 </body>
 </html>

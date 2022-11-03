@@ -115,130 +115,148 @@ if ($sesion_i == null ||  $sesion_i = "") {
      
       
       
-     <div  class="  flex-col w-auto md:hidden absolute mt-1 lg:left-0 mr-5
-                   text-center bg-slate-800 rounded h-auto mb-10 ">
-       <button id="boton2" class=" flex my-3  m-auto">
-         <span class=" text-white text-2xl  left-4 cursor-pointer md:hidden" >
-           <i class="bi bi-filter-left px-3 py-1 left-4 cursor-pointer rounded-md "></i>
-         </span>
-       </button> 
+      <div  class="  flex-col w-auto md:hidden absolute mt-1 lg:left-0 mr-5
+                    text-center bg-slate-800 rounded h-auto mb-10 ">
+        <button id="boton2" class=" flex my-3  m-auto">
+          <span class=" text-white text-2xl  left-4 cursor-pointer md:hidden" >
+            <i class="bi bi-filter-left px-3 py-1 left-4 cursor-pointer rounded-md "></i>
+          </span>
+        </button> 
 
-       <div id="menu2" class="flex-col hidden mx-14">
-         <div class="text-gray-100  text-xl">
-           <div class="px-2.5 flex items-center">
-           </div> 
-         </div>
-         <div class="p-2.5 mt- flex items rounded-md px-4 duration-300
-                     cursor-pointer bg-gray-700 text-white ">
-           <i class="bi bi-search font-bold text-sm " ></i>        
-           <input type="text" class="text-[15px] ml-4 w-full bg-transparent
-               focus:outline-none" placeholder="Buscar...">    
-         </div>
-         
-         <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
-                     cursor-pointer hover:bg-blue-700 text-white" >
-                     <a href="Cascos.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/casco.png" alt=""></a>  
-                     <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Cascos</p>
-                   <span class="text-sm m-auto p-auto" id="arrow">
-                      <i class="bi bi-chevron-down"></i>    
-                   </span>
-         </div>
-         
- 
-         <div class="p-2.5  flex items rounded-md px-4 duration-300
-                     cursor-pointer hover:bg-blue-700 text-white">
-                     <a href="Chalecos.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/Chaleco.png" alt=""></a>  
-                     <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Chalecos</p>     
-                     <span class="text-sm m-auto p-auto" id="arrow">
+        <div id="menu2" class="flex-col hidden mx-14">
+          <div class="text-gray-100  text-xl">
+            <div class="px-2.5 flex items-center">
+            </div> 
+          </div>
+          <div class="p-2.5 mt- flex items rounded-md px-4 duration-300
+                      cursor-pointer bg-gray-700 text-white ">
+            <i class="bi bi-search font-bold text-sm " ></i>        
+            <input type="text" class="text-[15px] ml-4 w-full bg-transparent
+                focus:outline-none" placeholder="Buscar...">    
+          </div>
+          
+          <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
+                      cursor-pointer hover:bg-blue-700 text-white" >
+                      <a href="Cascos.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/casco.png" alt=""></a>  
+                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Cascos</p>
+                    <span class="text-sm m-auto p-auto" id="arrow">
                        <i class="bi bi-chevron-down"></i>    
                     </span>
-         </div>
-         <div class="p-2.5  flex items rounded-md px-4 duration-300
-                     cursor-pointer hover:bg-blue-700 text-white">
-                     <a href="Uniformes.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/Uniforme.png" alt=""></a>  
-                     <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Uniformes</p>          
-                     <span class="text-sm m-auto p-auto" id="arrow">
-                       <i class="bi bi-chevron-down"></i>    
-                    </span>
-         </div>
-         <div class="p-2.5  flex items rounded-md px-4 duration-300
-                     cursor-pointer hover:bg-blue-700 text-white">
-                     <a href="Botas.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/botas.png" alt=""></a>  
-                     <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Botas</p>             
-                     <span class="text-sm m-auto p-auto" id="arrow">
-                       <i class="bi bi-chevron-down"></i>    
-                    </span>
-         </div>
-         <div class="p-2.5  flex items rounded-md px-4 duration-300
-                     cursor-pointer hover:bg-blue-700 text-white">
-                     <a href="Ofertas.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/Ofertas.png" alt=""></a>  
-                     <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Ofertas</p>      
-                     <span class="text-sm m-auto p-auto" id="arrow">
-                       <i class="bi bi-chevron-down"></i>    
-                    </span>
-         </div>
-         <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
-                     cursor-pointer hover:bg-blue-700 text-white">
-                     <a href="Combos.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/Combos.png" alt=""></a>  
-                     <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Combos</p>              
-                     <span class="text-sm m-auto p-auto" id="arrow">
-                       <i class="bi bi-chevron-down"></i>    
-                    </span>
-         </div>
- 
-       </div>           
-                
+          </div>
+          
+  
+          <div class="p-2.5  flex items rounded-md px-4 duration-300
+                      cursor-pointer hover:bg-blue-700 text-white">
+                      <a href="Chalecos.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/Chaleco.png" alt=""></a>  
+                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Chalecos</p>     
+                      <span class="text-sm m-auto p-auto" id="arrow">
+                        <i class="bi bi-chevron-down"></i>    
+                     </span>
+          </div>
+          <div class="p-2.5  flex items rounded-md px-4 duration-300
+                      cursor-pointer hover:bg-blue-700 text-white">
+                      <a href="Uniformes.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/Uniforme.png" alt=""></a>  
+                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Uniformes</p>          
+                      <span class="text-sm m-auto p-auto" id="arrow">
+                        <i class="bi bi-chevron-down"></i>    
+                     </span>
+          </div>
+          <div class="p-2.5  flex items rounded-md px-4 duration-300
+                      cursor-pointer hover:bg-blue-700 text-white">
+                      <a href="Botas.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/botas.png" alt=""></a>  
+                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Botas</p>             
+                      <span class="text-sm m-auto p-auto" id="arrow">
+                        <i class="bi bi-chevron-down"></i>    
+                     </span>
+          </div>
+          <div class="p-2.5  flex items rounded-md px-4 duration-300
+                      cursor-pointer hover:bg-blue-700 text-white">
+                      <a href="Ofertas.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/Ofertas.png" alt=""></a>  
+                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Ofertas</p>      
+                      <span class="text-sm m-auto p-auto" id="arrow">
+                        <i class="bi bi-chevron-down"></i>    
+                     </span>
+          </div>
+          <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
+                      cursor-pointer hover:bg-blue-700 text-white">
+                      <a href="Combos.php"><img class="h-6 m-2 p-auto inline" src="../../../../src/imgs/Combos.png" alt=""></a>  
+                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Combos</p>              
+                      <span class="text-sm m-auto p-auto" id="arrow">
+                        <i class="bi bi-chevron-down"></i>    
+                     </span>
+          </div>
+        </div>
+      </div>           
+                 
 
-     </div>
+  </div>
 
 
-      <div class="flex flex-col w-full mx-14">
+  <div class="flex flex-col h-auto  mt-5 mx-0 md:mx-14 ">     
+          
+
+          <div class="flex h-full md:flex-rows mb-5 mt-10 md:mt-0">
+  
+            <div class="">
+              <div class="hidden w-40 h-60 mr-10 mt-5 bg-blue-900 rounded hidden md:flex flex-col justify-around">
+                <img class="px-3" src="../../../../src/imgs/Combos.png" alt="">
+              </div>  
+              
+              <div class="hidden w-40 h-60 mr-10 mt-3 bg-blue-900 rounded hidden md:flex flex-col justify-around">
+                <img class="px-3" src="../../../../src/imgs/Ofertas.png" alt="">
+              </div> 
+            </div>
+            
+  
+            
+            <div class="flex flex-col w-auto  
+            py-5  border border-gray-200 flex-grow rounded mt-5 ">
+  
+            
+              
+            <div class="flex flex-col w-full mx-14">
           <div class="flex  w-full mt-5">
             <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Chalecos</h2>
           </div>
 
-        
-      <?php
-require_once("../miapp_productos.php");
-$consulta = mysqli_query($con, "SELECT * FROM producto WHERE Tipo='Torso'") or die(mysqli_error($con));
-
-while ($filas = mysqli_fetch_array($consulta)) {
-    $IDp = $filas['IdProducto'];
-    $nom = $filas['Nombre'];
-    $descu = $filas['Descuento'];
-    $pre = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
-    $desc = $filas['Descripcion'];
-    $foto= '<img  src="'."../".$filas["Foto"].'"    width="190"  alt="" srcset="">';
-
-  
+          
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  place-items-center ">
+            <?php
+              require_once("../miapp_productos.php");
+$consulta = mysqli_query($con, "SELECT * FROM producto WHERE Tipo='Torso' limit 8") or die(mysqli_error($con));
+$productos_relacionados = mysqli_fetch_all($consulta);
+shuffle($productos_relacionados);
+foreach ($productos_relacionados as $filas) {
+  $IDp = $filas[0];
+  $nom = $filas[1];
+  $descu = $filas[7];
+  $pre =$filas[4];
+  $pre = $filas[4]- (($filas[4] * $descu)/ 100);
+  $foto= '<img  src="'."../".$filas[6].'"    width="190"  alt="" srcset="">';
 ?>
-    
-         
+            
+              <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 hover:shadow-lg  flex flex-col hover:border hover:border-gray-200 rounded my-5 p-5 justify-between ">
+                <a href="../producto.php?ID=<?php echo $IDp; ?>"><?php echo $foto ?> </a>
+                <div class="flex justify-between">
+                  <p><?php echo $nom;?></p>
+                  <p><?php echo "$".$pre;?></p>
+                  
+                </div>
+                
+              </div>
+                  
+              <?php 
+                }
+              ?>
+                    
+            </div>
         
-    <a href="../producto.php?ID=<?php echo $IDp; ?>"><?php echo $foto ?> </a><br>
-        <?php echo $nom;?><br>
-       <?php echo "$".$pre;?><br>
-       <?php
-          }
-       ?>
-     
+        
+        
   
-
-        
-          </div>
-
-       
-
-         
-
-        </div>
-     
       </div>
-
-
-    </div>
-    
-
+    </div>  
+  </div>
    
   
     <footer class="flex h-auto ">
@@ -279,9 +297,10 @@ while ($filas = mysqli_fetch_array($consulta)) {
                 Redes y contactos
               </h4> 
               <ul class="flex ml-5 hover:text-white">
+      
               <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
                 <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>>
+                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
       
               </ul>
             </div>
@@ -308,7 +327,7 @@ while ($filas = mysqli_fetch_array($consulta)) {
 
   
   
-  
+      
     <script src="../../../../src/app.js"></script>
     <script src="../../../../src/jquer.js"></script>
     

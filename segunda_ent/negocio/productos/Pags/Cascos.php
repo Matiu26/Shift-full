@@ -224,16 +224,17 @@ if ($sesion_i == null ||  $sesion_i = "") {
             <?php
               require_once("../miapp_productos.php");
 $consulta = mysqli_query($con, "SELECT * FROM producto WHERE Tipo='Cabeza' limit 8") or die(mysqli_error($con));
-
-
-               while ($filas = mysqli_fetch_array($consulta)) {
-                $IDp = $filas['IdProducto'];
-                $nom = $filas['Nombre'];
-                $descu = $filas['Descuento'];
-                $pre = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
-                $desc = $filas['Descripcion'];
-                $foto= '<img  src="'."../".$filas["Foto"].'"    width="200"  alt="" srcset="">';
-              ?>
+$productos_relacionados = mysqli_fetch_all($consulta);
+shuffle($productos_relacionados);
+foreach ($productos_relacionados as $filas) {
+  $IDp = $filas[0];
+  $nom = $filas[1];
+  $descu = $filas[7];
+  $pre =$filas[4];
+  $pre = $filas[4]- (($filas[4] * $descu)/ 100);
+  $foto= '<img  src="'."../".$filas[6].'"    width="190"  alt="" srcset="">';
+?>
+            
               <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 hover:shadow-lg  flex flex-col hover:border hover:border-gray-200 rounded my-5 p-5 justify-between ">
                 <a href="../producto.php?ID=<?php echo $IDp; ?>"><?php echo $foto ?> </a>
                 <div class="flex justify-between">
