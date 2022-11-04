@@ -75,7 +75,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
   } else{
     ?>
  <a href="../../sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
-          Cerrar Sesión
+ <?php  echo $_SESSION['session_username'];?>          
         </a>
     <?php
 }

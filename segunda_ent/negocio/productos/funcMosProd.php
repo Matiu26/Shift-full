@@ -77,7 +77,7 @@
                 <td><?php echo "<p style='color:white;'>" . $desc . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $foto . "</p>"; ?></td>
                 <td><a href="editar_prod.php?ID=<?php echo $IDp; ?>">Modificar </a></td>
-                <td><a href="?ID=<?php echo $IDp; ?>">Eliminar </a></td>
+                <td><a href="eliminar_prod.php?ID=<?php echo $IDp; ?>">Eliminar </a></td>
                 <td><a href="producto.php?ID=<?php echo $IDp; ?>">Mostrar </a></td>
 
 

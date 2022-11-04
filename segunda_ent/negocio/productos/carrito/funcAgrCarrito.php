@@ -5,6 +5,10 @@ error_reporting(0);
 session_start();
 $sesion_i = $_SESSION['session_username'];
 $ID = $_GET["ID"];
+$query = mysqli_query($con, "SELECT IdUsuario FROM usuario WHERE Email='" . $sesion_i . "'");
+$row = $query->fetch_assoc();
+$id_u= $row["IdUsuario"];
+
 if ($sesion_i == null ||  $sesion_i = "") {
     echo '<script language="javascript">alert("Necesitas iniciar sesion para agregar productos al carrito");</script>';
     ?>
@@ -13,13 +17,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
     <?php
 
 } else{
-
-
-        $query = mysqli_query($con, "SELECT IdUsuario FROM usuario WHERE Email='" . $sesion_i . "'");
-        $row = $query->fetch_assoc();
-        $id_u= $row["IdUsuario"];
-
-
+           
         if (existe_en_carrito($ID) == true) {
             echo '<script language="javascript">alert("Este producto ya existe en tu carrito");</script>';
             ?>

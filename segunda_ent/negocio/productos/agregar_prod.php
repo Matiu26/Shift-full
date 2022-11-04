@@ -237,8 +237,9 @@
                       </select>
                     <br>
                     <br> <input class="controls" placeholder="Precio del producto" type="number" min="1" name="pre" required maxlength="30" size="40"> <br>
+                    <br> <input class="controls" placeholder="Descripcion" type="text" name="desc" required maxlength="30" size="40"> <br>
 
-                    <br> <textarea class="controls" placeholder="Descripcion del producto" type="text" name="desc" required> </textarea><br>
+                    <!-- <br> <textarea class="controls" placeholder="Descripcion del producto" type="text" name="desc" required> </textarea><br> -->
 
                     <div class="photo">
                                   <label class="foto" for="foto">Foto</label>
