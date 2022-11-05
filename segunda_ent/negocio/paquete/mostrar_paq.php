@@ -1,4 +1,6 @@
 <?php include("funcPaquete.php") ?>
+<?php include("func_most_paquete.php") ?> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +37,20 @@
       </div>
     <div id="menu" class="w-full mt-0 md:mt-5 hidden flex-grow md:flex md:items-center md:w-auto text-end ">
       <div  class="text-md md:flex-grow text-center items-cenetr mb-5  md:text-end justify-center items-cenetr ">
+      <?php
+       error_reporting(0);
+       session_start();
+      $sesion_i = $_SESSION['session_username'];
+            if ($sesion_i == null ||  $sesion_i = "") {
 
+          ?>
+          <?php
+  } else{
+    ?>
+      <a href="../productos/carrito/carrito.php"><img src="../../../src/imgs/carrito.png" class="h-10 inline-block mr-4 hover:border-b" alt=""></a>
+      <?php
+}
+?>
         <a href="../productos/pags/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Inicio
         </a>
@@ -125,7 +140,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
          
          <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
                      cursor-pointer hover:bg-blue-700 text-white" >
-                     <a href="../Pags/Cascos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/casco.png" alt=""></a>  
+                     <a href="../productos/pags/Cascos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/casco.png" alt=""></a>  
                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Cascos</p>
                    <span class="text-sm m-auto p-auto" id="arrow">
                       <i class="bi bi-chevron-down"></i>    
@@ -135,7 +150,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
  
          <div class="p-2.5  flex items rounded-md px-4 duration-300
                      cursor-pointer hover:bg-blue-700 text-white">
-                     <a href="../Pags/Chalecos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Chaleco.png" alt=""></a>  
+                     <a href="../productos/pags/Chalecos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Chaleco.png" alt=""></a>  
                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Chalecos</p>        
                      <span class="text-sm m-auto p-auto" id="arrow">
                        <i class="bi bi-chevron-down"></i>    
@@ -143,7 +158,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
          </div>
          <div class="p-2.5  flex items rounded-md px-4 duration-300
                      cursor-pointer hover:bg-blue-700 text-white">
-                     <a href="../Pags/Uniformes.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Uniforme.png" alt=""></a>  
+                     <a href="../productos/pags/Uniformes.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Uniforme.png" alt=""></a>  
                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Uniformes</p>        
                      <span class="text-sm m-auto p-auto" id="arrow">
                        <i class="bi bi-chevron-down"></i>    
@@ -151,7 +166,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
          </div>
          <div class="p-2.5  flex items rounded-md px-4 duration-300
                      cursor-pointer hover:bg-blue-700 text-white">
-                     <a href="../Pags/Botas.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Botas.png" alt=""></a>  
+                     <a href="../productos/pags/Botas.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Botas.png" alt=""></a>  
                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-center">Botas</p>        
                      <span class="text-sm m-auto p-auto" id="arrow">
                        <i class="bi bi-chevron-down"></i>    
@@ -159,7 +174,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
          </div>
          <div class="p-2.5  flex items rounded-md px-4 duration-300
                      cursor-pointer hover:bg-blue-700 text-white">
-                     <a href=""><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Ofertas.png" alt=""></a>  
+                     <a href="../productos/pags/Ofertas.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Ofertas.png" alt=""></a>  
                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Ofertas</p>        
                      <span class="text-sm m-auto p-auto" id="arrow">
                        <i class="bi bi-chevron-down"></i>    
@@ -167,7 +182,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
          </div>
          <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
                      cursor-pointer hover:bg-blue-700 text-white">
-                     <a href="../Pags/Combos.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Combos.png" alt=""></a>  
+                     <a href="../productos/pags/Combos.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Combos.png" alt=""></a>  
                      <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Combos</p>        
                      <span class="text-sm m-auto p-auto" id="arrow">
                        <i class="bi bi-chevron-down"></i>    
@@ -272,7 +287,39 @@ if ($sesion_i == null ||  $sesion_i = "") {
                 <h3 class="border-b border-gray-200 shadow-sm border-r w-28 text-center">Descripcion</h3>
                 <p class="mt-5 border border-gray-300 pb-10 p-5 w-full  shadow-md"><?php echo $desc?></p>
               </div>
-              <br>
+              <br>        
+              <div class="flex h-full md:flex-rows mb-5">
+              <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Incluido en paquete</h2>   
+          <?php
+        require_once("miapp_paquete.php");
+
+        while ($producto = mysqli_fetch_array($qu)) {
+         $IDp = $producto['IdProducto'];
+        $nom = $producto['Nombre'];
+        $descu = $producto['Descuento'];
+        $pre = ($producto['Precio']- (($producto['Precio'] * $descu)/ 100));
+        $foto= '<img  src="'.$producto["Foto"].'"    width="70"  alt="" srcset="">';
+      ?>
+                <div class=" w-full  h-auto m-auto grid grid-cols-2 justify-center  sm:grid-cols-3 lg:grid-cols-4 place-items-center ">
+                  
+                  <div class="">
+                  <a href="../productos/producto.php?ID=<?php echo $IDp; ?>"><?php echo $foto ;?> </a>
+                <?php echo $nom;?><br>
+               <?php echo "$".$pre;?><br>
+             
+              
+                    
+                  </div>
+                </div>
+                <?php
+                  }
+               ?>
+              </div>
+            </div>
+          
+              </div> 
+      </div>
+      
               <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Paquetes Similares</h2>  
           </div>          
 
@@ -280,9 +327,10 @@ if ($sesion_i == null ||  $sesion_i = "") {
           <?php
 require_once("miapp_paquete.php");
 
-$c = mysqli_query($con, "SELECT * FROM VIEW_PAQUETES_CON_IMAGEN WHERE id != '$IDpa' limit 4") or die(mysqli_error($con));
+$c = mysqli_query($con, "SELECT * FROM VIEW_PAQUETES_CON_IMAGEN  limit 4") or die(mysqli_error($con));
 $productos_relacionados = mysqli_fetch_all($c);
 shuffle($productos_relacionados);
+// echo var_dump($productos_relacionados);
 foreach ($productos_relacionados as $filas) {
     $IDp2 = $filas[0];
     $nom2 = $filas[2];
@@ -295,27 +343,21 @@ foreach ($productos_relacionados as $filas) {
         </div>
         <div class=" w-full  h-auto m-auto grid grid-cols-2 justify-center  sm:grid-cols-3 lg:grid-cols-4 place-items-center ">
           
-          <div class="">
-          <a href="mostrar_paq.php?ID=<?php echo $IDp2; ?>"><?php echo $foto2 ?> </a>
-        <?php echo $nom2;?><br>
-       <?php echo "$".$pre2;?><br>
-     
-          </div>
-          <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 bg-slate-900 mb-5 rounded">
-
-          </div>
-          <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 bg-slate-900 mb-5 rounded">
-
-          </div> 
-          <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 bg-slate-900 mb-5 rounded">
-            
-          </div>
-        </div>
-        <?php
-          }
-       ?>
-      </div>
-    </div>
+        <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 hover:shadow-lg  flex flex-col hover:border hover:border-gray-200 rounded my-5 p-5 justify-between ">
+                <a href="mostrar_paq.php?ID=<?php echo $IDp2; ?>"><?php echo $foto2 ?> </a>
+                <div class="flex justify-between">
+                  <p><?php echo $nom2;?></p>
+                  <p><?php echo "$".$pre2;?></p>
+                  
+                </div>
+                
+              </div>
+                  
+              <?php 
+                }
+              ?>
+                    
+            </div>
           
   
     <footer class="flex h-auto ">

@@ -221,25 +221,24 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
           
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  place-items-center ">
-            <?php
-              require_once("../miapp_productos.php");
-          $c = mysqli_query($con, "SELECT * FROM VIEW_PAQUETES_CON_IMAGEN limit 8") or die(mysqli_error($con));
-
-
-               while ($filas = mysqli_fetch_array($c)) {
-                $IDpa = $filas['id'];
-                $nom = $filas['Nombre'];
-                $descu = $filas['Descuento'];
-                $pre = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
-                $desc = $filas['Descripcion'];
-
-                $foto= '<img  src="'."../".$filas["Imagen"].'" width="180"  alt="" srcset="">';
-                ?>
+        <?php
+      require_once("../../paquete/miapp_paquete.php");
+        $c =  mysqli_query($con, "SELECT * FROM VIEW_PAQUETES_CON_IMAGEN  limit 16") or die(mysqli_error($con));
+      $productos_relacionados = mysqli_fetch_all($c);
+      shuffle($productos_relacionados);
+      foreach ($productos_relacionados as $filas) {
+    $IDp2 = $filas[0];
+    $nom2 = $filas[2];
+    $descu2 = $filas[4];
+    $pre2 =$filas[3];
+    $pre2 = $filas[3]- (($filas[3] * $descu2)/ 100);
+    $foto2= '<img  src="'."../".$filas[6].'"    width="190"  alt="" srcset="">';
+?>
               <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 hover:shadow-lg  flex flex-col hover:border hover:border-gray-200 rounded my-5 p-5 justify-between ">
-                <a href="../../paquete/mostrar_paq.php?ID=<?php echo $IDpa; ?>"><?php echo $foto ?> </a>
+                <a href="../../paquete/mostrar_paq.php?ID=<?php echo $IDp2; ?>"><?php echo $foto2 ?> </a>
                 <div class="flex justify-between">
-                  <p><?php echo $nom;?></p>
-                  <p><?php echo "$".$pre;?></p>
+                  <p><?php echo $nom2;?></p>
+                  <p><?php echo "$".$pre2;?></p>
                   
                 </div>
                 
