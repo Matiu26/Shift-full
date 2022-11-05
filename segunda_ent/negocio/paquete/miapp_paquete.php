@@ -66,3 +66,11 @@ function eliminar_de_paquete($id_p)
 
     return true;
 }
+function actualizar_paq($nom2,$pre2,$descu2,$desc2, $ID)
+{
+    $con = conectar();
+    mysqli_query($con, "UPDATE Paquete  Set Nombre = '$nom2',
+      Precio = '$pre2', Descuento = '$descu2',
+    Descripcion = '$desc2'  WHERE IdPaquete = '$ID'") or die(mysqli_error($con));
+    return true;
+}

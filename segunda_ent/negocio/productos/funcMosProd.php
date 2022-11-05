@@ -4,6 +4,9 @@
     require_once("miapp_productos.php");
 
     $consulta = mysqli_query($con, "SELECT * FROM producto") or die(mysqli_error($con));
+    $c = mysqli_query($con, "select pe.IdEmpresa, pr.Nombre from proveedor pr 
+    inner join provee pe
+    ON pr.IdEmpresa= pe.IdEmpresa where IdProducto") or die(mysqli_error($con));
 
     ?>
 
@@ -11,6 +14,7 @@
         <tr>
             <th>Id Producto</th>
             <th>Nombre</th>
+            <th>Proveedor</th>
             <th>Stock</th>
             <th>Tipo</th>
             <th>Precio</th>
@@ -34,7 +38,8 @@
             $pre = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
             $desc = $filas['Descripcion'];
             $foto= '<img  src="'.$filas["Foto"].'" width="180"  alt="" srcset="">';
-
+            $filax = mysqli_fetch_array($c) ;
+            $nom_prov = $filax['Nombre'];
           
 
             if (isset($_POST['buscar'])) {
@@ -58,6 +63,8 @@
                             $pre = $filas['Precio'];
                             $desc = $filas['Descripcion'];
                            $foto= '<img  src="'.$filas["Foto"].'" width="180"  alt="" srcset="">';
+                           $filax = mysqli_fetch_array($c) ;
+                             $nom_prov = $filax['Nombre'];
                         }
                     
                     } else {
@@ -71,6 +78,7 @@
             <tr>
                 <td><?php echo "<p style='color:white;'>" . $IDp . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $nom . "</p>"; ?></td>
+                <td><?php echo "<p style='color:white;'>" . $nom_prov . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $sto . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $tip . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>$" . $pre . "</p>"; ?></td>
@@ -87,7 +95,7 @@
         <?php
 
         }           
-
+    
     
 
         ?>

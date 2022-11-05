@@ -18,6 +18,8 @@
             <th>Agregar Paquete</th>
             <th>Ver Paquete</th>
             <th>Eliminar Paquete</th>
+            <th>Modificar Paquete</th>
+
 
           
 
@@ -78,6 +80,7 @@
                 <td><a href="lista_prod.php?ID=<?php echo $IDpa; ?>">Agregar productos </a></td>
                 <td><a href="verPaquete.php?ID=<?php echo $IDpa; ?>">Ver  Paquete </a></td>
                 <td><a href="eliminar_paquete.php?ID=<?php echo $IDpa; ?>">Eliminar  Paquete </a></td>
+                <td><a href="editar_paq.php?ID=<?php echo $IDpa; ?>">Modificar  Paquete </a></td>
 
 
 

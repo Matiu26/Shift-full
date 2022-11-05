@@ -1,3 +1,4 @@
+<?php include("funcModPaq.php")?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="../usuario/styles1.css">
-    <link rel="stylesheet" href="../../../src/estilos.css">
+    <link rel="stylesheet" href="styles1.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../../src/estilos.css">
     <script src="//unpkg.com/alpinejs" defer></script>
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -31,7 +33,7 @@
     }
     $sesion_i = $_SESSION['session_username'];
 
-    if(existe_comprador($sesion_i)==true){
+    if(existe_jefe($sesion_i)==true){
 
     } else{
    
@@ -40,7 +42,7 @@
        alert("No  tienes el rol necesario");
        </script>
        ';
-       header('refresh: 0; url=../productos/pags/index.php');
+       header('refresh: 0; url=pags/index.php');
        die();
     }
      ?>
@@ -51,7 +53,7 @@
 
     <div class="flex items-center flex-shrink-0 text-whit ">
       <img class="h-10 sm:h-14 inline" src="../../../src/imgs/Logo.png" alt="">
-      <span class="text-sm text-white sm:text-lg md:tex-3xl  font-semibold"> Ropa de seguridad Viera</span>
+      <span class="text-sm text-white sm:text-lg md:tex-3xl  font-semibold"><a href="pags/index.php">Ropa de seguridad Viera</a> </span>
 
     </div><link rel="stylesheet" href="">
     <div class="block ml-16 sm:ml-52 md:ml-0 md:hidden ">
@@ -65,7 +67,7 @@
     <div id="menu" class="w-full mt-0 md:mt-5 hidden flex-grow md:flex md:items-center md:w-auto text-end ">
       <div  class="text-md md:flex-grow text-center items-cenetr mb-5  md:text-end justify-center items-cenetr ">
 
-        <a href="../productos/pags/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+        <a href="pags/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Inicio
         </a>
         <a href="" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
@@ -100,6 +102,8 @@
 
 
   
+
+  
   <nav class="mt-2 hidden md:flex md:justify-center">
         <div class="  flex justify-center  id="menuCategorias">
           <ul x-show="open" class=" hidden md:flex  items-center bg-slate-800 rounded">
@@ -111,6 +115,7 @@
             <li><a href="../productos/Pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
             <li><a href="../productos/Pags/Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
             <li><a href="../productos/Pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
+
 
 
           </ul>
@@ -159,7 +164,7 @@
           </div>
           <div class="p-2.5  flex items rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../productos/Pags/Uniformes.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Uniforme.png" alt=""></a>  
+                      <a href=../productos/Pags/Uniformes.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Uniforme.png" alt=""></a>  
                       <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Uniformes</p>        
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
@@ -196,30 +201,47 @@
                  
 
       </div>
+
+
+
+      
+        
+        
+       
+      
+      
       
         <div class="flex flex-col w-full mx-14 ">
           <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Editar Stock Producto </h2>
-          </div>
-          <div class="flex h-screen flex-col border-b  border-gray-400 mt-10 agrProd">
-
-            <div class="flex flex-col">
-              <form class="form" name="formulario" method="post" action="">
-    
-                <input class="controls" placeholder="Ingrese Producto" type="text" name="nom" required maxlength="30" size="40"> 
-                <input class="botons" type="submit" value="Buscar Producto" name="buscar">
-                <br> <a href="mostrar_prod.php" class="regresar">Ver listado</a> <br>
-                <br> <a href="../../dise/comprador.php" class="regresar">Regresar</a> <br>
-    
-              </form>
-              <?php include("funcMosProd.php")?>
+              <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Modificar Paquete</h2>
             </div>
+            <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
+          
+            <form class="form" name="formulario" method="post" enctype="multipart/form-data">
 
+            <br><p class="foto">Nombre</p>  <input class="controls" placeholder="Nombre Paquete" type="text" name="nom2" value="<?php echo $nom; ?>" required maxlength="30" size="40">
+ 
+            <br> <p class="foto">Precio</p> <input class="controls" placeholder="Precio" type="number" min="1" name="pre2" value="<?php echo $pre; ?>" required maxlength="30" size="40">
+            
+            <br> <p class="foto">Descuento</p> <input class="controls" placeholder="Descuento" type="number" min="1" name="descu2" value="<?php echo $descu; ?>" required maxlength="30" size="40">
+
+            <br><p class="foto">Descripción</p>  <textarea class="controls" placeholder="Descripcion del paquete" type="text" name="desc2" value="<?php echo $desc; ?>"  required> </textarea>
+
+           
+
+            <input class="botons" type="submit" value="Modificar" name="modificar">
+
+            <br> <a href="javascript:history.back()"> Regresar</a>
+
+            </form>
+
+             
+              
+            </div>
+        
           </div>
-        </div>
-      </div>
 
-      
+        </div>
 
   <footer class="flex h-auto ">
       <div class="flex flex-col w-full bg-blue-900 rounded">
@@ -288,10 +310,3 @@
 
 <!--<npx tailwindcss -i ./src/input.css -o ./src/estilos.css --watch>  -->
  
-
-    
-
-
-    
-
-    
