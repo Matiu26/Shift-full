@@ -102,10 +102,10 @@ function agregar_desc($ID,$desc)
 //CARRITO --------------------------------------------------------------------------------------------------------------------------------
 
 
-function agregar_carrito($id_u,$id_p)
+function agregar_carrito($id_u,$id_p,$cant)
 {
     $con = conectar();
-    mysqli_query($con, "insert into carrito (IdUsuario,IdProducto) VALUES('$id_u', '$id_p')") or die;
+    mysqli_query($con, "insert into carrito (IdUsuario,IdProducto,cantidad) VALUES('$id_u', '$id_p','$cant')") or die;
     
     mysqli_close($con);
 

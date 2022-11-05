@@ -219,15 +219,17 @@ if ($sesion_i == null ||  $sesion_i = "") {
                             <th class="border border-gray-200">Foto</th>
                             <th class="border border-gray-200">Nombre</th>
                             <th class="border border-gray-200">Precio</th>
+                            <th class="border border-gray-200">Cantidad</th>
+
                           </tr>
                         </thead>
                         <?php 
                           while ($producto = mysqli_fetch_array($q)) {
-
+                            $cant = $producto['cantidad'];
                           $IDp = $producto['IdProducto'];
                           $nom = $producto['Nombre'];
                           $descu = $producto['Descuento'];
-                          $pre = $producto['Precio']- (($producto['Precio'] * $descu)/ 100);
+                          $pre = ($producto['Precio']- (($producto['Precio'] * $descu)/ 100)) * $cant ;
                           $foto= '<img  src="'."../".$producto["Foto"].'"    width="70"  alt="" srcset="">';
                           $total= $total + $pre;
                         ?>
@@ -240,7 +242,8 @@ if ($sesion_i == null ||  $sesion_i = "") {
                           <td class="ftCar border border-gray-200" ><a href="../producto.php?ID=<?php echo $IDp; ?>" ><?php echo $foto ?> </a> </td>
                           <td class="border border-gray-200"><?php echo $nom ?></td>
                           <td class="border border-gray-200"> $<?php echo $pre ?></td>
-                         
+                          <td class="border border-gray-200"> <?php echo $cant ?></td>
+
                         
                         </tr>
                         
