@@ -63,6 +63,11 @@ function agregar_prod($Nombre, $stock,$tipo, $precio,$descripcion,$ruta,$id_e)
 function eliminar_prod($id)
 {
     $con = conectar();
+    $query = mysqli_query($con, "Select Foto FROM producto  WHERE IdProducto='" . $id . "'") or die;
+    $row = $query->fetch_assoc();
+    $ruta= $row["Foto"];
+    unlink($ruta);
+
     mysqli_query($con, "DELETE FROM producto  WHERE IdProducto='" . $id . "'") or die;
     (mysqli_error($con));
     mysqli_close($con);

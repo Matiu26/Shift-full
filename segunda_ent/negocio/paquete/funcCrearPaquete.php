@@ -13,7 +13,8 @@
                 $precio = $_POST['pre'];
                 $descuento = $_POST['descu'];
                 $descripcion = $_POST['desc'];
-            
+                
+
 
                 if ( agregar_paq($nombre,$precio,$descuento,$descripcion) == true) {
                     echo '<script language="javascript">alert("Paquete creado correctamente");</script>';

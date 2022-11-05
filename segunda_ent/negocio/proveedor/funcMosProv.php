@@ -49,6 +49,9 @@
                     } else {
                         $email = null;
                         echo '<script language="javascript">alert("El Proveedor ingresado no existe");</script>';
+                        ?>
+                        <META HTTP-EQUIV="REFRESH" CONTENT="0;URL=mostrar_prov.php">
+                        <?php
                         die;
 
                     }

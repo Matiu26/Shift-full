@@ -221,7 +221,7 @@
 
             <br> <input class="controls" placeholder="Precio del Paquete" type="number" min="1" name="pre" required maxlength="30" size="40"> <br>
 
-            <br> <input class="controls" placeholder= "Descuento" type="number" min="0" name="descu"   value="" required maxlength="30" size="40"><br>
+            <br> <input class="controls" placeholder= "Descuento" type="number" min="0" name="descu" value=""  maxlength="30" size="40"><br>
 
             <br> <textarea class="controls" placeholder="Descripcion del paquete" type="text" name="desc" required> </textarea><br>
 

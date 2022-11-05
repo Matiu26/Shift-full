@@ -41,6 +41,10 @@
                     } else {
                         $email = null;
                         echo '<script language="javascript">alert("El usuario ingresado no existe");</script>';
+                        ?>
+                        <META HTTP-EQUIV="REFRESH" CONTENT="0;URL=mostrar.php">
+                       
+                        <?php
                         die;
 
                     }

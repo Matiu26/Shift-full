@@ -1,4 +1,4 @@
-<?php include("funcProducto.php") ?>
+<?php include("funcPaquete.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +22,7 @@
 
     <div class="flex items-center flex-shrink-0 text-whit ">
       <img class="h-10 sm:h-14 inline" src="../../../src/imgs/Logo.png" alt="">
-      <span class="text-sm text-white sm:text-lg md:tex-3xl  font-semibold"><a href="pags/index.php">Ropa de seguridad Viera</a> </span>
+      <span class="text-sm text-white sm:text-lg md:tex-3xl  font-semibold"><a href="../productos/pags/index.php">Ropa de seguridad Viera</a> </span>
 
     </div><link rel="stylesheet" href="">
     <div class="block ml-16 sm:ml-52 md:ml-0 md:hidden ">
@@ -36,7 +36,7 @@
     <div id="menu" class="w-full mt-0 md:mt-5 hidden flex-grow md:flex md:items-center md:w-auto text-end ">
       <div  class="text-md md:flex-grow text-center items-cenetr mb-5  md:text-end justify-center items-cenetr ">
 
-        <a href="pags/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+        <a href="../productos/pags/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Inicio
         </a>
         <a href="" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
@@ -73,7 +73,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
   } else{
     ?>
  <a href="../sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
-          Cerrar Sesión
+ <?php  echo $_SESSION['session_username'];?>          
         </a>
     <?php
 }
@@ -83,14 +83,14 @@ if ($sesion_i == null ||  $sesion_i = "") {
   <nav class="mt-2 hidden md:flex md:justify-center">
         <div class="  flex justify-center  id="menuCategorias">
           <ul x-show="open" class=" hidden md:flex  items-center bg-slate-800 rounded">
-            <li><a href="Pags/Cascos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/casco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Cascos</p></a></li>
-            <li><a href="Pags/Chalecos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Chaleco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Chalecos</p></a></li>
-            <li><a href="Pags/Uniformes.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Uniforme.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Uniformes</p></a></li>
+            <li><a href="../productos/Pags/Cascos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/casco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Cascos</p></a></li>
+            <li><a href="../productos/Pags/Chalecos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Chaleco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Chalecos</p></a></li>
+            <li><a href="../productos/Pags/Uniformes.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Uniforme.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Uniformes</p></a></li>
             <li><input class="h-6" type="text"></li>
             <li><img class="h-6 p-1 border"src="../../../src/imgs/Lupa2.png" alt=""></li>            
-            <li><a href="Pags/Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
-            <li><a href="Pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
-            <li><a href="Pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
+            <li><a href="../productos/Pags/Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
+            <li><a href="../productos/Pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
+            <li><a href="../productos/Pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
 
 
           </ul>
@@ -214,13 +214,13 @@ if ($sesion_i == null ||  $sesion_i = "") {
             <div class=" mx-5 flex justify-center">
               <div class="flex  flex-col ">
                 <div class="flex  h-48 w-48 md:h-64 md:w-64  items-center border border-gray-100 p-3 rounded border-r border-black">
-                <?php echo $foto?>
+                <?php echo $foto ?>
                 </div> 
 
                 <div class=" justify-center w-full mt-3 p-3 flex md:hidden">
                 <button class="" name="a" type="submit">
                     <p class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded">
-                    <a href="carrito/funcAgrCarrito.php?ID=<?php echo $IDp; ?>"><?php echo "Agregar al carrito" ?> </a>
+                    <a href="../productos/carrito/funcAgrCarrito.php?ID=<?php echo $IDpa; ?>"><?php echo "Agregar al carrito" ?> </a>
                   </p> 
                     </button> 
                 </div>
@@ -231,7 +231,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
   
                   <div class="flex mt-3 flex-col justify-between ">
                         
-                  
+                    
                   </div>
                   
 
@@ -248,12 +248,12 @@ if ($sesion_i == null ||  $sesion_i = "") {
   
                     <div class="flex mt-3 flex-col justify-between ">
 
-              
+                 
                       
                       <div class="w-full text-center mt-3">
                       <button class="" name="a" type="submit">
                     <p class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded">
-                    <a href="carrito/funcAgrCarrito.php?ID=<?php echo $IDp; ?>"><?php echo "Agregar al carrito" ?> </a>
+                    <a href="../productos/carrito/funcAgrCarrito.php?ID=<?php echo $IDpa; ?>"><?php echo "Agregar al carrito" ?> </a>
                   </p> 
                   <br> <a href="javascript:history.back()"> Regresar</a>
                     </button> 
@@ -271,27 +271,22 @@ if ($sesion_i == null ||  $sesion_i = "") {
                 <p class="mt-5 border border-gray-300 pb-10 p-5 w-full  shadow-md"><?php echo $desc?></p>
               </div>
               <br>
-              <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Productos Similares</h2>  
+              <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Paquetes Similares</h2>  
           </div>          
 
            
           <?php
-require_once("miapp_productos.php");
-$consulta = mysqli_query($con, "SELECT Tipo FROM producto  WHERE IdProducto = '$IDp'") or die(mysqli_error($con));
-while ($filas = mysqli_fetch_array($consulta)) {
-    $tip = $filas['Tipo']; 
-    
-}
+require_once("miapp_paquete.php");
 
-$c = mysqli_query($con, "SELECT * FROM producto WHERE Tipo= '$tip' and IdProducto != '$IDp' limit 4") or die(mysqli_error($con));
+$c = mysqli_query($con, "SELECT * FROM VIEW_PAQUETES_CON_IMAGEN WHERE id != '$IDpa' limit 4") or die(mysqli_error($con));
 $productos_relacionados = mysqli_fetch_all($c);
 shuffle($productos_relacionados);
 foreach ($productos_relacionados as $filas) {
     $IDp2 = $filas[0];
-    $nom2 = $filas[1];
-    $descu2 = $filas[7];
-    $pre2 =$filas[4];
-    $pre2 = $filas[4]- (($filas[4] * $descu2)/ 100);
+    $nom2 = $filas[2];
+    $descu2 = $filas[4];
+    $pre2 =$filas[3];
+    $pre2 = $filas[3]- (($filas[3] * $descu2)/ 100);
     $foto2= '<img  src="'.$filas[6].'"    width="190"  alt="" srcset="">';
 ?>
 
@@ -299,7 +294,7 @@ foreach ($productos_relacionados as $filas) {
         <div class=" w-full  h-auto m-auto grid grid-cols-2 justify-center  sm:grid-cols-3 lg:grid-cols-4 place-items-center ">
           
           <div class="">
-          <a href="producto.php?ID=<?php echo $IDp2; ?>"><?php echo $foto2 ?> </a><br>
+          <a href="mostrar_paq.php?ID=<?php echo $IDp2; ?>"><?php echo $foto2 ?> </a>
         <?php echo $nom2;?><br>
        <?php echo "$".$pre2;?><br>
      
