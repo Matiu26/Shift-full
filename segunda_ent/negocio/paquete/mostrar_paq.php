@@ -250,13 +250,15 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
                  
                       
+                        
+              <br> <input class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded" form="1" placeholder="Cantidad" type="number" min="1" name="cant" required maxlength="30" size="40"> <br>
+                      
                       <div class="w-full text-center mt-3">
-                      <button class="" name="a" type="submit">
-                    <p class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded">
-                    <a href="../productos/carrito/funcAgrCarrito.php?ID=<?php echo $IDpa; ?>"><?php echo "Agregar al carrito" ?> </a>
-                  </p> 
+                          <form id="1" method="post" action="../productos/carrito/funcAgr_Paq_Carrito.php?ID=<?php echo $IDpa; ?>">    
+                 <button class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded" name= type="submit"> Agregar a carrito </button> 
+                </form>
                   <br> <a href="javascript:history.back()"> Regresar</a>
-                    </button> 
+                    
                       </div>
                     </div>
 
