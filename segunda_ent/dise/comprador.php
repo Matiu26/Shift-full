@@ -86,8 +86,10 @@
             <li><a href="../negocio/productos/Pags/Cascos.php"><img class="h-10 px-5 m-2 mt-2" src="../../src/imgs/casco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Cascos</p></a></li>
             <li><a href="../negocio/productos/Pags/Chalecos.php"><img class="h-10 px-5 m-2 mt-2" src="../../src/imgs/Chaleco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Chalecos</p></a></li>
             <li><a href="../negocio/productos/Pags/Uniformes.php"><img class="h-10 px-5 m-2 mt-2" src="../../src/imgs/Uniforme.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Uniformes</p></a></li>
-            <li><input class="h-6" type="text"></li>
-            <li><img class="h-6 p-1 border"src="../../src/imgs/Lupa2.png" alt=""></li>            
+            <li><input class="h-7"  form="1" type="text" placeholder="Buscar" name="busc"></li>
+          <li><form id="1" method="post" action="../negocio/productos/pags/pagina_busqueda.php"></li>  
+        <button name= type="submit"><img class="h-7 p-1 border"src="../../src/imgs/Lupa2.png" alt=""></button> 
+              </form>          
             <li><a href="../negocio/productos/Pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
             <li><a href="../negocio/productos/Pags/Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
             <li><a href="../negocio/productos/Pags/.php"><img class="h-10 px-5 m-2 mt-2" src="../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
@@ -194,7 +196,11 @@
             <a href="../negocio/comprador/mostrar_prod.php">Listado productos</a>
             <br />
             <br />
-            <a href="../negocio/comprador/mostrar_prod.php">Administar paquete</a>
+            <h3 class="border-b mx-10">  PAQUETES </h3> 
+            <a href="../negocio/paquete/crear_paquete.php" class="text-">Crear paquete</a>
+            <br />
+            <br />
+            <a href="../negocio/paquete/lista_paquetes.php">Listado paquete</a>
             
           </form>  
           <div class="flex flex-col mx-auto mt-20">      

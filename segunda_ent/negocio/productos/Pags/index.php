@@ -84,7 +84,7 @@
          if(existe_comprador($sesion_i)==true){
         
            ?>
-        <a href="../../../dise/vendedor.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+        <a href="../../../dise/comprador.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Administar
         </a>
         <?php } ?> 
@@ -175,7 +175,8 @@ if ($sesion_i == null ||  $sesion_i = "") {
                       cursor-pointer bg-gray-700 text-white ">
             <i class="bi bi-search font-bold text-sm " ></i>        
             <input type="text" class="text-[15px] ml-4 w-full bg-transparent
-                focus:outline-none" placeholder="Buscar...">    
+                focus:outline-none" placeholder="Buscar..."> 
+                   
           </div>
           
           <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300

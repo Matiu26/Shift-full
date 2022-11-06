@@ -1,5 +1,14 @@
 <?php
     require_once("miapp_pedidos.php");
+    session_start();
+$sesion_i = $_SESSION['session_username'];
+
+$query = mysqli_query($con, "SELECT IdUsuario FROM usuario WHERE Email='" . $sesion_i . "'");
+$row = $query->fetch_assoc();
+$id_u= $row["IdUsuario"];
+
+
+    
     if (isset($_POST['siguiente'])) {
 
         if (isset($_POST['nom'])  && isset($_POST['ape']) && isset($_POST['mail']) && isset($_POST['dir'])
@@ -32,11 +41,19 @@
                 $tarjeta = $_POST['tar'];
                 $CVV = $_POST['cvv'];
 
-                $date = date('Y/d/m');       
-                        if (agregar_datos($nombre, $apellido, $email, $direccion,$tarjeta, $CVV, $date)  == true) {
-                            echo '<script language="javascript">alert("Se ha registrado correctamente");</script>';
-                            header('refresh: 0; url=../../dise/accion.php');
-                        }
+                $date = date('Y/d/m');     
+
+                $id=agregar_datos($nombre, $apellido, $email,$direccion,$tarjeta, $CVV,$date);
+
+                $q = mysqli_query($con, "select cantidad, IdProducto from carrito  where IdUsuario ='" . $id_u . "'");
+                while ($row =$q->fetch_assoc()){
+        
+                carrito_a_tiene($id,$row['IdProducto'],$row['cantidad'],$id_u);
+                }
+
+                            echo '<script language="javascript">alert("Compra exitosa");</script>';
+                            header('refresh: 0; url=../productos/carrito/carrito.php');
+                        
                     
                 
                     

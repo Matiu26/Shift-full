@@ -41,6 +41,7 @@
                     echo '<script language="javascript">alert("Se ha registrado  el producto correctamente");</script>';
                     header('refresh: 0; url=../../dise/comprador.php');
                 }
+            }
                  else if (($_POST['tip']) == "2") {
                     if (agregar_prod($producto, $cantidad,"Torso", $precio, $descripcion, $ruta, $id)  == true) {
                         echo '<script language="javascript">alert("Se ha registrado  el producto correctamente");</script>';
@@ -74,7 +75,7 @@
     }
     
 }
-    }
+    
     ?>
 
 
