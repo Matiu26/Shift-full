@@ -52,8 +52,8 @@
 
 
     <div class="flex items-center flex-shrink-0 text-whit ">
-      <img class="h-10 sm:h-14 inline" src="../../../src/imgs/Logo.png" alt="">
-      <span class="text-sm text-white sm:text-lg md:tex-3xl  font-semibold"> Ropa de seguridad Viera</span>
+    <a href="../productos/pags/index.php"><img class="h-10 sm:h-14 inline" src="../../../src/imgs/Logo.png" alt=""></a> 
+      <span class="text-sm text-white sm:text-lg md:tex-3xl  font-semibold"><a href="../productos/pags/index.php">Ropa de seguridad Viera</a></span>
 
     </div><link rel="stylesheet" href="">
     <div class="block ml-16 sm:ml-52 md:ml-0 md:hidden ">
@@ -67,9 +67,9 @@
     <div id="menu" class="w-full mt-0 md:mt-5 hidden flex-grow md:flex md:items-center md:w-auto text-end ">
       <div  class="text-md md:flex-grow text-center items-cenetr mb-5  md:text-end justify-center items-cenetr ">
         
-        <a href="carrito/carrito.php"><img src="../../../src/imgs/carrito.png" class="h-10 inline-block mr-4 hover:border-b" alt=""></a>
+        <a href="../productos/carrito/carrito.php"><img src="../../../src/imgs/carrito.png" class="h-10 inline-block mr-4 hover:border-b" alt=""></a>
 
-        <a href="pags/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+        <a href="../productos/pags/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Inicio
         </a>
         <a href="" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">

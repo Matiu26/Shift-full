@@ -15,7 +15,9 @@
             <th>Direccion</th>
             <th>Estado</th>
             <th>Fecha Compra</th>
-            <th>Siguiente</th>
+            <th>Siguiente Estado</th>
+            <th>Volver Estado</th>
+
 
 
 
@@ -71,6 +73,7 @@
                             $dir = $filas['Direccion'];
                             $estado = $filas['Estado'];
                             $fec = $filas['Fecha_Compra'];
+                            
                             if($estado== 0){
                                 $estado="Pago Pendiente";
                             }
@@ -108,7 +111,9 @@
                 <td><?php echo "<p style='color:white;'>" . $dir . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $estado . "</p>"; ?></td>
                 <td><?php echo "<p style='color:white;'>" . $fec . "</p>"; ?></td>
-                <td><a href="estado_pedido.php?ID=<?php echo $IDc; ?>">Siguiente </a></td>
+                <td><a href="estado_pedido.php?ID=<?php echo $IDc; ?>">Siguiente Estado </a></td>
+                <td><a href="volver_pedido.php?ID=<?php echo $IDc; ?>">Volver Estado </a></td>
+
 
 
 

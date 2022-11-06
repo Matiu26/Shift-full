@@ -267,10 +267,10 @@ if ($sesion_i == null ||  $sesion_i = "") {
                     <div class="flex mt-3 flex-col justify-between ">
 
               
-              <br> <input class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded" form="1" placeholder="Cantidad" type="number" min="1" name="cant" required maxlength="30" size="40"> <br>
+              <br> <input class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded" form="2" placeholder="Cantidad" type="number" min="1" name="cant" required maxlength="30" size="40"> <br>
                       
                       <div class="w-full text-center mt-3">
-                          <form id="1" method="post" action="carrito/funcAgrCarrito.php?ID=<?php echo $IDp; ?>">    
+                          <form id="2" method="post" action="carrito/funcAgrCarrito.php?ID=<?php echo $IDp; ?>">    
                  <button class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded" name= type="submit"> Agregar a carrito </button> 
                 </form>
                   <br> <a href="javascript:history.back()"> Regresar</a>
