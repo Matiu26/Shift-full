@@ -205,17 +205,19 @@ if ($sesion_i == null ||  $sesion_i = "") {
     <div class="flex w-full">
       <div class="flex flex-col h-auto w-full mt-10 mx-0 md:mx-14">     
             
-        <div class="flex h-full md:flex-rows mb-5 mt-10 md:mt-0 ">
+      <div class="flex h-full md:flex-rows mb-5 mt-10 md:mt-0">
+  
+  <div class="">
+    <div class="hidden w-40 h-60 mr-10 mt-5 bg-blue-900 rounded hidden md:flex flex-col justify-around">
+      <img class="px-3" src="../../../../src/imgs/Combos.png" alt="">
+    </div>  
+    
+    <div class="hidden w-40 h-60 mr-10 mt-3 bg-blue-900 rounded hidden md:flex flex-col justify-around">
+      <img class="px-3" src="../../../../src/imgs/Ofertas.png" alt="">
+    </div> 
+  </div>
+  
 
-          <div class="">
-            <div class="w-40 h-60 mr-10 mt-5 bg-blue-900 rounded hidden  lg:flex flex-col justify-around">
-              <img src="../../../src/imgs/Combos.png" alt="">
-            </div>  
-              
-            <div class="w-40 h-60 mr-10 mt-3 bg-blue-900 rounded hidden lg:flex flex-col justify-around">
-              <img src="../../../src/imgs/Ofertas.png" alt="">
-            </div> 
-          </div>
        
 
             <div class="flex w-full">
