@@ -247,9 +247,9 @@ if ($sesion_i == null ||  $sesion_i = "") {
                           $IDp = $producto['IdProducto'];
                           $nom = $producto['Nombre'];
                           $descu = $producto['Descuento'];
-                          $pre = ($producto['Precio']- (($producto['Precio'] * $descu)/ 100)) * $cant ;
+                          $pre = ($producto['Precio']- (($producto['Precio'] * $descu)/ 100));
                           $foto= '<img  src="'."../".$producto["Foto"].'"    width="70"  alt="" srcset="">';
-                          $total= $total + $pre;
+                          $total= $total + ($pre * $cant);
                         ?>
 
                         <tr>
