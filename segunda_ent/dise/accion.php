@@ -220,8 +220,10 @@
             <br />
             <br />
             <h3 class="border-b mx-10">  PAQUETES </h3> 
-            <a href="../negocio/paquete/crear_paquete.php" class="text-">Crear paquete</a>
+            <a href="../negocio/paquete/crear_paquete.php">Crear paquete</a>
             <a href="../negocio/paquete/lista_paquetes.php">Listado paquete</a>
+            <h3 class="border-b mx-10">  PEDIDOS </h3> 
+            <a href="../negocio/pedidos/verPedido.php">Ver pedido</a>
       
             <br />
             <br />

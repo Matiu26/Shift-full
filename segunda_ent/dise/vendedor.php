@@ -192,8 +192,8 @@
             <h3 class="border-b mx-10">  USUARIOS </h3>
             <a href="../negocio/vendedor/Aprobar.php" class="">Aprobar Usuario</a> <br> 
             <br />
-            <h3 class="border-b mx-10">  ENVÍOS </h3> 
-            <a href="" class="text-">Gestionar envíos</a>
+            <h3 class="border-b mx-10">  PEDIDOS </h3> 
+            <a href="../negocio/pedidos/verPedido.php">Ver pedido</a>
     
             <br />
             <br />

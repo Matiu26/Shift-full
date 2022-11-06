@@ -19,6 +19,26 @@ function carrito_a_tiene($id,$id_p,$cant,$id_u)
     mysqli_close($con);
 }
 
+function buscar_datos_compra($id)
+{
+    $con = conectar();
+    $query = mysqli_query($con, "SELECT * FROM compra WHERE IdCompra='" . $id . "'") or die(mysqli_error($con));
+
+    $row = $query->fetch_assoc();
+    mysqli_close($con);
+
+    if ($row == null) {
+        return false;
+    }
+
+    return true;
+}
+function actualizar_estado($ID,$estado)
+{
+    $con = conectar();
+    mysqli_query($con, "UPDATE compra SET Estado = '$estado' WHERE IdCompra = '$ID'") or die(mysqli_error($con));
+    return true;
+}
 
 ?>
       

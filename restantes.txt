@@ -5,20 +5,12 @@ ver tema agregar paquete a carrito
 
 jefe : 
 - Es el encargado de gestionar los envíos de las compras verificadas y de enviar el remito al cliente
- *administra paquetes de productos relacionados a una tarea 
 ----------------------------------------------------------------
 vendedor:
  Es el encargado de gestionar los envíos de las compras verificadas y de enviar el remito al cliente
 ----------------------------------------------------------------
-comprador:
- administra paquetes de productos relacionados a una tarea
-----------------------------------------------------------------
+
  generar remito, para luego enviar por email
- Gestionar paquetes de productos necesarios para realizar tareas específicas
  Generar promociones de productos con pocas ventas
- Administrar ofertas de productos por ventas en grandes volúmenes
 ----------------------------------------------------------------
-comprar
-vender
-rastreo
-----------------------------------------------------------------
+
