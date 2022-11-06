@@ -1,5 +1,19 @@
 <?php include("func_most_carrito.php") ?> 
+<?php
+$sesion_i = $_SESSION['session_username'];
+error_reporting(0);
 
+if ($sesion_i == null ||  $sesion_i = "") {
+    echo '
+    <script language="javascript">
+    alert("No has iniciado sesión");
+    </script>
+    ';
+    header('refresh: 0; url=../../usuario/login.php');
+    die();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -191,11 +205,11 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
           <div class="">
             <div class="w-40 h-60 mr-10 mt-5 bg-blue-900 rounded hidden  lg:flex flex-col justify-around">
-              <img src="imgs/Combos.png" alt="">
+              <img src="../../../src/imgs/Combos.png" alt="">
             </div>  
               
             <div class="w-40 h-60 mr-10 mt-3 bg-blue-900 rounded hidden lg:flex flex-col justify-around">
-              <img src="imgs/Ofertas.png" alt="">
+              <img src="../../../src/imgs/Ofertas.png" alt="">
             </div> 
           </div>
        
@@ -257,7 +271,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
                         <td></td>
                         <td></td>
                         <td class="border border-gray-200" colspan=""></td>
-                        <td  class="border border-gray-200"><strong calass="total">Total:</strong>
+                        <td  class="border border-gray-200"><strong class="total">Total:</strong>
                           $<?php echo ($total) ?>
                         </td><?php 
                         } else{ 
@@ -266,7 +280,10 @@ if ($sesion_i == null ||  $sesion_i = "") {
                                 ?>
                       </tfoot>
                     </table>
-                
+                    <br>
+                    <br>
+                    <a class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded " href="../../pedidos/datosCompra.php" > Finalizar Compra</a>
+
 
                   </div>
                 </div>

@@ -74,3 +74,27 @@ function actualizar_paq($nom2,$pre2,$descu2,$desc2, $ID)
     Descripcion = '$desc2'  WHERE IdPaquete = '$ID'") or die(mysqli_error($con));
     return true;
 }
+function agregar_carrito_paq($id_u,$id_p,$cant)
+{
+    $con = conectar();
+    mysqli_query($con, "insert into carrito_paq (IdUsuario,IdPaquete,cantidad) VALUES('$id_u', '$id_p','$cant')") or die;
+    
+    mysqli_close($con);
+
+    return true;
+}
+
+function existe_en_carrito_paq($id)
+{
+    $con = conectar();
+    $query = mysqli_query($con, "SELECT IdUsuario FROM carrito_paq WHERE IdPaquete='" . $id. "'") or die(mysqli_error($con));
+
+    $row = $query->fetch_assoc();
+    mysqli_close($con);
+
+    if ($row == null) {
+        return false;
+    }
+
+    return true;
+}

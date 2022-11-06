@@ -1,10 +1,10 @@
 <?php
 require_once("../../usuario/miapp_user.php");
 require_once("../../productos/miapp_productos.php");
-// error_reporting(0);
+error_reporting(0);
 session_start();
 $sesion_i = $_SESSION['session_username'];
-$ID = $_GET["ID"];
+echo $ID = $_GET["ID"];
 
 $query = mysqli_query($con, "SELECT IdUsuario FROM usuario WHERE Email='" . $sesion_i . "'");
 $row = $query->fetch_assoc();
@@ -12,7 +12,7 @@ $id_u= $row["IdUsuario"];
 
 $cant = $_POST['cant'];
 
-$q = mysqli_query($con, "SELECT cantidad FROM carrito WHERE IdProducto='" . $ID . "'");
+$q = mysqli_query($con, "SELECT cantidad FROM carrito_paq WHERE IdPaquete='" . $ID . "'");
 $row = $q->fetch_assoc();
 $cant_act= $row["cantidad"];
 $cant_nueva= $cant_act + $cant;
@@ -22,17 +22,17 @@ $row = $ka->fetch_assoc();
 $stock= $row["Stock"];
 
 if ($sesion_i == null ||  $sesion_i = "") {
-    echo '<script language="javascript">alert("Necesitas iniciar sesion para agregar productos al carrito");</script>';
+    echo '<script language="javascript">alert("Necesitas iniciar sesion para agregar paquetes al carrito");</script>';
     ?>
-    <META HTTP-EQUIV="REFRESH" CONTENT="0;URL=../producto.php?ID=<?php echo $ID; ?>">
+    <META HTTP-EQUIV="REFRESH" CONTENT="0;URL=../paquete/verPaquete.php?ID=<?php echo $ID; ?>">
    
     <?php
 
 } else{
            
-        if (existe_en_carrito($ID) == true) {
+        if (existe_en_carrito_paq($ID) == true) {
            
-            mysqli_query($con, "UPDATE carrito  Set cantidad = '$cant_nueva'  WHERE IdProducto = '$ID'") or die(mysqli_error($con));
+            mysqli_query($con, "UPDATE carrito_paq  Set cantidad = '$cant_nueva'  WHERE IdProducto = '$ID'") or die(mysqli_error($con));
             echo '<script language="javascript">alert("Se ha agregado correctamente");</script>';
             header('refresh: 0; url=carrito.php');
             ?>
@@ -41,14 +41,14 @@ if ($sesion_i == null ||  $sesion_i = "") {
             die;
         } else {
             if($stock >0){
-                if (agregar_carrito($id_u,$ID,$cant)  == true) {
+                if (agregar_carrito_paq($id_u,$ID,$cant)  == true) {
                     echo '<script language="javascript">alert("Se ha agregado correctamente");</script>';
                     header('refresh: 0; url=carrito.php');
                 }
             } else {
-                echo '<script language="javascript">alert("No contamos con stock de este producto");</script>';
+                echo '<script language="javascript">alert("No contamos con stock con ciertos productos del paquete");</script>';
                 ?>
-                <META HTTP-EQUIV="REFRESH" CONTENT="0;URL=../producto.php?ID=<?php echo $ID; ?>">
+             <META HTTP-EQUIV="REFRESH" CONTENT="0;URL=../paquete/verPaquete.php?ID=<?php echo $ID; ?>">
                
                 <?php
             }
