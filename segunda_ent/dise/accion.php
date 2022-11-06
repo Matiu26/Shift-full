@@ -97,7 +97,7 @@
               </form>                  
             <li><a href="../negocio/productos/Pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
             <li><a href="../negocio/productos/Pags/Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
-            <li><a href="../negocio/productos/Pags/.php"><img class="h-10 px-5 m-2 mt-2" src="../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
+            <li><a href="../negocio/productos/Pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
 
 
           </ul>

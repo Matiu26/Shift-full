@@ -25,21 +25,16 @@ if ($sesion_i == null ||  $sesion_i = "") {
     echo '<script language="javascript">alert("Necesitas iniciar sesion para agregar productos al carrito");</script>';
     ?>
     <META HTTP-EQUIV="REFRESH" CONTENT="0;URL=../producto.php?ID=<?php echo $ID; ?>">
-   
     <?php
 
 } else{
            
-        if (existe_en_carrito($ID) == true) {
-           
+        if(existe_en_carrito($ID)  == true) {
             mysqli_query($con, "UPDATE carrito  Set cantidad = '$cant_nueva'  WHERE IdProducto = '$ID'") or die(mysqli_error($con));
             echo '<script language="javascript">alert("Se ha agregado correctamente");</script>';
             header('refresh: 0; url=carrito.php');
-            ?>
-           
-            <?php
-            die;
-        } else {
+            
+        } 
             if($stock >0){
                 if (agregar_carrito($id_u,$ID,$cant)  == true) {
                     echo '<script language="javascript">alert("Se ha agregado correctamente");</script>';
@@ -54,7 +49,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
             }
           
         
-        }
+        
     
     }
 

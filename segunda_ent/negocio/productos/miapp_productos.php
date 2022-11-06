@@ -116,15 +116,13 @@ function existe_en_carrito($id)
 {
     $con = conectar();
     $query = mysqli_query($con, "SELECT IdUsuario FROM carrito WHERE IdProducto='" . $id. "'") or die(mysqli_error($con));
-
     $row = $query->fetch_assoc();
-    mysqli_close($con);
-
     if ($row == null) {
         return false;
     }
-
+    mysqli_close($con);
     return true;
+
 }
 function eliminar_carrito($id_p)
 {
