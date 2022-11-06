@@ -97,7 +97,7 @@
             <li><a href="../productos/Pags/Chalecos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Chaleco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Chalecos</p></a></li>
             <li><a href="../productos/Pags/Uniformes.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Uniforme.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Uniformes</p></a></li>
             <li><input class="h-6" type="text"></li>
-            <li><img class="h-6 p-1 border"src="../../../src/imgs/Lupa2.png" alt=""></li>            
+            <li><img class="h-6 p-1 border"src="../../../src/imgs/Lupa2.png" alt="" placeholder="Buscar..."></li>            
             <li><a href="../productos/Pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
             <li><a href="../productos/Pags/Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
             <li><a href="../productos/Pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
@@ -125,8 +125,7 @@
           <div class="p-2.5 mt- flex items rounded-md px-4 duration-300
                       cursor-pointer bg-gray-700 text-white ">
             <i class="bi bi-search font-bold text-sm " ></i>        
-            <input type="text" class="text-[15px] ml-4 w-full bg-transparent
-                focus:outline-none" placeholder="Buscar...">    
+            <input type="text" class="text-[15px] ml-4 w-full bg-transparent focus:outline-none" placeholder="Buscar...">    
           </div>
           
           <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
