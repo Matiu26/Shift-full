@@ -2,9 +2,9 @@
     require_once("miapp_paquete.php");
     if (isset($_POST['agregar'])) {
 
-        if (isset($_POST['nom'])  && isset($_POST['pre']) && isset($_POST['descu'])  && isset($_POST['desc'])) {
+        if (isset($_POST['nom'])  && isset($_POST['pre']) && isset($_POST['desc'])) {
 
-                if (empty($_POST['nom']) || empty($_POST['pre']) || empty($_POST['descu']) || empty($_POST['desc'])) {
+                if (empty($_POST['nom']) || empty($_POST['pre']) || empty($_POST['desc'])) {
 
                     return;
                 }
@@ -14,7 +14,9 @@
                 $descuento = $_POST['descu'];
                 $descripcion = $_POST['desc'];
                 
-
+                if($_POST['descu'] == null || empty($_POST['descu'])  ){    
+                    $descuento= "0";
+                }
 
                 if ( agregar_paq($nombre,$precio,$descuento,$descripcion) == true) {
                     echo '<script language="javascript">alert("Paquete creado correctamente");</script>';
