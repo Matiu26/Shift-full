@@ -212,11 +212,11 @@ if ($sesion_i == null ||  $sesion_i = "") {
   
           <div class="mt-20">
               <div class="hidden w-52 h-68 mr-10 mt-5 rounded hidden md:flex flex-col justify-around">
-                <img class="px-3" src="../../../../src/imgs/Combosbanner.png" alt="">
+                <a href="Combos.php"><img class="px-3" src="../../../../src/imgs/Combosbanner.png" alt=""></a>
               </div>  
               
               <div class="hidden w-52 h-68 mr-10 mt-3  rounded hidden md:flex flex-col justify-around">
-                <img class="px-3" src="../../../../src/imgs/Ofertasbanner.png" alt="">
+               <a href="Ofertas.php"><img class="px-3" src="../../../../src/imgs/Ofertasbanner.png" alt=""></a> 
               </div> 
             </div>
             
@@ -307,15 +307,13 @@ foreach ($productos_relacionados as $filas) {
               <a href="" class="text-white">Politicas de garantía</a> 
             </div>
 
-            <div class="m-auto mt-3 p-auto h-auto">
+            <div class="m-auto mt-3 p-auto h-auto justify-center">
               <h4 class="mb-2 ml-5 md:ml-9 font-semibold border-b mr-3 text-white">
                 Redes y contactos
               </h4> 
               <ul class="flex ml-5 hover:text-white">
       
-              <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100076407723343"><img class="w-12 rounded-full mx-2 " src="../../../../src/imgs/facebooklog" alt=""></a></li>
       
               </ul>
             </div>

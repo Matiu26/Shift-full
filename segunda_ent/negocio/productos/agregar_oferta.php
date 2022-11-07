@@ -272,12 +272,10 @@
               </h4> 
               <ul class="flex ml-5 hover:text-white">
       
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                <li></div><a href="https://www.facebook.com/profile.php?id=100076407723343"><img class="w-12 rounded-full mx-2 " src="../../../src/imgs/facebooklog" alt=""></a></li>
       
               </ul>
-            </div>
+            
   
            
           </div>

@@ -203,15 +203,15 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
         <div class="flex h-full md:flex-rows mb-5">
 
-          <div class="">
-            <div class="hidden w-40 h-60 mr-10 mt-5 bg-blue-900 rounded hidden md:flex flex-col justify-around">
-              <img src="../../../src/imgs/Combos.png" alt="">
-            </div>  
-            
-            <div class="hidden w-40 h-60 mr-10 mt-3 bg-blue-900 rounded hidden md:flex flex-col justify-around">
-              <img src="../../../src/imgs/Ofertas.png" alt="">
-            </div> 
-          </div>
+          <div class="mt-20">
+              <div class="hidden w-52 h-68 mr-10 mt-5 rounded hidden md:flex flex-col justify-around">
+                <a href="../productos/Pags/Combos.php"><img class="px-3" src="../../../../src/imgs/Combosbanner.png" alt=""></a>
+              </div>  
+              
+              <div class="hidden w-52 h-68 mr-10 mt-3  rounded hidden md:flex flex-col justify-around">
+               <a href="../productos/Pags/Ofertas.php"><img class="px-3" src="../../../../src/imgs/Ofertasbanner.png" alt=""></a> 
+              </div> 
+            </div>
           
           <div>
             
@@ -410,9 +410,8 @@ foreach ($productos_relacionados as $filas) {
               </h4> 
               <ul class="flex ml-5 hover:text-white">
       
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                
+                <li><a href="https://www.facebook.com/profile.php?id=100076407723343"><img class="w-12 rounded-full mx-2 " src="../../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
       
               </ul>
             </div>
