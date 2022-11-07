@@ -40,12 +40,11 @@
             }
             ?>
         <tr>
-            <td><?php echo "<p style='color:white;'>" . $IDu . "</p>"; ?></td>
-            <td><?php echo "<p style='color:white;'>" . $nom . "</p>"; ?></td>
-            <td><?php echo "<p style='color:white;'>" . $ape . "</p>"; ?></td>
-            <td><?php echo "<p style='color:white;'>" . $mail . "</p>"; ?></td>
-            <td><?php echo "<p style='color:white;'>" . $tel . "</p>"; ?></td>
-            <td><a href="modificar_usuario.php?ID=<?php echo $IDu; ?>">Modificar </a></td>
+        <td><?php echo "<p style='padding:6px;'>" . $IDu . "</p>"; ?></td>
+            <td><?php echo "<p style='padding:6px;'>" . $nom . "</p>"; ?></td>
+            <td><?php echo "<p style='padding:6px;'>" . $ape . "</p>"; ?></td>
+            <td><?php echo "<p style='padding:6px;'>" . $email ."</p>"; ?></td>
+            <td><a href="modificar_usuario.php?ID=<?php echo $IDu; ?>"><strong class="total">Modificar </a></td>
         
             <?php }?>
         </tr>

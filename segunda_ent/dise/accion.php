@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="../negocio/usuario/styles1.css">
+    <link rel="stylesheet" href="../negocio/comprador/styles1.css">
     <link rel="stylesheet" href="../../src/estilos.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 
@@ -188,46 +188,114 @@
       
         <div class="flex flex-col w-full mx-5 ">
           <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Menú de configuración</h2>
+            <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md font-semibold">Menú de configuración</h2>
           </div>
-          <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
+          <div class="flex flex-col h-screen w-auto py-5 border border-gray-200 flex-grow rounded my-5">
         
-          <form class="form" name="formulario" >
-            <h3 class="border-b mx-10">  USUARIOS </h3>
-            <a href="../negocio/usuario/agregar.php" class="">Agregar usuario</a> <br> 
-
-            <a href="../negocio/usuario/Aprobar.php">Aprobar usuario</a>
-
-            <a href="../negocio/usuario/modificar.php">Modificar usuario</a>
-
-            <a href="../negocio/usuario/eliminar.php">Eliminar usuario</a>
-            <br>
-            <a href="../negocio/usuario/mostrar.php">Lista usuarios</a>
-
-            <br />
-            <br />
-            <h3 class="border-b mx-10">  PROVEEDORES </h3> 
-            <a href="../negocio/proveedor/agregar_prov.php" class="text-">Agregar proveedor</a>
-            <a href="../negocio/proveedor/Upd_prov.php">Modificar proveedor</a>
-            <a href="../negocio/proveedor/eliminar_prov.php">Eliminar proveedor</a>
-            <a href="../negocio/proveedor/mostrar_prov.php">Lista Proveedores</a>
-            <br />
-            <br />
-            <h3 class="border-b mx-10">  PRODUCTOS </h3>
-            <a href="../negocio/productos/agregar_prod.php">Agregar producto</a>
-            <a href="../negocio/productos/mostrar_prod.php">Listado producto</a>
-            <a href="../negocio/productos/agregar_oferta.php">Agregar Oferta</a>
-            <br />
-            <br />
-            <h3 class="border-b mx-10">  PAQUETES </h3> 
-            <a href="../negocio/paquete/crear_paquete.php">Crear paquete</a>
-            <a href="../negocio/paquete/lista_paquetes.php">Listado paquete</a>
-            <h3 class="border-b mx-10">  PEDIDOS </h3> 
-            <a href="../negocio/pedidos/verPedido.php">Ver pedido</a>
-      
-            <br />
-            <br />
-          </form>  
+          <form class="form flex bg-blue-900 px-20 py-5 rounded" name="formulario" >
+            <div class="grid grid-cols-1 sm:grid-cols-2 m-auto">
+              <div class="flex flex-col text-center ">
+                    <div class="mx-5 my-5 ">
+                      <h3 class="border-b text-lg">  USUARIOS </h3>
+  
+                      <div>
+                        <div>
+                          <a href="../negocio/usuario/agregar.php" class="">Agregar usuario</a> 
+  
+                        </div>
+                        <div>
+                          <a href="../negocio/usuario/Aprobar.php">Aprobar usuario</a>
+                        </div>
+                        <div>
+                          <a href="../negocio/usuario/modificar.php">Modificar usuario</a>
+                        </div>
+                        <div>
+                          <a href="../negocio/usuario/eliminar.php">Eliminar usuario</a>
+                        </div>
+                        <div>
+                          <a href="../negocio/usuario/mostrar.php">Lista usuarios</a>
+                        </div>
+                      </div>
+                    </div>
+                      
+                  </div>
+                  <div class="flex flex-col text-center">
+                    <div class="mx-5 my-5">
+                      <h3 class="border-b text-lg">  PROVEEDORES </h3> 
+                      <div>
+                        <div>
+                          <a href="../negocio/proveedor/agregar_prov.php" class="text-">Agregar proveedor</a>
+  
+                        </div>
+                        <div>
+                        <a href="../negocio/proveedor/Upd_prov.php">Modificar proveedor</a>
+  
+                        </div>
+                        <div>
+                          <a href="../negocio/proveedor/eliminar_prov.php">Eliminar proveedor</a>
+  
+                        </div>
+                        <div>
+                          <a href="../negocio/proveedor/mostrar_prov.php">Lista Proveedores</a>
+  
+                        </div>
+                      </div>
+                    </div>
+                     
+                  </div>
+          
+                  <div class="flex flex-col text-center">
+                    <div class="mx-5 my-5">
+                      <h3 class="border-b text-lg">  PRODUCTOS </h3>
+                      <div>
+                        <div>
+                          <a href="../negocio/productos/agregar_prod.php">Agregar producto</a>
+  
+                        </div>
+                        <div>
+                          <a href="../negocio/productos/mostrar_prod.php">Listado producto</a>
+  
+                        </div>
+                        <div>
+                          <a href="../negocio/productos/agregar_oferta.php">Agregar Oferta</a>
+  
+                        </div>
+  
+                         
+                      </div>
+                    </div>
+                      
+                  </div>
+                  
+                  <div class="flex flex-col text-center">
+                    <div class="mx-5 my-5">
+                      <h3 class="border-b text-lg">  PAQUETES </h3> 
+                      <div>
+                        <div>
+                          <a href="../negocio/paquete/crear_paquete.php" class="text-">Crear paquete</a>
+  
+                        </div>
+                        <div>
+                        <a href="../negocio/paquete/lista_paquetes.php">Listado paquete</a>
+                          
+                        </div>
+                    </div>
+          
+                  </div>
+                  
+                  
+                      
+              </div>
+        
+              <div class="flex flex-col text-center col-span-2">
+                <h3 class="border-b mx-10 ">  PEDIDOS </h3> 
+                <a href="../negocio/pedidos/verPedido.php">Ver pedido</a>
+              </div>
+          
+            </div>
+                  
+              
+          </form> 
           <div class="flex flex-col mx-auto mt-20">      
           </div>
             
@@ -303,4 +371,3 @@
   
   
   <!--<npx tailwindcss -i ./src/input.css -o ./src/estilos.css --watch>  -->
-   

@@ -46,11 +46,11 @@
             }
         ?>
             <tr>
-                <td><?php echo "<p style='color:white;'>" . $IDu . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $nom . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $ape . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $email . "</p>"; ?></td>
-                <td><a href="eli.php?ID=<?php echo $IDu; ?>">Eliminar </a></td>
+            <td><?php echo "<p style='padding:6px;'>" . $IDu . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $nom . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $ape . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $email ."</p>"; ?></td>
+                <td><a  href="aprobado.php?ID=<?php echo   $IDu; ?>"><strong class="total">Eliminar </a></td>
 
             </tr>
         <?php

@@ -241,12 +241,14 @@ if ($sesion_i == null ||  $sesion_i = "") {
           <div class="flex h-full md:flex-rows mb-5 mt-10 md:mt-0">
   
             <div class="">
-              <div class="hidden w-40 h-60 mr-10 mt-5 bg-blue-900 rounded hidden md:flex flex-col justify-around">
-                <img class="px-3" src="../../../../src/imgs/Combos.png" alt="">
+              <div class="hidden w-40 h-60 mr-10 mt-5  rounded hidden md:flex flex-col justify-around">
+                <a href="Combos.php"><img class="px-3" src="../../../../src/imgs/CombosBanner.png" alt=""></a>
+                
               </div>  
               
-              <div class="hidden w-40 h-60 mr-10 mt-3 bg-blue-900 rounded hidden md:flex flex-col justify-around">
-                <img class="px-3" src="../../../../src/imgs/Ofertas.png" alt="">
+              <div class="hidden w-40 h-60 mr-10 mt-3  rounded hidden md:flex flex-col justify-around">
+                <a href="Ofertas.php"><img class="px-3" src="../../../../src/imgs/OfertasBanner.png" alt=""></a>
+                
               </div> 
             </div>
             

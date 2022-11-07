@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body class="mx-5 md:mx-10 font-Comfortaa " >
+
   <header class="flex justify-around flex-wrap items-center bg-blue-900 rounded md:px-10 ">
 
 
@@ -33,12 +34,17 @@
       </button>
 
     </div>
-    <div id="menu" class="w-full mt-0 md:mt-5 hidden flex-grow md:flex md:items-center md:w-auto text-end ">
-      <div  class="text-md md:flex-grow text-center items-cenetr mb-5  md:text-end justify-center items-cenetr ">
+    <div>
+      <a href="index.html" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+        Inicio
+      </a>
+    </div>
+    <div id="menu" class="mt-0 md:mt-5 hidden flex-grow md:flex md:items-center m text-end ">
+      
+      <div  class="text-md md:flex-grow text-center items-cenetr mb-5    ">
 
+        
         <a href="index.html" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
-          Inicio
-        </a><a href="index.html" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Inicio
         </a>
 
@@ -84,8 +90,8 @@
             <li><input class="h-7" type="text"></li>
             <li><img class="h-7 p-1 border"src="imgs/Lupa2.png" alt=""></li>
 
-            <li><a href="../Pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
-            <li><a href="../Pags/Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
+            <li><a href="../Pags/Combos.php"><img class="h-11 px-5 m-2 mt-2" src="imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
+            <li><a href="../Pags/Ofertas.php"><img class="h-11 px-5 m-2 mt-2" src="imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
             <li><a href="../Pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
 
 
@@ -94,7 +100,7 @@
       </nav> 
   
       <div class="flex">
-        <div class="flex flex-col h-auto  mt-5 mx-0 md:mx-14">     
+        <div class="flex flex-col h-auto w-auto mt-5 mx-0 md:mx-14">     
             
 
           <div class="flex h-full md:flex-rows mb-5">
@@ -198,25 +204,115 @@
 
           
           </div>
-          <div class=" w-full  h-auto m-auto grid grid-cols-2 justify-center  sm:grid-cols-3 lg:grid-cols-4 place-items-center ">
-            <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 bg-slate-900 mb-5 rounded">
+          <div clas="my-20 flex">
+              <form class="form flex bg-blue-900  px-20 py-5 w-auto  rounded" name="formulario" >
+                <div class="grid grid-cols-1 sm:grid-cols-2 m-auto">
+                  <div class="flex flex-col text-center col-span-2">
+                    <div class="m-5 ">
+                      <h3 class="border-b ">  USUARIOS </h3>
+                      <textarea class="h-52 mt-6 pn-2" name="" id="" cols="30" rows="10"></textarea>
+                      <div>
+                        <div>
+                          <a href="../negocio/usuario/agregar.php" class="">Agregar usuario</a> 
+  
+                        </div>
+                        <div>
+                          <a href="../negocio/usuario/Aprobar.php">Aprobar usuario</a>
+                        </div>
+                        <div>
+                          <a href="../negocio/usuario/modificar.php">Modificar usuario</a>
+                        </div>
+                        <div>
+                          <a href="../negocio/usuario/eliminar.php">Eliminar usuario</a>
+                        </div>
+                        <div>
+                          <a href="../negocio/usuario/mostrar.php">Lista usuarios</a>
+                        </div>
+                      </div>
+                    </div>
+                      
+                  </div>
+                  <div class="flex flex-col text-center">
+                    <div class="m-5">
+                      <h3 class="border-b ">  PROVEEDORES </h3> 
+                      <div>
+                        <div>
+                          <a href="../negocio/proveedor/agregar_prov.php" class="text-">Agregar proveedor</a>
+  
+                        </div>
+                        <div>
+                        <a href="../negocio/proveedor/Upd_prov.php">Modificar proveedor</a>
+  
+                        </div>
+                        <div>
+                          <a href="../negocio/proveedor/eliminar_prov.php">Eliminar proveedor</a>
+  
+                        </div>
+                        <div>
+                          <a href="../negocio/proveedor/mostrar_prov.php">Lista Proveedores</a>
+  
+                        </div>
+                      </div>
+                    </div>
+                     
+                  </div>
+          
+                  <div class="flex flex-col text-center">
+                    <div class="m-5">
+                      <h3 class="border-b text-lg md:text-2xl">  PRODUCTOS </h3>
+                      <div>
+                        <div>
+                          <a href="../negocio/productos/agregar_prod.php">Agregar producto</a>
+  
+                        </div>
+                        <div>
+                          <a href="../negocio/productos/mostrar_prod.php">Listado producto</a>
+  
+                        </div>
+                        <div>
+                          <a href="../negocio/productos/agregar_oferta.php">Agregar Oferta</a>
+  
+                        </div>
+  
+                         
+                      </div>
+                    </div>
+                      
+                  </div>
+                  <div class="flex flex-col text-center">
+                    <div class="m-5">
+                      <h3 class="border-b ">  PAQUETES </h3> 
+                      <div>
+                        <div>
+                          <a href="../negocio/paquete/crear_paquete.php" class="text-">Crear paquete</a>
+  
+                        </div>
+                        <div>
+                        <a href="../negocio/paquete/lista_paquetes.php">Listado paquete</a>
+                          
+                        </div>
+                      </div>
+          
+                    </div>
+                      
+                  </div>
+          
+          
+          
+                </div>
+                  
+              </form> 
 
-            </div>
-            <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 bg-slate-900 mb-5 rounded">
-
-            </div>
-            <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 bg-slate-900 mb-5 rounded">
-
-            </div> 
-            <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 bg-slate-900 mb-5 rounded">
-              
-            </div>
+            
           </div>
+          
     
         </div>
       </div>
       
     <footer class="flex h-auto ">
+
+    
       <div class="flex flex-col w-full bg-blue-900 rounded">
 
         <div class="   ">

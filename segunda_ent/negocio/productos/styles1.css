@@ -1,11 +1,8 @@
 .form{
-    width: 270px;
-    background-color: rgb(3, 3, 112);
-    padding: 10px;
+    width: auto;
     margin: auto;
-    margin-top: -19px;
+    margin-top: 20px;
     border-radius: 4px;
-    color: white;
     box-shadow: 5px 7px 10px #000;
   }
 
@@ -18,27 +15,19 @@
 }
 
 .controls {
-    width: 80%;
     background: rgb(3, 3, 112);
-    padding: px;
     border-radius: 3px;
     margin-bottom: 5px;
     border: 1px solid #1f53c5;
     font-size: 15px;
     color: white;
-    margin-left: 10%;
 
 }
 
-.form .regresar {
-    margin-left: 35%;
-}
 
 .form a {
-    margin: 10px;
     color: white;
     text-decoration: none;
-    margin-left: 15%;
 
 }
 
@@ -50,23 +39,17 @@
 
 
 .form .botons {
-    width: auto;
     background:#1f53c5;
     border: none;
     padding: 12px;
     color: white;
-    margin: auto;
     font-size: 16px;
     border-radius: 4px;
-    margin-left: 30%;
-    margin-top: 5px;
     margin-bottom: 10px;
 
 }
 
 .form select {
-    width: 80%;
-    width: 80%;
     background: rgb(3,3,112);
     padding: 5px;
     border-radius: 3px;
@@ -74,7 +57,7 @@
     border: 1px solid #1f53c5;
     font-size: 15px;
     color: white;
-    margin-left: 10%;
+    margin: auto;
 }
 
 #tabla {
@@ -103,12 +86,8 @@ th,td {
 }
 
 .foto{
-    margin-left: 40%;
+    margin-left: 37%;
 }
-.fotos{
-    margin-left: 30%;
-}
-
 
 .agrProd{
     margin-bottom: 0px;

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="../comprador/styles1.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 
@@ -208,39 +208,55 @@
       
       
       
-        <div class="flex flex-col w-full mx-14 ">
-          <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Agregar usuario</h2>
-          </div>
-          <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
+      <div class="flex flex-col w-full mx-14  ">
 
-            <form  class="form" name="formulario" method="post" action="">
+<div class="flex  w-full mt-5 ">
+  <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md ">Agregar usuario</h2>
+</div>
+<div class="flex flex-col h-screen w-auto py-5 border border-gray-200 flex-grow rounded my-5">            
 
-              <br> <input class="controls" placeholder="Nombre" type="text" name="nom" required maxlength="30" size="40"> <br>
+  <form  class="form bg-blue-900 p-5" name="formulario" method="post" action="">
+  <div calss="grid grid-cols-1 sm:grid-cols-2">
+      <div class="flex">
+        <input class="controls m-2" placeholder="Nombre" type="text" name="nom" required maxlength="30" > 
+      </div>
+      <div>
+      <input class="controls m-2" placeholder="Apellido" type="text" name="ape" required maxlength="30" >
 
-              <br> <input class="controls" placeholder="Apellido" type="text" name="ape" required maxlength="30" size="40"> <br>
+      </div>
+      <div class="flex">
+        <input class="controls m-2"placeholder="Email" type="email" name="mail" required maxlength="30" > 
+      </div>
+      <div>
+      <input class="controls m-2"placeholder="Contraseña" type="password" name="pass" required maxlength="30" >
 
-              <br> <input class="controls"placeholder="Email" type="email" name="mail" required maxlength="30" size="40"> <br>
+      </div>
+    </div>
+    <div>
+      
+    </div>
+    <div class="text-center my-5 flex">
+      <select name="rol" class="" id="elemento"> <br><br>
+        <option value="0">Selecciona un Rol</option> <br>
+        <option value="1">Vendedor</option>
+        <option value="2">Comprador </option>
+        <option value="3">Jefe </option>
+      </select>
 
-              <br> <input class="controls" placeholder="Contraseña" type="password" name="pass" required maxlength="30" size="40"> <br>
+    </div>
+    <div class="text-center">
+    <input class="botons " type="submit" value="Agregar Usuario" name="agregar"> 
 
-              <br> 
-              <select name="rol" onchange="" id="elemento"> <br><br>
-                <option value="0">Selecciona un Rol</option> <br>
-                <option value="1">Vendedor</option>
-                <option value="2">Comprador </option>
-                <option value="3">Jefe </option>
+    </div>
+    <div class="text-center">
+      <a href="../../dise/accion.php" class="regresar m-auto">Regresar</a>
 
+    </div>
+  </form>
 
-              </select>
-                <br>
-                <br> <input class="botons" type="submit" value="Agregar Usuario" name="agregar"> <br>
-                <br> <a href="../../dise/accion.php" class="regresar">Regresar</a> <br>
-            </form>
-         
-          </div>
-        
-        </div>
+</div>
+
+</div>
   
       </div>
   

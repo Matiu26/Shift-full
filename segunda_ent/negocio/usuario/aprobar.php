@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="../comprador/styles1.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <script src="//unpkg.com/alpinejs" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -76,19 +76,7 @@
         <a href="../sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Cerrar Sesión
         </a>
-        <!-- <div x-data="{ open: false }" class="inline">
-          <div class="inline">
-            <button x-on:click="open = ! open" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b">
-              Iniciar sesion
-            </button>
-          </div>
-          
-          <div x-show="open" class="absolute text-center right-24 sm:right-60 md:right-11 mx-3 md:mx-0  z-10 border border-black bg-blue-900
-                                  mt-7 w-40 origin-top-right rounded-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <a href="../usuario/login.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-0">Ingresar</a>
-            <a href="../usuario/registrarse.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-1">Registrarse</a>
-          </div>
-        </div> -->
+       
       </div>
       
     </div>
@@ -202,37 +190,56 @@
       
       
       
-        <div class="flex flex-col w-full mx-14 ">
-          <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Aprobar Usuario</h2>
-          </div>
-          <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
-            <div class="flex flex-col">
-            <form class="form" name="formulario" method="post" action="">
+      <div class="flex flex-col h-screen  w-full mx-14  ">
 
-              <input class="controls" placeholder="Ingrese Email" type="email" name="mail" required maxlength="30" size="40">
-              <input class="botons" type="submit" value="Buscar Usuario" name="buscar">
-              
-              <br> <a href="Aprobar.php" class="regresar">Ver listado</a> <br>
-              <br> <a href="../../dise/accion.php" class="regresar">Regresar</a> <br>
-            </form>
-            <table id="tabla" width="40%" border="1">
-              <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Email</th>
-                <th>Telefono</th>
-                <th>Habilitar</th>
-                <th>Rechazar</th>
-                <?php include("funcAprobar.php")?>
-              </tr>
-            </table>
-          </div>
-              
+<div class="flex  w-full mt-5 ">
+<h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md font-semibold">Aprobar usuario</h2>
+</div>
+<div class="flex flex-col h-full w-auto py-5 border border-gray-200  rounded my-5">     
+  <div class="flex flex-col">
+    <form  class="form bg-blue-900 p-5" name="formulario" method="post" action="">
+      <div calss="grid grid-cols-1 m-auto p-5">
+        <div class="m-2 text-center">
+          <input class="controls" placeholder="Ingrese Email" type="email" name="mail" required maxlength="30" >
         </div>
-              
+
+        <div class="m-2 text-center">
+          <input class="botons" type="submit" value="Buscar Usuario" name="buscar">
+        </div>
+
+        <div class=" m-2 text-center">
+          <a href="Aprobar.php" class="regresar">Ver listado</a>
+        </div>
+
+        <div class="text-center m-2 ">
+          <a href="../../dise/accion.php" class="regresar">Regresar</a>
+        </div>
+
       </div>
+    </form>
+    <div class="mt-10">
+      <table id="tabla" >
+        <tr>
+          <th class="p-2">Id</th>
+          <th class="p-2">Nombre</th>
+          <th class="p-2">Apellido</th>
+          <th class="p-2">Email</th>
+          <th class="p-2">Telefono</th>
+          <th class="p-2">Habilitar</th>
+          <th class="p-2">Rechazar</th>
+          <?php include("funcAprobar.php")?>
+        </tr>
+      </table>
+    </div>
+</div>       
+
+  
+  
+
+</div>
+
+
+</div>
       
     </div>
       

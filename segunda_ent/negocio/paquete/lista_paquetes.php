@@ -71,7 +71,7 @@
         
         <a href="carrito/carrito.php"><img src="../../../src/imgs/carrito.png" class="h-10 inline-block mr-4 hover:border-b" alt=""></a>
 
-        <a href="../../../src/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+        <a href="../productos/Pags/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Inicio
         </a>
         <a href="" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">

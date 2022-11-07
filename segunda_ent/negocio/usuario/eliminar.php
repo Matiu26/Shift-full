@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="../comprador/styles1.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 
@@ -203,37 +203,50 @@
       
       
       
-        <div class="flex flex-col w-full mx-14 ">
-        <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Eliminar Usuario</h2>
-          </div>
-          <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
-            <div class="flex flex-col">
-              <form class="form" name="formulario" method="post" action="">
+      <div class="flex flex-col h-screen  w-full mx-14  ">
 
-                <input class="controls" placeholder="Ingrese Email" type="email" name="mail" required maxlength="30" size="40">
-                <input class="botons" type="submit" value="Buscar Usuario" name="buscar">
-                <br> <a href="eliminar.php" class="regresar">Ver listado</a> <br>
-                <br> <a href="../../dise/accion.php" class="regresar">Regresar</a> <br>
-              </form>
-              <table id="tabla" width="40%" border="1">
-                <tr>
-                  <th>Id</th>
-                  <th>Nombre</th>
-                  <th>Apellido</th>
-                  <th>Email</th>
-                  <th>Accion</th>
-                  <?php include("funcElim.php")?>
-                </tr>
-              </table>
-            </div>
-            
-                
-          </div>
-        
+<div class="flex  w-full mt-5">
+  <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md ">Eliminar Usuario</h2>
+</div>
+<div class="flex flex-col h-screen w-auto py-5 border border-gray-200 flex-grow rounded my-5">      
+  <div class="flex flex-col">
+    <form class="form bg-blue-900 p-5"  name="formulario" method="post" action="">
+      <div calss="grid grid-cols-1 sm:grid-cols-2 m-auto p-5">
+        <div class="m-2">
+          <input class="controls" placeholder="Ingrese Email" type="email" name="mail" required maxlength="30">
         </div>
+        <div class="text-center m-2"">
+          <input class="botons" type="submit" value="Buscar Usuario" name="buscar">
+        </div>
+        <div class="text-center m-2"">
+          <a href="eliminar.php" class="regresar">Ver listado</a> 
+        </div>
+        <div class="text-center m-2"">
+          <a href="../../dise/accion.php" class="regresar">Regresar</a>
+        </div>
+      </div>
 
+    </form>
+    <div class="mt-10">
+      <table id="tabla">
+        <tr>
+          <th class="p-2">Id</th>
+          <th class="p-2">Nombre</th>
+          <th class="p-2">Apellido</th>
+          <th class="p-2">Email</th>
+          <th class="p-2">Accion</th>
+          <?php include("funcElim.php")?>
+        </tr>
+      </table>
+    </div>
   </div>
+  
+      
+</div>
+
+</div>
+
+</div>
   <footer class="flex h-auto ">
       <div class="flex flex-col w-full bg-blue-900 rounded">
 

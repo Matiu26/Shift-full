@@ -48,13 +48,13 @@
             }
         ?>
             <tr>
-                <td><?php echo "<p style='color:white;'>" . $IDu . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $nom . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $ape . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $email ."</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $tel . "</p>"; ?></td>
-                <td><a href="aprobado.php?ID=<?php echo $IDu; ?>">Habilitar </a></td>
-                <td><a href="rechazar.php?ID=<?php echo $IDu; ?>">Rechazar </a></td>
+            <td><?php echo "<p style='padding:6px;'>" . $IDu . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $nom . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $ape . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $email ."</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $tel . "</p>"; ?></td>
+                <td><a  href="aprobado.php?ID=<?php echo   $IDu; ?>"><strong class="total"> Habilitar </a></td>
+                <td><a href="rechazar.php?ID=<?php echo $IDu; ?>"><strong class="total">Rechazar </a></td>  
 
                 
             </tr>

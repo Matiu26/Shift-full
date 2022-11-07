@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="../comprador/styles1.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <script src="//unpkg.com/alpinejs" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -206,38 +206,43 @@
       
       
       
-        <div class="flex flex-col w-full mx-14 ">
-        <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Modificar Usuario</h2>
-          </div>
-          <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
-            <div class="flex flex-col">
-              <form class="form mb-20" name="formulario" method="post" action="">
-
-                <input class="controls" placeholder="Email" type="email" name="mail" required maxlength="30" size="40">
+      <div class="flex flex-col h-screen  w-full mx-14  ">
+      <div class="flex  w-full mt-5">
+        <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md ">Modificar Usuario</h2>
+      </div>
+      <div class="flex flex-col h-full w-auto py-5 border border-gray-200  rounded my-5">     
+        <div class="flex flex-col">
+          <form  class="form bg-blue-900 p-5" name="formulario" method="post">
+            <div calss="grid grid-cols-1 m-auto p-5">
+              <div class="m-2 text-center">
+                <input class="controls" placeholder="Email" type="email" name="mail" required maxlength="30">
+              </div>
+              <div class="m-2 text-center">
                 <input class="botons" type="submit" value="Buscar Usuario" name="buscar">
-                <br> <a href="../../dise/accion.php" class="regresar">Regresar</a> <br>
+              </div>
+              <div class="m-2 text-center">
+                <a href="../../dise/accion.php" class="regresar">Regresar</a>
+              </div>
+            </div>  
+            </form>
+            <table id="tabla"  border="1">
+              <tr>
+                <th class="p-2">Id</th>
+                <th class="p-2">Nombre</th>
+                <th class="p-2">Apellido</th>
+                <th class="p-2">Email</th>
+                <th class="p-2">Accion</th>
+                <?php include("funcMod.php")?>
 
-              </form>
-              <table id="tabla" width="40%" border="1">
-                <tr>
-                  <th class="th">Id</th>
-                  <th>Nombre</th>
-                  <th>Apellido</th>
-                  <th>Email</th>
-                  <th>Telefono</th>
-                  <th>Accion</th>
-                  <?php include("funcMod.php")?>
-
-                </tr>    
-              </table>
-            </div>
+              </tr>    
+            </table>
+          </div>
               
         </div>
         
       </div>
 
-  </div>
+    </div>
 
 
 
