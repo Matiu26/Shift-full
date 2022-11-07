@@ -27,7 +27,7 @@ $IDpa = $_GET["ID"];
             $descu = $filas['Descuento'];
             $pre = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
             $desc = $filas['Descripcion'];
-            $foto= '<img  src="'.$filas["Foto"].'" width="180"  alt="" srcset="">';
+            $foto= '<img  src="'.$filas["Foto"].'" width="120"  alt="" srcset="">';
           
 
             if (isset($_POST['buscar'])) {
@@ -51,7 +51,7 @@ $IDpa = $_GET["ID"];
                             $tip = $filas['Tipo'];
                             $pre = $filas['Precio'];
                             $desc = $filas['Descripcion'];
-                           $foto= '<img  src="'.$filas["Foto"].'" width="180"  alt="" srcset="">';
+                           $foto= '<img  src="'.$filas["Foto"].'" width="120"  alt="" srcset="">';
                         }
                     
                     } else {
@@ -64,14 +64,14 @@ $IDpa = $_GET["ID"];
             
         ?>
             <tr>
-                <td><?php echo "<p style='color:white;'>" . $IDp . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $nom . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $sto . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $tip . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>$" . $pre . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $desc . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $foto . "</p>"; ?></td>
-                <td><a href="funcAgregarAPaq.php?IDpr=<?php echo $IDp; ?>&ID=<?php echo $IDpa; ?>">Agregar a Paquete </a></td>
+                <td><?php echo "<p style='padding:6px;'>" . $IDp . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $nom . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $sto . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $tip . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>$" . $pre . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $desc . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $foto . "</p>"; ?></td>
+                <td><a href="funcAgregarAPaq.php?IDpr=<?php echo $IDp; ?>&ID=<?php echo $IDpa; ?>"><strong class="total">Agregar a Paquete </a></td>
 
 
 

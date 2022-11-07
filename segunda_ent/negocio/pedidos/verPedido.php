@@ -192,7 +192,7 @@
       
       <div class="flex flex-col h-screen  w-full mx-14  ">
           <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md font-semibold">Editar o Eliminar Producto </h2>
+            <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md font-semibold">Ver Pedido</h2>
           </div>
           <div class="flex flex-col h-screen w-auto py-5 border border-gray-200  rounded my-5">
             <div class="flex flex-col">

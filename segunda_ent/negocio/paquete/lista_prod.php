@@ -193,25 +193,34 @@
 
       </div>
       
-        <div class="flex flex-col w-full mx-14  ">
-
-<div class="flex  w-full mt-5 ">
-  <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md ">Editar paquete</h2>
-</div>
-<div class="flex flex-col h-screen w-auto py-5 border border-gray-200 flex-grow rounded my-5">    
-    <div class="flex h-screen flex-col  mt-10">
-  
-      <form class="form bg-blue-900 p-5 flex flex-col" name="formulario" method="post" action="">
+      <div class="flex flex-col h-auto  w-full mx-14  ">
+          <div class="flex  w-full mt-5">
+            <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md font-semibold">Agregar a paquete</h2>
+          </div>
+          <div class="flex flex-col h-auto w-auto py-5 border border-gray-200  rounded my-5">
+            <div class="flex flex-col">
+              <form class="form bg-blue-900 p-5 flex flex-col" name="formulario" method="post" action="">
         
         
-    <input class="controls" placeholder="Ingrese Producto" type="text" name="nom" required maxlength="30" size="40">
+    <input class="controls" placeholder="Ingrese Producto" type="text" name="nom" required maxlength="30" size="30">
+    <div class="text-center w-auto m-2">
     <input class="botons" type="submit" value="Buscar Producto" name="buscar">
-    <br />
-    <br> <a href="lista_prod.php" class="regresar">Ver listado</a> <br>
-    <br> <a href="javascript:history.back()"class="regresar"> Regresar</a>
+
+    </div>
+    <div class="text-center w-auto m-2">
+    <a href="lista_prod.php" class="regresar">Ver listado</a> 
+
+    </div>
+    <div class="text-center w-auto m-2">
+    <a href="javascript:history.back()"class="regresar"> Regresar</a>
+
+    </div>
 
   </form>
-              <?php include("FunctablaProd.php")?>
+  <div class="mt-10">
+  <?php include("FunctablaProd.php")?>
+    
+  </div>
             </div>
 
           </div>

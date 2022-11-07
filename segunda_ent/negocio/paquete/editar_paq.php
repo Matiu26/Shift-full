@@ -223,7 +223,7 @@
   
       <form class="form bg-blue-900 p-5 flex flex-col" name="formulario" method="post" action="">
         
-        <p class="foto t  ext-white">Nombre</p>  <input class="controls" placeholder="Nombre Paquete" type="text" name="nom2" value="<?php echo $nom; ?>" required maxlength="30" size="30">
+        <p class="foto text-white">Nombre</p>  <input class="controls" placeholder="Nombre Paquete" type="text" name="nom2" value="<?php echo $nom; ?>" required maxlength="30" size="30">
  
             <p class="foto text-white">Precio</p> <input class="controls" placeholder="Precio" type="number" min="1" name="pre2" value="<?php echo $pre; ?>" required maxlength="30" size="30">
             

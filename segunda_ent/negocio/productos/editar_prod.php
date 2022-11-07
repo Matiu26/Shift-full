@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="../comprador/styles1.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -202,67 +202,82 @@
       </div>
 
 
-
-      
-        
-        
-       
-      
-      
-      
-        <div class="flex flex-col w-full mx-14 ">
+        <div class="flex flex-col h-auto  w-full mx-14  ">
           <div class="flex  w-full mt-5">
-              <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Modificar Producto</h2>
-            </div>
-            <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
-          
-            <form class="form" name="formulario" method="post" enctype="multipart/form-data">
-
-            <br><p class="foto">Nombre</p>  <input class="controls" placeholder="Nombre Producto" type="text" name="nom2" value="<?php echo $nom; ?>" required maxlength="30" size="40">
-
-            <br> <p class="foto">Stock</p> <input class="controls" placeholder= "Stock" type="number" min="1" name="sto2" value="<?php echo $sto; ?>" required maxlength="30" size="40">
-            <br> 
-                     <select name="tip" onchange="" id="elemento"  class="form_control"> <br><br>
-                      <option value="0">Selecciona Tipo</option> <br>
+            <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md font-semibold">Modificar producto</h2>
+          </div>
+          <div class="flex flex-col h-auto w-auto py-5 border border-gray-200  rounded my-5">
+            <div class="flex flex-col">
+            <form class="form bg-blue-900 p-5 h-auto" name="formulario" method="post" enctype="multipart/form-data">
+                <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center">
+                  <div class="m-3">
+                  <p class="foto text-white">Nombre</p>  <input class="controls" placeholder="Nombre Producto" type="text" name="nom2" value="<?php echo $nom; ?>" required maxlength="30" >
+                </div>
+                <div class="m-3">
+                 <p class="foto text-white">Stock</p> <input class="controls" placeholder= "Stock" type="number" min="1" name="sto2" value="<?php echo $sto; ?>" required maxlength="30" size="30">
+                </div>
+            
+                <div class="m-3 flex flex-col my-5 text-white text-center">
+                  <label for="">tipo</label>
+                    <select name="tip" onchange="" id="elemento"  class="form_control"> 
+                      <option value="0">Selecciona Tipo</option> 
                       <option value="1">Cabeza</option>
-                     <option value="2">Torso </option>
-                     <option value="3">Cintura </option>
-                     <option value="4">Piernas </option>
-                     <option value="5">Calzado </option>
-                      </select>
-                    
-            <br> <p class="foto">Precio</p> <input class="controls" placeholder="Precio" type="number" min="1" name="pre2" value="<?php echo $pre; ?>" required maxlength="30" size="40">
-
-            <br><p class="foto">Descripción</p> <input class="controls" placeholder="Descripcion Producto" type="text" name="desc2" value="<?php echo $desc; ?>" required maxlength="30" size="40">
-            <div class="photo">
-                                  <label class="foto" for="foto">  Foto</label>
-                        <div class="prevPhoto">
-                            <span class="delPhoto notBlock">X</span>
-                            <label for="foto"></label>
-                        </div>
-                        <div class="upimg">
-                            <input type="file" name="foto" id="foto">
-                        </div>
-                        <div id="form_alert"></div>
+                      <option value="2">Torso </option>
+                      <option value="3">Cintura </option>
+                      <option value="4">Piernas </option>
+                      <option value="5">Calzado </option>
+                    </select>
+                  </div >
+                  <div class="m-3">
+                    <p class="foto text-white">Precio</p> 
+                    <input class="controls" placeholder="Precio" type="number" min="1" name="pre2" value="<?php echo $pre; ?>" required maxlength="30" >
+                  </div>
+                  <div class="photo col-span-1 sm:col-span-2 text-white text-center">
+                    <div>
+                      <label for="foto">Foto (necesario)</label>
                     </div>
-                    <br>
-                    <script src="../../js/jquery-3.6.0.min.js"></script>
-                    <script src="../../js/functions.js"></script>
+                                  
+                          <div class="prevPhoto">
+                              <span class="delPhoto notBlock">X</span>
+                              <label for="foto"></label>
+                          </div>
+                          <div class="upimg">
+                              <input type="file" name="foto" id="foto">
+                          </div>
+                        <div id="form_alert"></div> 
+                        <p class="text-lg text-white text-center mt-5">Descripción</p> 
+                    <textarea class="controls rounded w-80 h-40" placeholder="" type="text" name="desc2" value="<?php echo $desc; ?>" required  >
+                    </textarea>  
+                    </div>
 
-            <input class="botons" type="submit" value="Modificar" name="modificar">
+                  <div lass="col-span-1 sm:col-span-2 flex flex-col m-5 text-center">
+                       
+                  </div>
+                      <br>
+                      <script src="../../js/jquery-3.6.0.min.js"></script>
+                      <script src="../../js/functions.js"></script>
+                      <div class="col-span-1 sm:col-span-2">
+                        <div class="text-center">
+                  <input class="botons" type="submit" value="Modificar" name="modificar">
 
-            <a href="mostrar_prod.php" class="regresar">Regresar</a>
+                  </div>
+                  <div class="text-center mt-5">
+                  <a href="mostrar_prod.php" class="regresar">Regresar</a>
+
+                  </div>
+                      </div>
+                  
+
 
             </form>
 
              
-              
             </div>
-        
+        </div>
           </div>
 
         </div>
-
+      </div>
   <footer class="flex h-auto ">
       <div class="flex flex-col w-full bg-blue-900 rounded">
 

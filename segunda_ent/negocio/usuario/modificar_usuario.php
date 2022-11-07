@@ -206,27 +206,33 @@
       
       
       
-        <div class="flex flex-col w-full mx-14 ">
-          <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Modificar Usuario</h2>
-          </div>
-          <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
+      <div class="flex flex-col w-full mx-14  ">
+
+<div class="flex  w-full mt-5 ">
+  <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md ">Modificar usuario</h2>
+</div>
+<div class="flex flex-col h-screen w-auto py-5 border border-gray-200 flex-grow rounded my-5">    
+    <div class="flex h-screen flex-col  mt-10">
+  
+      <form class="form bg-blue-900 p-5 flex flex-col" name="formulario" method="post" action="">
         
-            <form class="form" name="formulario" method="post" action="">
+         <input class="controls" placeholder="" type="text" name="nom2" value="<?php echo $nom; ?>" required maxlength="30" size="30">
 
-              <input class="controls" placeholder="" type="text" name="nom2" value="<?php echo $nom; ?>" required maxlength="30" size="40">
+              <input class="controls" placeholder="" type="text" name="ape2" value="<?php echo $ape; ?>" required maxlength="30" size="30">
 
-              <input class="controls" placeholder="" type="text" name="ape2" value="<?php echo $ape; ?>" required maxlength="30" size="40">
+              <input class="controls" placeholder="Ingrese Contraseña" type="password" name="pass2" value="" required maxlength="30" size="30">
 
-              <input class="controls" placeholder="Ingrese Contraseña" type="password" name="pass2" value="" required maxlength="30" size="40">
+              <input class="controls" placeholder="" type="email" name="mail2" value="<?php echo $mail; ?>" required maxlength="30" size="30">
 
-              <input class="controls" placeholder="" type="email" name="mail2" value="<?php echo $mail; ?>" required maxlength="30" size="40">
-
-              <input class="controls" placeholder="" type="number" name="tel2" value="<?php echo $tel; ?>" required maxlength="30" size="40">
-
+              <input class="controls" placeholder="" type="number" name="tel2" value="<?php echo $tel; ?>" required maxlength="30" size="30">
+              <div class="w-auto text-center m-2">
               <input class="botons" type="submit" value="Modificar" name="modificar">
 
-              <a href="modificar.php" class="regresar">Regresar</a>
+              </div>
+              <div class="w-auto text-center">
+                <a href="modificar.php" class="regresar">Regresar</a>
+
+              </div>
 
             </form>
             
@@ -237,7 +243,7 @@
 
       </div>
 
-
+      </div>
 
       <footer class="flex h-auto ">
       <div class="flex flex-col w-full bg-blue-900 rounded">
