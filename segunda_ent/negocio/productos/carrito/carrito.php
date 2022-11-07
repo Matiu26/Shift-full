@@ -211,12 +211,12 @@ if ($sesion_i == null ||  $sesion_i = "") {
    
   </div>
 
-    <div class="flex w-full">
-      <div class="flex flex-col h-auto w-full mt-10 mx-0 md:mx-14">     
+  <div class="flex h-screen w-full">
+      <div class="flex flex-col h-screen w-full mt-10 mx-0 md:mx-14">     
             
       <div class="flex h-full md:flex-rows mb-5 mt-10 md:mt-0">
   
-      <div class="mt-20">
+      <div class="mt-10">
               <div class="hidden w-52 h-68 mr-10 mt-5 rounded hidden md:flex flex-col justify-around">
                 <img class="px-3" src="../../../../src/imgs/Combosbanner.png" alt="">
               </div>  
@@ -229,10 +229,10 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
        
 
-            <div class="flex w-full">
+           <div class="flex w-full ">
 
-              <div class="columns w-full mx-10 border border-gray-200 rounded px-5">
-                <div class="column text-center mt-5">
+              <div class="columns w-full h-screen mx-10 border border-gray-200 rounded px-5">
+                <div class="column text-center h-screen my-5  mt-5">
                   <h2 class=" text-lg  w-full font-semibold">Carrito </h2>
 
                   <div class="">
@@ -292,66 +292,56 @@ if ($sesion_i == null ||  $sesion_i = "") {
                     </table>
                    
                       
-                       <div class="m-5">
-                         <a class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded m-2" href="../../pedidos/datosCompra.php" > Finalizar Compra</a>
-                       </div>
+                    <div class="m-5">
+                      <a class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded m-2" href="../../pedidos/datosCompra.php" > Finalizar Compra</a>
+                    </div>
                       
-                        <?php 
-                        } else{ 
+                    <?php 
+                    } else{ 
                                 
-                          echo"No hay productos en tu carrito aún"; } 
-                                ?>
+                      echo"No hay productos en tu carrito aún"; } 
+                    ?>
                      
                   
 
 
-                  </div>
-                  
                 </div>
+                  
+              </div>
                 
                 
               
                 
-              </div>          
+            </div>          
 
         
             
 
           
-            </div>
+          </div>
           
     
          
         </div>
 
 
-      <div class="flex flex-col w-full mx-14">     
-        <div class="flex  w-full mt-5">
-        </div>
-
     
-
-            
-
-
-            </div>
-          </div>
+        
           
 
         
             
 
           
-          </div>
+      </div>
      
-        </div>
-
-
     </div>
+
+
+  </div>
     
    
-  
-    <footer class="flex h-auto ">
+  <footer class="flex h-auto mt-20">
       <div class="flex flex-col w-full bg-blue-900 rounded">
 
         <div class="   ">
@@ -410,6 +400,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
        
       
     </footer>
+    
    
 
  

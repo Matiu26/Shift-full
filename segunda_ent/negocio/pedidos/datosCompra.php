@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="../comprador/styles1.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 
@@ -194,28 +194,49 @@
       
       
       
-        <div class="flex flex-col w-full mx-14 ">
+      <div class="flex flex-col h-screen  w-full mx-14  ">
           <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Datos de compra</h2>
+            <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md font-semibold">Datos de Compra</h2>
           </div>
-          <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
+          <div class="flex flex-col h-auto w-auto py-5 border border-gray-200  rounded my-5">
+            <div class="flex flex-col">
+              <form class="form bg-blue-900 p-5 my-5 flex flex-col" name="formulario" method="post" action="">
+              <div class="m-2">
+              <input class="controls" placeholder="Nombre" type="text" name="nom" required maxlength="30" size="40"> 
 
-            <form  class="form" name="formulario" method="post" action="">
+              </div>
+              <div class="m-2">
+              <input class="controls" placeholder="Apellido" type="text" name="ape" required maxlength="30" size="40"> 
 
-            <br> <input class="controls" placeholder="Nombre" type="text" name="nom" required maxlength="30" size="40"> <br>
+              </div>
+              <div class="m-2">
+              <input class="controls" placeholder="Email" type="mail" name="mail" required maxlength="30" size="40"> 
 
-            <br> <input class="controls" placeholder="Apellido" type="text" name="ape" required maxlength="30" size="40"> <br>
+              </div>
+              <div class="m-2">
+             <input class="controls" placeholder="Dirección" type="text" min="0" name="dir" required maxlength="30" size="40"> 
+                
+              </div>
+              <div class="m-2">
+              <input class="controls" placeholder="Tarjeta" type="text" min="0" name="tar" required maxlength="30" size="40"> 
 
-            <br> <input class="controls" placeholder="Email" type="mail" name="mail" required maxlength="30" size="40"> <br>
+              </div>
+              <div class="m-2 text-center">
+              <input class="controls" placeholder="CVV" type="number" min="0" name="cvv" required maxlength="30" size="40"> 
+
+              </div>
+              <div class="text-center">
+                <input class="botons" type="submit" value="Siguiente" name="siguiente"> 
+              </div>
+              <div class="m-2 text-center">
+                <a href="javascript:history.back()"class="regresar"> Cancelar</a>
+              </div>
+
+
  
-            <br> <input class="controls" placeholder="Dirección" type="text" min="0" name="dir" required maxlength="30" size="40"> <br>
             
-            <br> <input class="controls" placeholder="Tarjeta" type="text" min="0" name="tar" required maxlength="30" size="40"> <br>
-            
-            <br> <input class="controls" placeholder="CVV" type="number" min="0" name="cvv" required maxlength="30" size="40"> <br>
 
-                <br> <input class="botons" type="submit" value="Siguiente" name="siguiente"> <br>
-                <br> <a href="javascript:history.back()"class="regresar"> Regresar</a>
+                 
 
             </form>
          
@@ -224,7 +245,7 @@
         </div>
   
       </div>
-  
+      </div>
   <footer class="flex h-auto ">
     <div class="flex flex-col w-full bg-blue-900 rounded">
   

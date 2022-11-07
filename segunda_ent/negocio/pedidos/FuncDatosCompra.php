@@ -46,17 +46,9 @@ $id_u= $row["IdUsuario"];
                 $id=agregar_datos($nombre, $apellido, $email,$direccion,$tarjeta, $CVV,$date);
 
                 $q = mysqli_query($con, "select cantidad, IdProducto from carrito  where IdUsuario ='" . $id_u . "'");
-
                 while ($row =$q->fetch_assoc()){
-                    
-                    $q = mysqli_query($con, "SELECT cantidad FROM carrito WHERE IdProducto='" . $row['IdProducto'] . "'");
-                    $row = $q->fetch_assoc();
-                    $cant_act= $row["cantidad"];
-
-                    $cant_nueva= $cant_act - $row['cantidad'];
-                    Stock($row['IdProducto'],$cant_nueva);
+        
                 carrito_a_tiene($id,$row['IdProducto'],$row['cantidad'],$id_u);
-
                 }
 
                             echo '<script language="javascript">alert("Compra exitosa");</script>';
