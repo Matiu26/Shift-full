@@ -87,10 +87,19 @@ if ($sesion_i == null ||  $sesion_i = "") {
     </div>
     <?php
   } else{
-    ?>
- <a href="../../sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
- <?php  echo $_SESSION['session_username'];?>          
-        </a>
+    ?></a>
+    <div x-data="{ open: false }" class="inline">
+      <div class="inline">
+        <button x-on:click="open = ! open" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b">
+        <?php  echo $_SESSION['session_username'];?>  
+        </button>
+      </div>
+      
+      <div x-show="open" class="absolute text-center right-24 sm:right-60 md:right-11 mx-3 md:mx-0  z-10 border border-black bg-blue-900
+        mt-7 w-40 origin-top-right rounded-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <a href="../../sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">Cerrar Sesiòn </a>                     
+      </div>
+    </div>
     <?php
 }
 ?>
@@ -207,22 +216,22 @@ if ($sesion_i == null ||  $sesion_i = "") {
             
       <div class="flex h-full md:flex-rows mb-5 mt-10 md:mt-0">
   
-  <div class="">
-    <div class="hidden w-40 h-60 mr-10 mt-5 bg-blue-900 rounded hidden md:flex flex-col justify-around">
-      <img class="px-3" src="../../../../src/imgs/Combos.png" alt="">
-    </div>  
-    
-    <div class="hidden w-40 h-60 mr-10 mt-3 bg-blue-900 rounded hidden md:flex flex-col justify-around">
-      <img class="px-3" src="../../../../src/imgs/Ofertas.png" alt="">
-    </div> 
-  </div>
+      <div class="mt-20">
+              <div class="hidden w-52 h-68 mr-10 mt-5 rounded hidden md:flex flex-col justify-around">
+                <img class="px-3" src="../../../../src/imgs/Combosbanner.png" alt="">
+              </div>  
+              
+              <div class="hidden w-52 h-68 mr-10 mt-3  rounded hidden md:flex flex-col justify-around">
+                <img class="px-3" src="../../../../src/imgs/Ofertasbanner.png" alt="">
+              </div> 
+            </div>
   
 
        
 
             <div class="flex w-full">
 
-              <div class="columns w-full m-0 md:mx-10 border border-gray-200 rounded px-5">
+              <div class="columns w-full mx-10 border border-gray-200 rounded px-5">
                 <div class="column text-center mt-5">
                   <h2 class=" text-lg  w-full font-semibold">Carrito </h2>
 

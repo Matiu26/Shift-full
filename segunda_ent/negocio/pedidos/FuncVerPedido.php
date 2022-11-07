@@ -104,15 +104,15 @@
             }
         ?>
             <tr>
-                <td><?php echo "<p style='color:white;'>" . $IDc . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $nom . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $ape . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $mail . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $dir . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $estado . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $fec . "</p>"; ?></td>
-                <td><a href="estado_pedido.php?ID=<?php echo $IDc; ?>">Siguiente Estado </a></td>
-                <td><a href="volver_pedido.php?ID=<?php echo $IDc; ?>">Volver Estado </a></td>
+                <td><?php echo "<p style='padding:6px;'>" . $IDc . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $nom . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $ape . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $mail . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $dir . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $estado . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $fec . "</p>"; ?></td>
+                <td><a href="estado_pedido.php?ID=<?php echo $IDc; ?>"><strong class="total">Siguiente Estado </a></td>
+                <td><a href="volver_pedido.php?ID=<?php echo $IDc; ?>"><strong class="total">Volver Estado </a></td>
 
 
 

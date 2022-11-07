@@ -86,10 +86,19 @@ if ($sesion_i == null ||  $sesion_i = "") {
     </div>
     <?php
   } else{
-    ?>
- <a href="../../sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
-          Cerrar Sesión
-        </a>
+    ?></a>
+    <div x-data="{ open: false }" class="inline">
+      <div class="inline">
+        <button x-on:click="open = ! open" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b">
+        <?php  echo $_SESSION['session_username'];?>  
+        </button>
+      </div>
+      
+      <div x-show="open" class="absolute text-center right-24 sm:right-60 md:right-11 mx-3 md:mx-0  z-10 border border-black bg-blue-900
+        mt-7 w-40 origin-top-right rounded-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <a href="../../sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">Cerrar Sesiòn </a>                     
+      </div>
+    </div>
     <?php
 }
 ?>
@@ -202,43 +211,41 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
           <div class="flex h-full md:flex-rows mb-5 mt-10 md:mt-0">
   
-            <div class="">
-              <div class="hidden w-40 h-60 mr-10 mt-5 bg-blue-900 rounded hidden md:flex flex-col justify-around">
-                <img class="px-3" src="../../../../src/imgs/Combos.png" alt="">
+            <div class="mt-20">
+              <div class="hidden w-52 h-68 mr-10 mt-5 rounded hidden md:flex flex-col justify-around">
+                <img class="px-3" src="../../../../src/imgs/Combosbanner.png" alt="">
               </div>  
               
-              <div class="hidden w-40 h-60 mr-10 mt-3 bg-blue-900 rounded hidden md:flex flex-col justify-around">
-                <img class="px-3" src="../../../../src/imgs/Ofertas.png" alt="">
+              <div class="hidden w-52 h-68 mr-10 mt-3  rounded hidden md:flex flex-col justify-around">
+                <img class="px-3" src="../../../../src/imgs/Ofertasbanner.png" alt="">
               </div> 
             </div>
             
   
             
-            <div class="flex flex-col w-auto  
-            py-5  border border-gray-200 flex-grow rounded mt-5 ">
-  
-            
-              
-            <div class="flex flex-col w-full mx-14">
+            <div class="flex flex-col h-screen  w-full mx-14  ">
           <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Botas</h2>
+            <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md font-semibold">Botas</h2>
           </div>
+              
+          <div class="flex flex-col h-screen w-auto py-5 border border-gray-200  rounded my-5">
+          
 
           
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  place-items-center ">
             <?php
               require_once("../miapp_productos.php");
-$consulta = mysqli_query($con, "SELECT * FROM producto WHERE Tipo='Calzado' limit 8") or die(mysqli_error($con));
-$productos_relacionados = mysqli_fetch_all($consulta);
-shuffle($productos_relacionados);
-foreach ($productos_relacionados as $filas) {
-  $IDp = $filas[0];
-  $nom = $filas[1];
-  $descu = $filas[7];
-  $pre =$filas[4];
-  $pre = $filas[4]- (($filas[4] * $descu)/ 100);
-  $foto= '<img  src="'."../".$filas[6].'"    width="190"  alt="" srcset="">';
-?>
+              $consulta = mysqli_query($con, "SELECT * FROM producto WHERE Tipo='Calzado' limit 8") or die(mysqli_error($con));
+              $productos_relacionados = mysqli_fetch_all($consulta);
+              shuffle($productos_relacionados);
+              foreach ($productos_relacionados as $filas) {
+                $IDp = $filas[0];
+                $nom = $filas[1];
+                $descu = $filas[7];
+                $pre =$filas[4];
+                $pre = $filas[4]- (($filas[4] * $descu)/ 100);
+                $foto= '<img  src="'."../".$filas[6].'"    width="190"  alt="" srcset="">';
+            ?>
             
               <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 hover:shadow-lg  flex flex-col hover:border hover:border-gray-200 rounded my-5 p-5 justify-between ">
                 <a href="../producto.php?ID=<?php echo $IDp; ?>"><?php echo $foto ?> </a>

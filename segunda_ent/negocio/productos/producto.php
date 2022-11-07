@@ -206,12 +206,12 @@ if ($sesion_i == null ||  $sesion_i = "") {
         <div class="flex h-full md:flex-rows mb-5">
 
           <div class="">
-            <div class="hidden w-40 h-60 mr-10 mt-5 bg-blue-900 rounded hidden md:flex flex-col justify-around">
-              <img src="../../../src/imgs/Combos.png" alt="">
+            <div class="hidden w-40 h-60 mr-10 mt-5  bg-blue-900 rounded hidden md:flex flex-col justify-around">
+              <img src="../../../src/imgs/CombosBanner.png" alt="">
             </div>  
             
-            <div class="hidden w-40 h-60 mr-10 mt-3 bg-blue-900 rounded hidden md:flex flex-col justify-around">
-              <img src="../../../src/imgs/Ofertas.png" alt="">
+            <div class="hidden w-40 h-60 mr-10 mt-10 bg-blue-900 rounded hidden md:flex flex-col justify-around">
+              <img src="../../../src/imgs/OfertasBanner.png" alt="">
             </div> 
           </div>
           
@@ -234,23 +234,21 @@ if ($sesion_i == null ||  $sesion_i = "") {
                 <?php echo $foto?>
                 </div> 
 
-                <div class=" justify-center w-full mt-3 p-3 flex md:hidden">
-                <button class="" name="a" type="submit">
-                    <p class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded">
-                    <a href="carrito/funcAgrCarrito.php?ID=<?php echo $IDp; ?>"><?php echo "Agregar al carrito" ?> </a>
-                  </p> 
-                    </button> 
+                    
+                
+                      <div class="w-full text-center flex md:hidden mt-3">
+                <input class="text-sm md:text-lg p-2 text-white w-12 bg-blue-600 rounded" form="3" value="1" type="number" min="1" name="cant" required maxlength="30"> 
 
-                </div>
+                        <form id="3" method="post" action="carrito/funcAgrCarrito.php?ID=<?php echo $IDp; ?>">    
+                          <button class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded" name= type="submit"> Agregar a carrito </button> 
+                        </form>
+                      </div>
                 <div class="flex-col md:hidden mt-3 ">
                   <div class="w-28  border-black">
                     <p class="font-bold text-2xl text-blue-900 ">$<?php echo $pre ?></p>
                   </div>  
   
-                  <div class="flex mt-3 flex-col justify-between ">
-                        
-                  
-                  </div>
+                 
                   
 
                 </div>
@@ -267,7 +265,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
                     <div class="flex mt-3 flex-col justify-between ">
 
               
-             <input class="text-sm md:text-lg p-2 text-white w-12 bg-blue-600 rounded" form="2" value="1" type="number" min="1" name="cant" required maxlength="30"> 
+                    <input class="text-sm md:text-lg p-2 text-white w-12 bg-blue-600 rounded" form="2" value="1" type="number" min="1" name="cant" required maxlength="30"> 
                       
                       <div class="w-full text-center mt-3">
                           <form id="2" method="post" action="carrito/funcAgrCarrito.php?ID=<?php echo $IDp; ?>">    
@@ -301,7 +299,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
         </div>
         <div class=" w-full  h-auto m-auto grid grid-cols-2 justify-center  sm:grid-cols-3 lg:grid-cols-4 place-items-center ">
                
-        <?php
+          <?php
             require_once("miapp_productos.php");
             $consulta = mysqli_query($con, "SELECT Tipo FROM producto  WHERE IdProducto = '$IDp'") or die(mysqli_error($con));
             while ($filas = mysqli_fetch_array($consulta)) {
@@ -321,7 +319,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
                 $foto2= '<img  src="'.$filas[6].'"    width="190"  alt="" srcset="">';
             ?>
           
-        <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 hover:shadow-lg  flex flex-col hover:border hover:border-gray-200 rounded my-5 p-5 justify-between ">
+              <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 hover:shadow-lg  flex flex-col hover:border hover:border-gray-200 rounded my-5 p-5 justify-between ">
                 <a href="../producto.php?ID=<?php echo $IDp2; ?>"><?php echo $foto2 ?> </a>
                 <div class="flex justify-between">
                   <p><?php echo $nom2;?></p>

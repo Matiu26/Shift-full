@@ -173,21 +173,27 @@
       
       
       
-        <div class="flex flex-col w-full mx-14 ">
-          <div class="flex  w-full mt-5">
-              <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Iniciar Sesión</h2>
-            </div>
-            <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
+      <div class="flex flex-col w-full mx-14  ">
+
+        <div class="flex  w-full mt-5 ">
+          <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md ">Iniciar sesión</h2>
+        </div>
+        <div class="flex flex-col h-screen w-auto py-5 border border-gray-200 flex-grow rounded my-5">    
+            <div class="flex h-screen flex-col  mt-10">
           
-              <form class="form" name="formulario" method="post" action="">
-                <h4>Iniciar Sesión</h4>
-                <input class="controls" placeholder="Email" type="email" required name="mail" maxlength="30" size="40">
+              <form class="form bg-blue-900 p-5 flex flex-col" name="formulario" method="post" action="">
+                
+                <input class="controls my-2" placeholder="Email" type="email" required name="mail" maxlength="30" size="30">
 
-                <input class="controls" placeholder="Contraseña" type="password" required name="pass" maxlength="30" size="40">
+                <input class="controls my-2" placeholder="Contraseña" type="password" required name="pass" maxlength="30" size="30">
+                <div class="text-center my-2">
+                  <input class="botons w-auto" type="submit" value="Ingresar" name="ingresar">
 
-                <input class="botons" type="submit" value="Ingresar" name="ingresar">
-                 <p clas="regis"> ¿No tienes cuenta? </p>
-                 <a href="registrarse.php" class="regresar">Registrate</a> <br>
+                </div>
+                <div class="text-center text-white my-2">
+                <p clas="regis"> ¿No tienes cuenta? </p>
+                 <a href="registrarse.php" class="regresar">Registrate aquì</a> 
+                </div>
 
               </form>
               
@@ -196,7 +202,7 @@
           </div>
 
         </div>
-
+      </div>
   <footer class="flex h-auto ">
       <div class="flex flex-col w-full bg-blue-900 rounded">
 

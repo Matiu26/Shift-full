@@ -223,7 +223,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
           
             
             <div class="flex w-auto justify-center mb-5 ">
-                <h2 class="mb-3 text-2xl w-28  border-b border-gray-200 shadow-md text-center font-semibold"><?php echo $nom?> </h2>
+                <h2 class="mb-3 text-2xl w-auto  border-b border-gray-200 shadow-md text-center font-semibold"><?php echo $nom?> </h2>
             </div>
 
             <div class=" mx-5 flex justify-center">
@@ -266,7 +266,8 @@ if ($sesion_i == null ||  $sesion_i = "") {
                  
                       
                         
-              <br> <input class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded" form="1" placeholder="Cantidad" type="number" min="1" name="cant" required maxlength="30" size="40"> <br>
+                    <input class="text-sm md:text-lg p-2 text-white w-12 bg-blue-600 rounded" form="2" value="1" type="number" min="1" name="cant" required maxlength="30"> 
+
                       
                       <div class="w-full text-center mt-3">
                       <form id="1" method="post" action="../productos/carrito/carrito.php">    
@@ -283,51 +284,65 @@ if ($sesion_i == null ||  $sesion_i = "") {
                 
 
               </div>
-              <div class=" flex flex-col m-3 mt-5  ">
+              <div class=" flex flex-col mx-10 mt-5 hidden lg:flex">
                 <h3 class="border-b border-gray-200 shadow-sm border-r w-28 text-center">Descripcion</h3>
-                <p class="mt-5 border border-gray-300 pb-10 p-5 w-full  shadow-md"><?php echo $desc?></p>
+                
+                  <p class="mt-5 border border-gray-300 pb-10 p-5  shadow-md"><?php echo $desc?></p>
+                
+                
               </div>
-              <br>        
-              <div class="flex h-full md:flex-rows mb-5">
-              <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Incluido en paquete</h2>   
-          <?php
-        require_once("miapp_paquete.php");
+              <div class=" m-3 border-t border-gray-300">
 
-        while ($producto = mysqli_fetch_array($qu)) {
-         $IDp = $producto['IdProducto'];
-        $nom = $producto['Nombre'];
-        $descu = $producto['Descuento'];
-        $pre = ($producto['Precio']- (($producto['Precio'] * $descu)/ 100));
-        $foto= '<img  src="'.$producto["Foto"].'"    width="70"  alt="" srcset="">';
-      ?>
-                <div class=" w-full  h-auto m-auto grid grid-cols-2 justify-center  sm:grid-cols-3 lg:grid-cols-4 place-items-center ">
-                  
-                  <div class="">
-                  <a href="../productos/producto.php?ID=<?php echo $IDp; ?>"><?php echo $foto ;?> </a>
-                <?php echo $nom;?><br>
-               <?php echo "$".$pre;?><br>
-             
-              
-                    
-                  </div>
-                </div>
-                <?php
-                  }
-               ?>
               </div>
+              <div class="flex flex-col m-auto mt-10">
+                <h2 class="mb-3 text-2xl w-auto  border-b border-gray-200 shadow-md text-center font-semibold">Incluido en paquete</h2>   
+                <div class=" w-full  h-auto m-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 justify-center  place-items-center ">
+                <?php
+                  require_once("miapp_paquete.php");
+                  while ($producto = mysqli_fetch_array($qu)) {
+                  $IDp = $producto['IdProducto'];
+                  $nom = $producto['Nombre'];
+                  $descu = $producto['Descuento'];
+                  $pre = ($producto['Precio']- (($producto['Precio'] * $descu)/ 100));
+                  $foto= '<img  src="'.$producto["Foto"].'"    width="70"  alt="" srcset="">';
+                ?>
+                <div class="flex flex-col h-32 justify-around mx-5">
+                   <a href="../productos/producto.php?ID=<?php echo $IDp; ?>"><?php echo $foto ;?> </a>
+                <?php echo $nom;?>  
+                <?php echo "$".$pre;?>
+                </div>
+               
+                            
+                            <?php
+                              }
+                          ?>
+                          
+               
+              
+
+              
             </div>
+                      
+          </div>
           
-              </div> 
+        </div> 
       </div>
       
-              <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Paquetes Similares</h2>  
-          </div>          
+    </div>          
 
            
-          <?php
+          
+
+        </div>
+        <div class="w-auto">
+        <h2 class="mb-3 text-2xl w-auto  border-b border-gray-200 shadow-md text-center font-semibold">Paquetes Similares</h2>  
+
+        </div>
+        <div class=" w-full  h-auto m-auto grid grid-cols-2 justify-center  sm:grid-cols-3 lg:grid-cols-4 place-items-center ">
+        <?php
 require_once("miapp_paquete.php");
 
-$c = mysqli_query($con, "SELECT * FROM VIEW_PAQUETES_CON_IMAGEN  limit 4") or die(mysqli_error($con));
+$c = mysqli_query($con, "SELECT * FROM VIEW_PAQUETES_CON_IMAGEN  WHERE  id != '$IDpa' limit 4") or die(mysqli_error($con));
 $productos_relacionados = mysqli_fetch_all($c);
 shuffle($productos_relacionados);
 // echo var_dump($productos_relacionados);
@@ -339,9 +354,6 @@ foreach ($productos_relacionados as $filas) {
     $pre2 = $filas[3]- (($filas[3] * $descu2)/ 100);
     $foto2= '<img  src="'.$filas[6].'"    width="190"  alt="" srcset="">';
 ?>
-
-        </div>
-        <div class=" w-full  h-auto m-auto grid grid-cols-2 justify-center  sm:grid-cols-3 lg:grid-cols-4 place-items-center ">
           
         <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 hover:shadow-lg  flex flex-col hover:border hover:border-gray-200 rounded my-5 p-5 justify-between ">
                 <a href="mostrar_paq.php?ID=<?php echo $IDp2; ?>"><?php echo $foto2 ?> </a>

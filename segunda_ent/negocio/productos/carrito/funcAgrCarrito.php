@@ -1,7 +1,7 @@
 <?php
 require_once("../../usuario/miapp_user.php");
 require_once("../../productos/miapp_productos.php");
-error_reporting(0);
+// error_reporting(0);
 session_start();
 $sesion_i = $_SESSION['session_username'];
 $ID = $_GET["ID"];

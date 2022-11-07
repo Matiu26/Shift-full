@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -120,9 +118,22 @@ if ($sesion_i == null ||  $sesion_i = "") {
     <?php
   } else{
     ?>
- <a href="../../sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
- <?php  echo $_SESSION['session_username'];?>          
+
+ 
+        
         </a>
+        <div x-data="{ open: false }" class="inline">
+          <div class="inline">
+            <button x-on:click="open = ! open" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b">
+            <?php  echo $_SESSION['session_username'];?>  
+            </button>
+          </div>
+          
+          <div x-show="open" class="absolute text-center right-24 sm:right-60 md:right-11 mx-3 md:mx-0  z-10 border border-black bg-blue-900
+            mt-7 w-40 origin-top-right rounded-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <a href="../../sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">Cerrar Sesiòn </a>                     
+          </div>
+        </div>
     <?php
 }
 ?>
@@ -142,7 +153,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
             <li><input class="h-7"  form="1" type="text" placeholder="Buscar" name="busc"></li>
 
             <li><form id="1" method="post" action="pagina_busqueda.php"></li>  
-            <button name= type="submit"><img class="h-7 p-1 border"src="../../../../src/imgs/Lupa2.png" alt=""></button> 
+            <button name="" type="submit"><img class="h-7 p-1 border"src="../../../../src/imgs/Lupa2.png" alt=""></button> 
 
             </form>
             <li><a href="Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
@@ -240,26 +251,26 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
           <div class="flex h-full md:flex-rows mb-5 mt-10 md:mt-0">
   
-            <div class="">
-              <div class="hidden w-40 h-60 mr-10 mt-5  rounded hidden md:flex flex-col justify-around">
-                <a href="Combos.php"><img class="px-3" src="../../../../src/imgs/CombosBanner.png" alt=""></a>
-                
+          <div class="mt-20">
+              <div class="hidden w-52 h-68 mr-10 mt-5 rounded hidden md:flex flex-col justify-around">
+                <img class="px-3" src="../../../../src/imgs/Combosbanner.png" alt="">
               </div>  
               
-              <div class="hidden w-40 h-60 mr-10 mt-3  rounded hidden md:flex flex-col justify-around">
-                <a href="Ofertas.php"><img class="px-3" src="../../../../src/imgs/OfertasBanner.png" alt=""></a>
-                
+              <div class="hidden w-52 h-68 mr-10 mt-3  rounded hidden md:flex flex-col justify-around">
+                <img class="px-3" src="../../../../src/imgs/Ofertasbanner.png" alt="">
               </div> 
             </div>
             
   
             
-            <div class="flex flex-col w-auto  
-            py-5  border border-gray-200 flex-grow rounded mt-5 ">
-  
-            
+            <div class="flex flex-col h-screen  w-full mx-14  ">
+          <div class="flex  w-full mt-5">
+            <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md font-semibold">Inicio</h2>
+          </div>
               
-            
+          <div class="flex flex-col h-screen w-auto py-5 border border-gray-200  rounded my-5">
+          
+
           
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  place-items-center ">
             <?php

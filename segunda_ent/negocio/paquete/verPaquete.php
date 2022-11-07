@@ -189,20 +189,25 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
     <div class="flex">
 
-      <div class="w-60 mr-5 bg-blue-900 rounded h-auto my-5 hidden md:flex flex-col justify-around">
+      <div class="w-60 mr-5  rounded h-auto my-5 hidden md:flex flex-col justify-around">
         
-        <div class="border-b mx-2">
-          <img src="../../../src/imgs/Combos.png" width="180" alt="">
-        </div>
-
-        <div class="border-b mx-2">
-          <img src="../../../src/imgs/Ofertas.png" width="180" salt="">
-        </div>
+      <div class="mt-20">
+              <div class="hidden w-52 h-68 mr-10 mt-5 rounded hidden md:flex flex-col justify-around">
+                <img class="px-3" src="../../../src/imgs/Combosbanner.png" alt="">
+              </div>  
+              
+              <div class="hidden w-52 h-68 mr-10 mt-3  rounded hidden md:flex flex-col justify-around">
+                <img class="px-3" src="../../../src/imgs/Ofertasbanner.png" alt="">
+              </div> 
+            </div>
+            
       </div>  
-      <div class="columns">
-        <div class="column">
-        <h2 class="mb-3 text-lg w-full font-semibold">Paquete</h2>
-        
+      <div class="flex flex-col h-screen  w-full mx-14  ">
+          <div class="flex  w-full mt-5">
+            <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md font-semibold">Contenido del paquete</h2>
+          </div>
+              
+          <div class="flex flex-col h-screen w-auto p-5 border border-gray-200  rounded my-5">
             <table class="table">
                
                 <tbody><?php 
@@ -259,7 +264,10 @@ if ($sesion_i == null ||  $sesion_i = "") {
                           ?>
                 </tfoot>
             </table>
-            <br> <a href="javascript:history.back()"> Regresar</a>
+            <div class="mt-10 p-3 bg-blue-900 m-auto rounded text-white">
+            <a href="javascript:history.back()"> Regresar</a>
+
+            </div>
 
     </div>
 

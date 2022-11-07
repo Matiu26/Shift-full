@@ -81,19 +81,7 @@
         <a href="../sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Cerrar Sesión
         </a>
-        <!-- <div x-data="{ open: false }" class="inline">
-          <div class="inline">
-            <button x-on:click="open = ! open" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b">
-              Iniciar sesion
-            </button>
-          </div>
-          
-          <div x-show="open" class="absolute text-center right-24 sm:right-60 md:right-11 mx-3 md:mx-0  z-10 border border-black bg-blue-900
-                                  mt-7 w-40 origin-top-right rounded-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <a href="../usuario/login.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-0">Ingresar</a>
-            <a href="../usuario/registrarse.php" class="block mx-4 py-1 text-sm text-white hover:border-b" role="menuitem" tabindex="-1" id="user-menu-item-1">Registrarse</a>
-          </div>
-        </div> -->
+        
           
       </div>
       
@@ -202,22 +190,28 @@
 
       </div>
       
-        <div class="flex flex-col w-full mx-14 ">
+      <div class="flex flex-col h-screen  w-full mx-14  ">
           <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Ver Pedido </h2>
+            <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md font-semibold">Editar o Eliminar Producto </h2>
           </div>
-          <div class="flex h-screen flex-col border-b  border-gray-400 mt-10 agrProd">
-
+          <div class="flex flex-col h-screen w-auto py-5 border border-gray-200  rounded my-5">
             <div class="flex flex-col">
-              <form class="form" name="formulario" method="post" action="">
+              <form class="form bg-blue-900 flex flex-col p-5" name="formulario" method="post" action="">
     
-                <input class="controls" placeholder="Ingrese Id" type="num" name="id" required maxlength="30" size="40">
-                <input class="botons" type="submit" value="Buscar Pedido" name="buscar">
-                <br />
-                <br> <a href="javascript:history.back()"class="regresar"> Regresar</a>
+                <input class="controls" placeholder="Ingrese Id" type="num" name="id" required maxlength="30" size="30">
+                <div class="w-auto text-center m-2">
+                   <input class="botons w-auto" type="submit" value="Buscar Pedido" name="buscar">
+                </div>
+                <div class="m-auto">
+                  <a href="javascript:history.back()"class="regresar"> Regresar</a>
+
+                </div>
     
               </form>
-              <?php include("FuncVerPedido.php")?>
+              <div class="mt-10">
+                <?php include("FuncVerPedido.php")?>
+              </div>
+              
             </div>
 
           </div>
