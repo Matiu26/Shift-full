@@ -1,11 +1,14 @@
 <?php
     require_once("miapp_pedidos.php");
+    error_reporting(0);
     session_start();
 $sesion_i = $_SESSION['session_username'];
 
 $query = mysqli_query($con, "SELECT IdUsuario FROM usuario WHERE Email='" . $sesion_i . "'");
 $row = $query->fetch_assoc();
 $id_u= $row["IdUsuario"];
+
+$total = $_GET["PRE"];
 
 
     
@@ -49,10 +52,15 @@ $id_u= $row["IdUsuario"];
                 while ($row =$q->fetch_assoc()){
         
                 carrito_a_tiene($id,$row['IdProducto'],$row['cantidad'],$id_u);
+                $correo_shift = "shiftdevelops@gmail.com";
+                $subject = "Remito de pedido para $nombre $apellido";
+                $body = "Nombre Completo: $nombre $apellido\r\nTarjeta: $tarjeta\r\nTotal: \$$total";
+              
+                mail($email, $subject, $body, 'From: ' . $correo_shift . "\r\n");
                 }
-
-                            echo '<script language="javascript">alert("Compra exitosa");</script>';
-                            header('refresh: 0; url=../productos/carrito/carrito.php');
+            
+                            // echo '<script language="javascript">alert("Compra exitosa");</script>';
+                            // header('refresh: 0; url=../productos/carrito/carrito.php');
                         
                     
                 

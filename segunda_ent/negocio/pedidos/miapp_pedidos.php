@@ -16,6 +16,7 @@ function carrito_a_tiene($id,$id_p,$cant,$id_u)
     mysqli_query($con, "insert into tiene (IdCompra, IdProducto, Cantidad) VALUES('$id','$id_p','$cant')") or die;
     mysqli_query($con, "DELETE FROM carrito  WHERE IdUsuario='" . $id_u . "'") or die;
     mysqli_close($con);
+
 }    
 
 function Stock($id_p,$cant)

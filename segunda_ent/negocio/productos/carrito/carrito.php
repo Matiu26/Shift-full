@@ -293,7 +293,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
                    
                       
                     <div class="m-5">
-                      <a class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded m-2" href="../../pedidos/datosCompra.php" > Finalizar Compra</a>
+                      <a class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded m-2" href="../../pedidos/datosCompra.php?" > Finalizar Compra</a>
                     </div>
                       
                     <?php 
