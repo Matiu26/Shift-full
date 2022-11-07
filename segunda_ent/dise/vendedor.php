@@ -182,21 +182,31 @@
       
       
       
-        <div class="flex flex-col w-full mx-5 ">
-          <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Gestión de Vendedor</h2>
-          </div>
-          <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
-        
-          <form class="form" name="formulario" >
-            <h3 class="border-b mx-10">  USUARIOS </h3>
-            <a href="../negocio/vendedor/Aprobar.php" class="">Aprobar Usuario</a> <br> 
-            <br />
-            <h3 class="border-b mx-10">  PEDIDOS </h3> 
+      <div class="flex flex-col w-full mx-14  ">
+
+<div class="flex  w-full mt-5 ">
+  <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md ">Gestion de vendedor</h2>
+</div>
+<div class="flex flex-col h-screen w-auto py-5 border border-gray-200 flex-grow rounded my-5">    
+    <div class="flex h-screen flex-col  mt-10">
+  
+      <form class="form bg-blue-900 p-5 flex flex-col" name="formulario" method="post" action="">
+        <div class=" flex flex-col  text-center">
+        <h3 class="border-b mx-10 text-white ">  Aprobar usuario </h3>
+        <div class="my-5"><a  href="../negocio/vendedor/Aprobar.php" class="">Aprobar Usuario</a></div>
+            
+        </div>
+        <div class=" flex flex-col  text-center">
+          <h3 class="border-b mx-10 text-white">  PEDIDOS </h3> 
+          <div  class="my-5">
             <a href="../negocio/pedidos/verPedido.php">Ver pedido</a>
+          </div>
+        </div>
+           
+          
+            
+            
     
-            <br />
-            <br />
           </form>  
           <div class="flex flex-col mx-auto mt-20">      
           </div>
@@ -206,6 +216,7 @@
       </div>
   
     </div>
+  </div>
   
     <footer class="flex h-auto ">
         <div class="flex flex-col w-full bg-blue-900 rounded">
@@ -245,10 +256,8 @@
                   Redes y contactos
                 </h4> 
                 <ul class="flex ml-5 hover:text-white">
-        
-                  <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                  <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
-                  <li><a href=""><img class="w-12 rounded-full mx-2 " src="../../src/imgs/Instagram_logo_2022.svg" alt=""></a></li>
+                
+                  <li><a href="https://www.facebook.com/profile.php?id=100076407723343"><img class="w-12 rounded-full mx-2 " src="../../src/imgs/facebooklog" alt=""></a></li>
         
                 </ul>
               </div>

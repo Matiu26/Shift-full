@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="../usuario/styles1.css">
+    <link rel="stylesheet" href="../comprador/styles1.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -196,22 +196,35 @@
 
       </div>
       
-        <div class="flex flex-col w-full mx-14 ">
+      <div class="flex flex-col h-auto  w-full mx-14  ">
           <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Editar Stock Producto </h2>
+            <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md font-semibold">Editar Stock  </h2>
           </div>
-          <div class="flex h-screen flex-col border-b  border-gray-400 mt-10 agrProd">
-
+          <div class="flex flex-col h-full w-auto py-5 border border-gray-200  rounded my-5">
             <div class="flex flex-col">
-              <form class="form" name="formulario" method="post" action="">
+             <form class="form bg-blue-900 p-5" name="formulario" method="post" action="">
+              <div>
+                 <input class="controls" placeholder="Ingrese Producto" type="text" name="nom" required maxlength="30" size="30"> 
+              </div>
+              <div class="text-center mt-2">
+              <input class="botons" type="submit" value="Buscar Producto" name="buscar">
+
+              </div>
+              <div class="text-center flex flex-col">
+                <a  href="mostrar_prod.php" class="regresar">Ver listado</a> 
+                <a class="mt-5" href="../../dise/comprador.php" class="regresar">Regresar</a> 
+              </div>
+
+
     
-                <input class="controls" placeholder="Ingrese Producto" type="text" name="nom" required maxlength="30" size="40"> 
-                <input class="botons" type="submit" value="Buscar Producto" name="buscar">
-                <br> <a href="mostrar_prod.php" class="regresar">Ver listado</a> <br>
-                <br> <a href="../../dise/comprador.php" class="regresar">Regresar</a> <br>
+               
+                
     
               </form>
+              <div class="mt-10">
               <?php include("funcMosProd.php")?>
+
+              </div>
             </div>
 
           </div>

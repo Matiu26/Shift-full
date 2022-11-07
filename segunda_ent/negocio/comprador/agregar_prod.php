@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="../usuario/styles1.css">
+    <link rel="stylesheet" href="../comprador/styles1.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -66,7 +66,7 @@
     <div id="menu" class="w-full mt-0 md:mt-5 hidden flex-grow md:flex md:items-center md:w-auto text-end ">
       <div  class="text-md md:flex-grow text-center items-cenetr mb-5  md:text-end justify-center items-cenetr ">
 
-        <a href="../productos/pags/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
+        <a href="pags/index.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Inicio
         </a>
         <a href="" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
@@ -75,6 +75,7 @@
         <a href="" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Nosotros
         </a>
+
         <a href="../sesiones/logout.php" class="block w-full md:w-auto mt-4 md:inline-block md:mt-0 text-white hover:border-b mr-4">
           Cerrar Sesión
         </a>
@@ -99,24 +100,30 @@
   </header>
 
 
-  <nav class="mt-2 hidden md:flex md:justify-center">
+
+  
+
+  
+      <nav class="mt-2 hidden md:flex md:justify-center">
         <div class="  flex justify-center  id="menuCategorias">
           <ul x-show="open" class=" hidden md:flex  items-center bg-slate-800 rounded">
-            <li><a href="../productos/Pags/Cascos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/casco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Cascos</p></a></li>
-            <li><a href="../productos/Pags/Chalecos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Chaleco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Chalecos</p></a></li>
-            <li><a href="../productos/Pags/Uniformes.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Uniforme.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Uniformes</p></a></li>
-          
-            <li><a href="../productos/Pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
-            <li><a href="../productos/Pags/Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
-            <li><a href="../productos/Pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
+            <li><a href="Pags/Cascos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/casco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Cascos</p></a></li>
+            <li><a href="Pags/Chalecos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Chaleco.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Chalecos</p></a></li>
+            <li><a href="Pags/Uniformes.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Uniforme.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Uniformes</p></a></li>
+                  
+            <li><a href="Pags/Combos.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Combos.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Combos</p></a></li>
+            <li><a href="Pags/Ofertas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Ofertas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Ofertas</p></a></li>
+            <li><a href="Pags/Botas.php"><img class="h-10 px-5 m-2 mt-2" src="../../../src/imgs/Botas.png" alt=""><p class="flex text-white justify-center hover:border-b mb-2 mx-3">Botas</p></a></li>
 
 
           </ul>
         </div>
       </nav> 
     
-      <div class="flex mb-10">
-     
+      <div class="flex flex-col mb-10">
+      <div class="flex  w-full mt-5 ">
+  <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md ">Agregar producto</h2>
+</div>
         <div  class="  flex-col w-auto md:hidden absolute mt-1 lg:left-0 mr-5
                     text-center bg-slate-800 rounded h-auto mb-10 ">
           <button id="boton2" class=" flex my-3  m-auto">
@@ -139,7 +146,7 @@
           
           <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white" >
-                      <a href="../productos/Pags/Cascos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/casco.png" alt=""></a>  
+                      <a href="Pags/Cascos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/casco.png" alt=""></a>  
                       <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Cascos</p>
                     <span class="text-sm m-auto p-auto" id="arrow">
                        <i class="bi bi-chevron-down"></i>    
@@ -149,7 +156,7 @@
   
           <div class="p-2.5  flex items rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../productos/Pags/Chalecos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Chaleco.png" alt=""></a>  
+                      <a href="Pags/Chalecos.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Chaleco.png" alt=""></a>  
                       <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Chalecos</p>        
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
@@ -157,7 +164,7 @@
           </div>
           <div class="p-2.5  flex items rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../productos/Pags/Uniformes.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Uniforme.png" alt=""></a>  
+                      <a href="Pags/Uniformes.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Uniforme.png" alt=""></a>  
                       <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Uniformes</p>        
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
@@ -165,7 +172,7 @@
           </div>
           <div class="p-2.5  flex items rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../productos/Pags/Botas.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Botas.png" alt=""></a>  
+                      <a href="Pags/Botas.php"><img class="h-6 m-2 p-auto inline" src="../../../src/imgs/Botas.png" alt=""></a>  
                       <p class=" m-auto p-auto text-sm md:text-lg text-white justify-center">Botas</p>        
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
@@ -173,7 +180,7 @@
           </div>
           <div class="p-2.5  flex items rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../productos/Pags/Ofertas.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Ofertas.png" alt=""></a>  
+                      <a href="Pags/Ofertas.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Ofertas.png" alt=""></a>  
                       <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Ofertas</p>        
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
@@ -181,7 +188,7 @@
           </div>
           <div class="p-2.5  flex items-center justify-between rounded-md px-4 duration-300
                       cursor-pointer hover:bg-blue-700 text-white">
-                      <a href="../productos/Pags/Combos.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Combos.png" alt=""></a>  
+                      <a href="Pags/Combos.php"><img class="h-7 m-2 p-auto inline" src="../../../src/imgs/Combos.png" alt=""></a>  
                       <p class=" m-auto p-auto text-sm md:text-lg text-white justify-between">Combos</p>        
                       <span class="text-sm m-auto p-auto" id="arrow">
                         <i class="bi bi-chevron-down"></i>    
@@ -191,72 +198,93 @@
         </div>           
                  
 
-                         
-                 
-
       </div>
       
-        <div class="flex flex-col w-full mx-14 ">
-            <div class="flex  w-full mt-5">
-                <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Agregar Producto nuevo</h2>
-            </div>
-            <div class="flex h-screen flex-col border-b  border-gray-400 mt-10 agrProd">
-              <form class="form" name="formulario" method="post" enctype="multipart/form-data">
+      <div class="flex flex-col h-auto w-auto py-5 border border-gray-200 flex-grow rounded my-5">            
+              
+
+              <form class="form bg-blue-900 p-5 h-auto" name="formulario" method="post" enctype="multipart/form-data">
+                <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center">
+                  <div class="m-3">
+                    <input class="controls" placeholder="Nombre " type="text" name="prod" required maxlength="30" >
+                     
+                  </div>
+                  <div class="m-3">
+                    <input class="controls" placeholder="Precio " type="number" min="1" name="pre" required maxlength="30" > 
+
+                  </div>
+                  <div class="flex ">
                     <?php
                         require_once("../../dato/conexion.php");
                         $query_proveedor = mysqli_query($con, "SELECT IdEmpresa, Nombre FROM  proveedor ORDER BY NOMBRE ASC ") or die(mysqli_error($con));
                         mysqli_close($con);
                     ?>
                     <select name="proveedor" class="form_control">
-                        <?php
+                      <?php
+                        while ($proveedor = mysqli_fetch_array($query_proveedor)) {
+                      ?>
 
-                            while ($proveedor = mysqli_fetch_array($query_proveedor)) {
-
-                        ?>
-                        <option value="<?php echo $proveedor['IdEmpresa']; ?>"><?php echo $proveedor['Nombre']; ?>
-                        </option>
+                      <option value="<?php echo $proveedor['IdEmpresa']; ?>">
+                        <?php echo $proveedor['Nombre']; ?>
+                      </option>
                         <?php
                             }
                         ?>
                     </select>
-                    <br> <input class="controls" placeholder="Nombre del producto" type="text" name="prod" required maxlength="30" size="40"> <br>
+                    
 
-                    <br> <input class="controls" placeholder="Cantidad adquirida" type="number" min="1" name="cant" required maxlength="30" size="40"> <br>
-
-                    <br> 
-                     <select name="tip" onchange="" id="elemento"  class="form_control"> <br><br>
+                  </div>
+                  <div class="m-3">
+                    <select name="tip" onchange="" id="elemento"  class="form_control"> <br><br>
                       <option value="0">Selecciona Tipo</option> <br>
                       <option value="1">Cabeza</option>
-                     <option value="2">Torso </option>
-                     <option value="3">Cintura </option>
-                     <option value="4">Piernas </option>
-                     <option value="5">Calzado </option>
-                      </select>
-                    <br>
-                    <br> <input class="controls" placeholder="Precio del producto" type="number" min="1" name="pre" required maxlength="30" size="40"> <br>
+                      <option value="2">Torso </option>
+                      <option value="3">Cintura </option>
+                      <option value="4">Piernas </option>
+                      <option value="5">Calzado </option>
+                    </select>
+                  </div >
+                  <div class="col-span-1 sm:col-span-2 text-center m-3">
+                    <input class="controls" placeholder="Cantidad" type="number" min="1" name="cant" required maxlength="30">
 
-                    <br> <input class="controls" placeholder="Descripcion del producto" type="text" name="desc" required> <br>
+                  </div>
+                  <div class="photo col-span-1 sm:col-span-2 text-center">
+                      <label class=" text-lg text-white" for="foto">Foto</label>   
+                      <div class="prevPhoto">
+                          
+                        <span class="delPhoto notBlock">X</span>
+                        <label for="foto"></label>
+                      </div>
+                        
+                      <div class="upimg">
+                        <input required type="file" class="" name="foto" id="foto">
 
-                    <div class="photo">
-                        <label class="foto" for="foto">Foto</label>
-                        <div class="prevPhoto">
-                            <span class="delPhoto notBlock">X</span>
-                            <label for="foto"></label>
-                        </div>
-                        <div class="upimg">
-                            <input type="file" name="foto" id="foto">
-                        </div>
-                        <div id="form_alert"></div>
+                      </div>
+                      <div id="form_alert">
+
+                      </div>
                     </div>
-
-                    <br>
-                    <br> <input class="botons" type="submit" value="Agregar Producto" name="agregar"> <br>
-
+                  <div class="col-span-1 sm:col-span-2 flex flex-col m-3 text-center">
+                    <label class="text-lg text-white">Descripcion</label>
+                    <textarea  class="controls rounded w-80 h-40"  placeholder="Descripcion" type="text" name="desc" required > </textarea>
+                    
+                  </div>
+                  <div class="flex flex-col items-center text-center m-auto p-auto sm:col-span-2">
+                    <input class="botons" type="submit" value="Agregar Producto" name="agregar"> 
                     <script src="../../js/jquery-3.6.0.min.js"></script>
                     <script src="../../js/functions.js"></script>
-                    <br> <a href="../../dise/accion.php" class="regresar">Regresar</a> <br>
+                    <a href="../../dise/accion.php" class="regresar ">Regresar</a>
+                  </div>
+                  
+                  
+                </div>
+                
+                  
+               
 
-                </form>
+                
+
+              </form>
 
              
 
@@ -306,7 +334,7 @@
               <ul class="flex ml-5 hover:text-white">
       
                 <li><a href="https://www.facebook.com/profile.php?id=100076407723343"><img class="w-12 rounded-full mx-2 " src="../../../src/imgs/facebooklog" alt=""></a></li>
-                
+      
               </ul>
             </div>
   

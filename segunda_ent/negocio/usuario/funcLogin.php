@@ -2,6 +2,7 @@
 require_once("../../dato/conexion.php");
 require_once("miapp_user.php");
 session_start();
+error_reporting(0);
 if (isset($_POST['ingresar'])) {
 
     if (isset($_POST['mail'])  && isset($_POST['pass'])) {
