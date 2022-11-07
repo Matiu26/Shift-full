@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="../comprador/styles1.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -213,27 +213,36 @@
       
       
       
-        <div class="flex flex-col w-full mx-14 ">
-          <div class="flex  w-full mt-5">
-              <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Modificar Paquete</h2>
-            </div>
-            <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
-          
-            <form class="form" name="formulario" method="post" enctype="multipart/form-data">
+      <div class="flex flex-col w-full mx-14  ">
 
-            <br><p class="foto">Nombre</p>  <input class="controls" placeholder="Nombre Paquete" type="text" name="nom2" value="<?php echo $nom; ?>" required maxlength="30" size="40">
+<div class="flex  w-full mt-5 ">
+  <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md ">Editar paquete</h2>
+</div>
+<div class="flex flex-col h-screen w-auto py-5 border border-gray-200 flex-grow rounded my-5">    
+    <div class="flex h-screen flex-col  mt-10">
+  
+      <form class="form bg-blue-900 p-5 flex flex-col" name="formulario" method="post" action="">
+        
+        <p class="foto t  ext-white">Nombre</p>  <input class="controls" placeholder="Nombre Paquete" type="text" name="nom2" value="<?php echo $nom; ?>" required maxlength="30" size="30">
  
-            <br> <p class="foto">Precio</p> <input class="controls" placeholder="Precio" type="number" min="1" name="pre2" value="<?php echo $pre; ?>" required maxlength="30" size="40">
+            <p class="foto text-white">Precio</p> <input class="controls" placeholder="Precio" type="number" min="1" name="pre2" value="<?php echo $pre; ?>" required maxlength="30" size="30">
             
-            <br> <p class="foto">Descuento</p> <input class="controls" placeholder="Descuento" type="number" min="1" name="descu2" value="<?php echo $descu; ?>" required maxlength="30" size="40">
+            <p class="foto text-white ">Descuento</p> <input class="controls" placeholder="Descuento" type="number" min="1" name="descu2" value="<?php echo $descu; ?>" required maxlength="30" size="30">
 
-            <br><p class="foto">Descripción</p>  <textarea class="controls" placeholder="Descripcion del paquete" type="text" name="desc2" value="<?php echo $desc; ?>"  required> </textarea>
-
+            <div class="col-span-1 sm:col-span-2 flex flex-col m-3 text-center">
+                    <label class="text-lg text-white">Descripcion</label>
+                    <textarea  class="controls rounded w-80 h-40"  placeholder="Descripcion" type="text" name="desc" required > </textarea>
+                    
+                  </div>
            
+            <div class="text-center w-auto">
+              <input class="botons" type="submit" value="Modificar" name="modificar">
+            </div>
+            
 
-            <input class="botons" type="submit" value="Modificar" name="modificar">
-
-            <br> <a href="javascript:history.back()"> Regresar</a>
+            <div class="m-auto">
+              <a href="javascript:history.back()"> Regresar</a>
+            </div>
 
             </form>
 
@@ -243,7 +252,8 @@
         
           </div>
 
-        </div>
+      </div> 
+    </div>
 
   <footer class="flex h-auto ">
       <div class="flex flex-col w-full bg-blue-900 rounded">
