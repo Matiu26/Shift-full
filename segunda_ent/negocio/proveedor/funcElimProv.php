@@ -58,11 +58,12 @@
             }
         ?>
             <tr>
-            <td><?php echo "<p style='color:white;'>" . $IDe . "</p>"; ?></td>
-            <td><?php echo "<p style='color:white;'>" . $nom . "</p>"; ?></td>
-            <td><?php echo "<p style='color:white;'>" . $mail . "</p>"; ?></td>
-            <td><?php echo "<p style='color:white;'>" . $dir . "</p>"; ?></td>
-            <td><a href="eliP.php?ID=<?php echo $IDe; ?>">Eliminar </a></td>
+            <td><?php echo "<p style='padding:6px;'>" . $IDe . "</p>"; ?></td>
+            <td><?php echo "<p style='padding:6px;'>" . $nom . "</p>"; ?></td>
+            <td><?php echo "<p style='padding:6px;'>" . $mail . "</p>"; ?></td>
+            <td><?php echo "<p style='padding:6px;'>" . $dir . "</p>"; ?></td>
+            <td><a href="eliP.php?ID=<?php echo "<p style='padding:6px;'>" . $IDe;  ?>"><strong class="total">Eliminar </a></td>
+
 
             </tr>
         <?php

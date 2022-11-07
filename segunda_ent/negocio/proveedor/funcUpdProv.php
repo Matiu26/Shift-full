@@ -29,7 +29,7 @@
                         $tel = $filam['Num_Telefono'];
                     }
                 } else {
-                    echo '<script language="javascript">alert("El usuario ingresado no existe");</script>';
+                    echo '<script language="javascript">alert("El proveedor ingresado no existe");</script>';
                     header('refresh: 0; ');
                     die;
                 }
@@ -37,12 +37,12 @@
 
             ?>
             <tr>
-                <td><?php echo "<p style='color:white;'>" . $IDe . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $nom . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $mail . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $dir . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $tel . "</p>"; ?></td>
-                <td><a href="modificar_prov.php?ID=<?php echo $IDe; ?>">Modificar </a></td>
+            <td><?php echo "<p style='padding:6px;'>"  . $IDe . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>"  . $nom . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>"  . $mail . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>"  . $dir . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>"  . $tel . "</p>"; ?></td>
+                <td><a href="modificar_prov.php?ID=<?php echo $IDe; ?>"><strong class="total">Modificar </a></td>
 
             <?php } ?>
             </tr>

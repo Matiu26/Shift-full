@@ -225,7 +225,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
           
             
             <div class="flex w-auto justify-center mb-5 ">
-                <h2 class="mb-3 text-2xl w-28  border-b border-gray-200 shadow-md text-center font-semibold"><?php echo $nom?> </h2>
+                <h2 class="mb-3 text-2xl w-auto px-5 border-b border-gray-200 shadow-md text-center font-semibold"><?php echo $nom?> </h2>
             </div>
 
             <div class=" mx-5 flex justify-center">
@@ -267,7 +267,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
                     <div class="flex mt-3 flex-col justify-between ">
 
               
-              <br> <input class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded" form="2" placeholder="Cantidad" type="number" min="1" name="cant" required maxlength="30" size="40"> <br>
+             <input class="text-sm md:text-lg p-2 text-white w-12 bg-blue-600 rounded" form="2" value="1" type="number" min="1" name="cant" required maxlength="30"> 
                       
                       <div class="w-full text-center mt-3">
                           <form id="2" method="post" action="carrito/funcAgrCarrito.php?ID=<?php echo $IDp; ?>">    
@@ -288,34 +288,38 @@ if ($sesion_i == null ||  $sesion_i = "") {
                 <h3 class="border-b border-gray-200 shadow-sm border-r w-28 text-center">Descripcion</h3>
                 <p class="mt-5 border border-gray-300 pb-10 p-5 w-full  shadow-md"><?php echo $desc?></p>
               </div>
-              <br>
-              <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Productos Similares</h2>  
+             
+              
           </div>          
 
-           
-          <?php
-require_once("miapp_productos.php");
-$consulta = mysqli_query($con, "SELECT Tipo FROM producto  WHERE IdProducto = '$IDp'") or die(mysqli_error($con));
-while ($filas = mysqli_fetch_array($consulta)) {
-    $tip = $filas['Tipo']; 
-    
-}
-
-$c = mysqli_query($con, "SELECT * FROM producto WHERE Tipo= '$tip' and IdProducto != '$IDp' limit 4") or die(mysqli_error($con));
-$productos_relacionados = mysqli_fetch_all($c);
-shuffle($productos_relacionados);
-foreach ($productos_relacionados as $filas) {
-    $IDp2 = $filas[0];
-    $nom2 = $filas[1];
-    $descu2 = $filas[7];
-    $pre2 =$filas[4];
-    $pre2 = $filas[4]- (($filas[4] * $descu2)/ 100);
-    $foto2= '<img  src="'.$filas[6].'"    width="190"  alt="" srcset="">';
-?>
+                 
 
        
 </div>
+        <div class="w-auto">
+        <h2 class="mb-3 text-2xl w-auto  border-b border-gray-200 shadow-md text-center font-semibold">Productos Similares</h2>  
+        </div>
         <div class=" w-full  h-auto m-auto grid grid-cols-2 justify-center  sm:grid-cols-3 lg:grid-cols-4 place-items-center ">
+               
+        <?php
+            require_once("miapp_productos.php");
+            $consulta = mysqli_query($con, "SELECT Tipo FROM producto  WHERE IdProducto = '$IDp'") or die(mysqli_error($con));
+            while ($filas = mysqli_fetch_array($consulta)) {
+                $tip = $filas['Tipo']; 
+                
+            }
+
+            $c = mysqli_query($con, "SELECT * FROM producto WHERE Tipo= '$tip' and IdProducto != '$IDp' limit 4") or die(mysqli_error($con));
+            $productos_relacionados = mysqli_fetch_all($c);
+            shuffle($productos_relacionados);
+            foreach ($productos_relacionados as $filas) {
+                $IDp2 = $filas[0];
+                $nom2 = $filas[1];
+                $descu2 = $filas[7];
+                $pre2 =$filas[4];
+                $pre2 = $filas[4]- (($filas[4] * $descu2)/ 100);
+                $foto2= '<img  src="'.$filas[6].'"    width="190"  alt="" srcset="">';
+            ?>
           
         <div class="h-48 w-32  sm:h-52 md:w-36 md:h-64 md:w-48 hover:shadow-lg  flex flex-col hover:border hover:border-gray-200 rounded my-5 p-5 justify-between ">
                 <a href="../producto.php?ID=<?php echo $IDp2; ?>"><?php echo $foto2 ?> </a>

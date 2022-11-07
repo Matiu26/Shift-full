@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="../usuario/styles1.css">
+    <link rel="stylesheet" href="../comprador/styles1.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -192,28 +192,45 @@
 
       </div>
       
-        <div class="flex flex-col w-full mx-14 ">
+      <div class="flex flex-col h-auto  w-full mx-14  ">
           <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Paquetes </h2>
+            <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md font-semibold">Editar o Eliminar Producto </h2>
           </div>
-          <div class="flex h-screen flex-col border-b  border-gray-400 mt-10 agrProd">
-
+          <div class="flex flex-col h-full w-auto py-5 border border-gray-200  rounded my-5">
             <div class="flex flex-col">
-              <form class="form" name="formulario" method="post" action="">
-    
-                <input class="controls" placeholder="Ingrese Paquete" type="text" name="nom" required maxlength="30" size="40">
-                <input class="botons" type="submit" value="Buscar Paquete" name="buscar">
-                <br />
-                <br> <a href="lista_paquetes.php" class="regresar">Ver listado</a> <br>
-                <br> <a href="javascript:history.back()"class="regresar"> Regresar</a>
+              <form  class="form bg-blue-900 p-5" name="formulario" method="post" action="">
+                <div calss="grid grid-cols-1 m-auto p-5">
+                  <div class="m-2 text-center">
+                    <input class="controls" placeholder="Ingrese Paquete" type="text" name="nom" required maxlength="30" >
+                    
+                  </div>
+                  <div class="m-2 text-center">
+                    <input class="botons" type="submit" value="Buscar Paquete" name="buscar">
+
+                  </div>
+                  <div class="m-2 text-center">
+                    <a href="lista_paquetes.php" class="regresar">Ver listado</a> 
+
+                  </div>
+                  <div class="m-2 text-center">
+                    <a href="javascript:history.back()"class="regresar"> Regresar</a>
+                  </div>
+            
+                
     
               </form>
-              <?php include("tablaPaq.php")?>
+              
+             
+              
             </div>
+            <div class="mt-10">
+              <?php include("tablaPaq.php")?>
 
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
       
 

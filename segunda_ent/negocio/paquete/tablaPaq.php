@@ -36,7 +36,7 @@
             $desc = $filas['Descripcion'];
             
             $filax = mysqli_fetch_array($c) ;
-            $foto= '<img  src="'.$filax["Imagen"].'" width="180"  alt="" srcset="">';
+            $foto= '<img  src="'.$filax["Imagen"].'" width="120"  alt="" srcset="">';
 
            
           
@@ -72,15 +72,15 @@
             }
         ?>
             <tr>
-                <td><?php echo "<p style='color:white;'>" . $IDpa . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $nom . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>$" . $pre . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $desc . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $foto . "</p>"; ?></td>
-                <td><a href="lista_prod.php?ID=<?php echo $IDpa; ?>">Agregar productos </a></td>
-                <td><a href="verPaquete.php?ID=<?php echo $IDpa; ?>">Ver  Paquete </a></td>
-                <td><a href="eliminar_paquete.php?ID=<?php echo $IDpa; ?>">Eliminar  Paquete </a></td>
-                <td><a href="editar_paq.php?ID=<?php echo $IDpa; ?>">Modificar  Paquete </a></td>
+                <td><?php echo "<p style='padding:6px;'>" . $IDpa . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $nom . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>$" . $pre . "</p>"; ?></td>
+                <td ><?php echo "<p style='padding:6px;'>" . $desc . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $foto . "</p>"; ?></td>
+                <td><a href="lista_prod.php?ID=<?php echo $IDpa; ?>"><strong class="total">Agregar productos </a></td>
+                <td><a href="verPaquete.php?ID=<?php echo $IDpa; ?>"><strong class="total">Ver  Paquete </a></td>
+                <td><a href="eliminar_paquete.php?ID=<?php echo $IDpa; ?>"><strong class="total">Eliminar  Paquete </a></td>
+                <td><a href="editar_paq.php?ID=<?php echo $IDpa; ?>"><strong class="total">Modificar  Paquete </a></td>
 
 
 

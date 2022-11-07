@@ -37,7 +37,7 @@
             $descu = $filas['Descuento'];
             $pre = $filas['Precio']- (($filas['Precio'] * $descu)/ 100);
             $desc = $filas['Descripcion'];
-            $foto= '<img  src="'.$filas["Foto"].'" width="180"  alt="" srcset="">';
+            $foto= '<img  src="'.$filas["Foto"].'" width="120"  alt="" srcset="">';
             $filax = mysqli_fetch_array($c) ;
             $nom_prov = $filax['Nombre'];
           
@@ -62,7 +62,7 @@
                             $tip = $filas['Tipo'];
                             $pre = $filas['Precio'];
                             $desc = $filas['Descripcion'];
-                           $foto= '<img  src="'.$filas["Foto"].'" width="180"  alt="" srcset="">';
+                           $foto= '<img  src="'.$filas["Foto"].'" width="120"  alt="" srcset="">';
                            $filax = mysqli_fetch_array($c) ;
                              $nom_prov = $filax['Nombre'];
                         }
@@ -76,17 +76,17 @@
             }
         ?>
             <tr>
-                <td><?php echo "<p style='color:white;'>" . $IDp . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $nom . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $nom_prov . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $sto . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $tip . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>$" . $pre . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $desc . "</p>"; ?></td>
-                <td><?php echo "<p style='color:white;'>" . $foto . "</p>"; ?></td>
-                <td><a href="editar_prod.php?ID=<?php echo $IDp; ?>">Modificar </a></td>
-                <td><a href="eliminar_prod.php?ID=<?php echo $IDp; ?>">Eliminar </a></td>
-                <!-- <td><a href="producto.php?ID=<?php echo $IDp; ?>">Mostrar </a></td> -->
+            <td><?php echo "<p style='padding:6px;'>" . $IDp . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $nom . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $nom_prov . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $sto . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $tip . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $pre . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $desc . "</p>"; ?></td>
+                <td><?php echo "<p style='padding:6px;'>" . $foto . "</p>"; ?></td>
+                <td><a href="editar_prod.php?ID=<?php echo $IDp; ?>"><strong class="total">Modificar </a></td>
+                <td><a href="eliminar_prod.php?ID=<?php echo $IDp; ?>"><strong class="total">Eliminar </a></td>
+          
 
 
 

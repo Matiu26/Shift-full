@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="../usuario/styles1.css">
+    <link rel="stylesheet" href="../comprador/styles1.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -198,79 +198,91 @@
 
       </div>
       
-        <div class="flex flex-col w-full mx-14 ">
-            <div class="flex  w-full mt-5">
-                <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Agregar Producto nuevo</h2>
-            </div>
-            <div class="flex h-screen flex-col border-b  border-gray-400 mt-10 agrProd">
-              <form class="form" name="formulario" method="post" enctype="multipart/form-data">
+      <div class="flex flex-col h-auto w-auto py-5 border border-gray-200 flex-grow rounded my-5">            
+              
+
+              <form class="form bg-blue-900 p-5 h-auto" name="formulario" method="post" enctype="multipart/form-data">
+                <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center">
+                  <div class="m-3">
+                    <input class="controls" placeholder="Nombre " type="text" name="prod" required maxlength="30" >
+                     
+                  </div>
+                  <div class="m-3">
+                    <input class="controls" placeholder="Precio " type="number" min="1" name="pre" required maxlength="30" > 
+
+                  </div>
+                  <div class="flex ">
                     <?php
                         require_once("../../dato/conexion.php");
                         $query_proveedor = mysqli_query($con, "SELECT IdEmpresa, Nombre FROM  proveedor ORDER BY NOMBRE ASC ") or die(mysqli_error($con));
                         mysqli_close($con);
                     ?>
                     <select name="proveedor" class="form_control">
-                        <?php
+                      <?php
+                        while ($proveedor = mysqli_fetch_array($query_proveedor)) {
+                      ?>
 
-                            while ($proveedor = mysqli_fetch_array($query_proveedor)) {
-
-                        ?>
-                        <option value="<?php echo $proveedor['IdEmpresa']; ?>"><?php echo $proveedor['Nombre']; ?>
-                        </option>
+                      <option value="<?php echo $proveedor['IdEmpresa']; ?>">
+                        <?php echo $proveedor['Nombre']; ?>
+                      </option>
                         <?php
                             }
                         ?>
                     </select>
-                    <br> <input class="controls" placeholder="Nombre del producto" type="text" name="prod" required maxlength="30" size="40"> <br>
+                    
 
-                    <br> <input class="controls" placeholder="Cantidad adquirida" type="number" min="1" name="cant" required maxlength="30" size="40"> <br>
-
-                    <br> 
-                     <select name="tip" onchange="" id="elemento"  class="form_control"> <br><br>
+                  </div>
+                  <div class="m-3">
+                    <select name="tip" onchange="" id="elemento"  class="form_control"> <br><br>
                       <option value="0">Selecciona Tipo</option> <br>
                       <option value="1">Cabeza</option>
-                     <option value="2">Torso </option>
-                     <option value="3">Cintura </option>
-                     <option value="4">Piernas </option>
-                     <option value="5">Calzado </option>
-                      </select>
-                    <br>
-                    <br> <input class="controls" placeholder="Precio del producto" type="number" min="1" name="pre" required maxlength="30" size="40"> <br>
+                      <option value="2">Torso </option>
+                      <option value="3">Cintura </option>
+                      <option value="4">Piernas </option>
+                      <option value="5">Calzado </option>
+                    </select>
+                  </div >
+                  <div class="col-span-1 sm:col-span-2 text-center m-3">
+                    <input class="controls" placeholder="Cantidad" type="number" min="1" name="cant" required maxlength="30">
 
-                    <!-- <br> <input class="controls" placeholder="Descripcion" type="text" name="desc" required maxlength="30" size="40"> <br> -->
-
-                    <br> <textarea class="controls" placeholder="Descripcion del producto" type="text" name="desc" required> </textarea><br>
-
-                    <div class="photo">
-                                  <label class="foto" for="foto">Foto</label>
-                                  
-                                  
-                         <div class="prevPhoto">
+                  </div>
+                  <div class="photo col-span-1 sm:col-span-2 text-center">
+                      <label class=" text-lg text-white" for="foto">Foto</label>   
+                      <div class="prevPhoto">
                           
-                            <span class="delPhoto notBlock">X</span>
-                            <label for="foto"></label>
-                        </div>
-                        <label class="foto" for="foto">Es necesario</label>
-
-                        <label class="fotos" for="foto">agregar una foto</label>
-
-
-                        <div class="upimg">
-                        <input required type="file" name="foto" id="foto">
-
-                        </div>
-                        <div id="form_alert"></div>
+                        <span class="delPhoto notBlock">X</span>
+                        <label for="foto"></label>
                       </div>
-                
+                        
+                      <div class="upimg">
+                        <input required type="file" class="" name="foto" id="foto">
 
-                    <br>
-                    <br> <input class="botons" type="submit" value="Agregar Producto" name="agregar"> <br>
+                      </div>
+                      <div id="form_alert">
 
+                      </div>
+                    </div>
+                  <div class="col-span-1 sm:col-span-2 flex flex-col m-3 text-center">
+                    <label class="text-lg text-white">Descripcion</label>
+                    <textarea  class="controls rounded w-80 h-40"  placeholder="Descripcion" type="text" name="desc" required > </textarea>
+                    
+                  </div>
+                  <div class="flex flex-col items-center text-center m-auto p-auto sm:col-span-2">
+                    <input class="botons" type="submit" value="Agregar Producto" name="agregar"> 
                     <script src="../../js/jquery-3.6.0.min.js"></script>
                     <script src="../../js/functions.js"></script>
-                    <br> <a href="../../dise/accion.php" class="regresar">Regresar</a> <br>
+                    <a href="../../dise/accion.php" class="regresar ">Regresar</a>
+                  </div>
+                  
+                  
+                </div>
+                
+                  
+               
 
-                </form>
+                
+
+              </form>
 
              
 

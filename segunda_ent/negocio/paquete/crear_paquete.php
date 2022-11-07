@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="../comprador/styles1.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 
@@ -211,33 +211,53 @@
        
       
       
-      
-        <div class="flex flex-col w-full mx-14 ">
-          <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Crear Paquete</h2>
-          </div>
-          <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
+      <div class="flex flex-col h-screen  w-full mx-14  ">
 
-            <form  class="form" name="formulario" method="post" action="">
-
-            <br> <input class="controls" placeholder="Nombre Paquete" type="text" name="nom" required maxlength="30" size="40"> <br>
-
-            <br> <input class="controls" placeholder="Precio del Paquete" type="number" min="1" name="pre" required maxlength="30" size="40"> <br>
-
-            <br> <input class="controls" placeholder= "Descuento" type="number" min="0" name="descu" value=""  maxlength="30" size="40"><br>
-
-            <br> <textarea class="controls" placeholder="Descripcion del paquete" type="text" name="desc" required> </textarea><br>
-
-                <br> <input class="botons" type="submit" value="Crear Paquete" name="agregar"> <br>
-                <br> <a href="javascript:history.back()"class="regresar"> Regresar</a>
-
-            </form>
-         
-          </div>
-        
-        </div>
-  
+<div class="flex  w-full mt-5">
+  <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md font-semibold">Modificar Proveedor</h2>
+</div>
+<div class="flex flex-col h-full w-auto py-5 border border-gray-200  rounded my-5">
+  <div class="flex flex-col">
+   <form  class="form bg-blue-900 " name="formulario" method="post" action="">
+      <div class="gri grid-cols-1 m-auto p-5">
+      <div class="m-2 text-center">
+        <input class="controls" placeholder="Nombre Paquete" type="text" name="nom" required maxlength="30" >
       </div>
+      <div class="m-2 text-center">
+        <input class="controls" placeholder="Precio del Paquete" type="number" min="1" name="pre" required maxlength="30" >
+      </div>
+      <div class="m-2 text-center">
+        <input class="controls" placeholder= "Descuento" type="number" min="0" name="descu"   value="" required maxlength="30" >
+
+      </div>
+      <div class="m-2 text-center">
+        <textarea class="controls rounded w-80 h-40" placeholder="Descripcion del paquete" type="text" name="desc" required> </textarea>
+
+      </div>
+      <div class="m-2 text-center">
+         <input class="botons " type="submit" value="Crear Paquete" name="agregar"> 
+      </div>
+      <div class="m-2 text-center">
+        <a href="javascript:history.back()"class="regresar"> Regresar</a>
+      </div>
+
+      
+        
+
+    </form>
+    </div >
+          
+          
+          </div>
+      
+        
+              
+          
+          </div>
+      
+      </div>
+
+  </div>
   
   <footer class="flex h-auto ">
     <div class="flex flex-col w-full bg-blue-900 rounded">

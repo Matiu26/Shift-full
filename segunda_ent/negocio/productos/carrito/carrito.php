@@ -222,7 +222,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
             <div class="flex w-full">
 
-              <div class="columns w-full mx-10 border border-gray-200 rounded px-5">
+              <div class="columns w-full m-0 md:mx-10 border border-gray-200 rounded px-5">
                 <div class="column text-center mt-5">
                   <h2 class=" text-lg  w-full font-semibold">Carrito </h2>
 
@@ -236,7 +236,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
                         <thead class="headCar">
                           <tr >
                             <th class="border border-gray-200"></th>
-                            <th class="border border-gray-200">Foto</th>
+                            <th class="border border-gray-200 hidden md:flex">Foto</th>
                             <th class="border border-gray-200">Nombre</th>
                             <th class="border border-gray-200">Precio</th>
                             <th class="border border-gray-200">Cantidad</th>
@@ -259,7 +259,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
                             <input type="hidden" name="id_producto" value="<?php echo $IdP ?>"> 
                                       
                             </button></td>
-                          <td class="ftCar border border-gray-200" ><a href="../producto.php?ID=<?php echo $IDp; ?>" ><?php echo $foto ?> </a> </td>
+                          <td class="ftCar border border-gray-200 hidden md:flex" ><a href="../producto.php?ID=<?php echo $IDp; ?>" ><?php echo $foto ?> </a> </td>
                           <td class="border border-gray-200"><?php echo $nom ?></td>
                           <td class="border border-gray-200"> $<?php echo $pre ?></td>
                           <td class="border border-gray-200"> <?php echo $cant ?></td>
@@ -281,10 +281,12 @@ if ($sesion_i == null ||  $sesion_i = "") {
                         </td>
                         </tfoot>
                     </table>
-                    <br>
-                        <br>
-                        <a class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded " href="../../pedidos/datosCompra.php" > Finalizar Compra</a>
-                       
+                   
+                      
+                       <div class="m-5">
+                         <a class="text-sm md:text-lg p-2 text-white w-auto bg-blue-600 rounded m-2" href="../../pedidos/datosCompra.php" > Finalizar Compra</a>
+                       </div>
+                      
                         <?php 
                         } else{ 
                                 
@@ -295,6 +297,7 @@ if ($sesion_i == null ||  $sesion_i = "") {
 
 
                   </div>
+                  
                 </div>
                 
                 

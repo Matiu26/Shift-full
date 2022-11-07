@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="../usuario/styles1.css">
+    <link rel="stylesheet" href="../comprador/styles1.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 
@@ -206,31 +206,43 @@
       
       
       
-        <div class="flex flex-col w-full mx-14 ">
+      <div class="flex flex-col h-screen  w-full mx-14  ">
           <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Lista Proveedores</h2>
+            <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md font-semibold">Lista Proveedores</h2>
           </div>
-          <div class="flex h-screen flex-col border-b border-gray-400 mt-10"> 
+          <div class="flex flex-col h-full w-auto py-5 border border-gray-200  rounded my-5"> 
             <div class="flex flex-col">
+              <form class="form bg-blue-900 p-5" name="formulario" method="post" action="">
+                <div class="grid grid-cols-1 m-auto">
+                  <div class="m-2 text-center">
+                    <input class="controls" placeholder="Nombre" type="text" name="nom" required maxlength="30" >
+                  </div>
+                  <div class="m-2 text-center">
+                    <input class="botons" type="submit" value="Buscar Proveedor" name="buscar">
+                  </div>
+                  <div class="m-2 text-center">
+                    <a href="mostrar_prov.php" class="regresar">Ver listado</a>
+                  </div>
+                  <div class="m-2 text-center"v>
+                    <a href="../../dise/accion.php" class="regresar">Regresar</a>
+                  </div>
 
-              <form class="form" name="formulario" method="post" action="">
-  
-              <input class="controls" placeholder="Nombre" type="text" name="nom" required maxlength="30" size="40">
-                <input class="botons" type="submit" value="Buscar Proveedor" name="buscar">
-                <br> <a href="mostrar_prov.php" class="regresar">Ver listado</a> <br>
-                <br> <a href="../../dise/accion.php" class="regresar">Regresar</a> <br>
+                </div>
               </form>
-              <table id="tabla" width="40%" border="1">
-                <tr>
-                  <th>Id Empresa</th>
-                  <th>Nombre</th>
-                  <th>Email</th>
-                  <th>Direcion</th>
-                  <th>Telefono</th>
-                  <?php include("funcMosProv.php")?>
-                </tr>
-              </table>  
+              <div class="mt-10">
+                <table id="tabla">
+                  <tr>
+                    <th class="p-2">Id Empresa</th>
+                    <th class="p-2">Nombre</th>
+                    <th class="p-2">Email</th>
+                    <th class="p-2">Direcion</th>
+                    <th class="p-2">Telefono</th>
+                    <?php include("funcMosProv.php")?>
+                  </tr>
+                </table> 
               </div>
+               
+            </div>
         
           </div>
  

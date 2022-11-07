@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad Viera</title>
-    <link rel="stylesheet" href="../usuario/styles1.css">
+    <link rel="stylesheet" href="../comprador/styles1.css">
     <link rel="stylesheet" href="../../../src/estilos.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 
@@ -202,25 +202,40 @@
       
       
       
-        <div class="flex flex-col w-full mx-14 ">
+      <div class="flex flex-col w-full mx-14 ">
         <div class="flex  w-full mt-5">
-            <h2 class="text-lg md:text-3xl mx-auto pb-4 w-full text-center border-b border-gray-300">Agregar Proveedor</h2>
+        <h2 class="text-lg md:text-2xl mx-auto pb-4 w-auto px-5 text-center border-b border-gray-300 shadow-md ">Agregar Proveedor</h2>
           </div>
-          <div class="flex h-screen flex-col border-b border-gray-400 mt-10">
+          <div class="flex flex-col h-screen w-auto py-5 border border-gray-200 flex-grow rounded my-5"> 
         
-          <form class="form" name="formulario" method="post" action="">
+          <form class="form bg-blue-900" name="formulario" method="post" action="">
+            <div class="grid grid-cols-1 sm:grid-cols-2 m-auto p-5">
+             
+              <div class="m-2">
+                <input class="controls" placeholder="Nombre" type="text" name="nom" required maxlength="30" > 
 
-            <br> <input class="controls" placeholder="Nombre" type="text" name="nom" required maxlength="30" size="40"> <br>
+              </div>
+              <div class="m-2">
+                <input class="controls" placeholder="Email" type="email" name="mail" required maxlength="30" > 
 
-            <br> <input class="controls" placeholder="Email" type="email" name="mail" required maxlength="30" size="40"> <br>
+              </div>
+              <div class="m-2">
+                <input class="controls" placeholder="Direccion" type="text" name="dir"  required maxlength="30" >
+              </div>
+              <div class="m-2">
+                <input class="controls" placeholder="Telefono" type="number" name="tel" required maxlength="30" >
 
-            <br> <input class="controls" placeholder="Direccion" type="text" name="dir"  required maxlength="30" size="40"> <br>
+              </div>
+             
+              <div class="flex flex-col items-center text-center m-auto p-auto col-span-1 sm:col-span-2 ">
+                <input class="botons" type="submit" value="Agregar Proveedor" name="agregar"> 
+                <a href="../../dise/accion.php" class="regresar ">Regresar</a>
+              </div>
+                
 
-            <br> <input class="controls" placeholder="Telefono" type="number" name="tel" required maxlength="30" size="40"> <br>
+            </div>
 
-            <br>
-            <br> <input class="botons" type="submit" value="Agregar Proveedor" name="agregar"> <br>
-            <br> <a href="../../dise/accion.php" class="regresar">Regresar</a> <br>
+
 
           </form>
           <div class="flex flex-col mx-auto mt-20">
